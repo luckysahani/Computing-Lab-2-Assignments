@@ -1,0 +1,23 @@
+# modified java.schema -- Java Object Schema - used for example purposes only
+# Copyright Notice
+# 
+#    Copyright (C) The Internet Society (1999).  All Rights Reserved.
+# 
+# Attribute definition
+
+attributetype ( 1.3.6.1.4.1.42.2.27.4.1.6
+	NAME 'javaClassName'
+	DESC 'Fully qualified name of distinguished Java class or interface'
+	EQUALITY caseExactMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE )
+ 
+
+# Object Class Definition
+
+objectclass ( 1.3.6.1.4.1.42.2.27.4.2.1
+	NAME 'javaContainer'
+	DESC 'Container for a Java object'
+	SUP top
+	STRUCTURAL
+	MUST cn )

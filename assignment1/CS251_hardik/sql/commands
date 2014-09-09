@@ -1,0 +1,30 @@
+order by,group by,having,where,like
+unique,distinct,all,not null,default
+primary key(,,,)
+check in      http://stackoverflow.com/questions/2115497/check-constraint-in-mysql-is-not-working
+max,min,sum,count,avg,len,
+create view _____ as (____) 
+alter table ____1.add_____ int after cloumn_name 2. modify ____ char(30) 3.drop column1,drop column2 4.
+create table ______ as (_____)
+insert into _____(___) values (____)
+inser into _____ select * from ______
+update _____ set ______ where _____
+create view _____ as select * from _______
+INNER JOIN: Returns all rows when there is at least one match in BOTH tables
+LEFT JOIN: Return all rows from the left table, and the matched rows from the right table
+RIGHT JOIN: Return all rows from the right table, and the matched rows from the left table
+FULL JOIN: Return all rows when there is a match in ONE of the tables
+delete from table_name     //deletes all the entries
+truncate table_name     //same as delete from 
+drop view ______      drop table ______
+ALTER TABLE Orders
+ADD FOREIGN KEY (P_Id)
+REFERENCES Persons(P_Id)
+select salaries.salary as sal from salaries a;
+natural join removes all the repeated entries and show only those having same values on all the repeated columns
+select * from table1 inner join table2 using (roll);///only those entries having same roll in both tables
+select * from table1 a left outer join table2 b on a.roll=b.roll;//left join
+select * from table1 a right outer join table2 b on a.roll=b.roll;//right join ie all data of right table is displayed
+select * from table1 a left outer join table2 b on a.roll=b.roll union select * from table1 a right outer join table2 b on a.roll=b.roll;//full join
+http://www.tutorialspoint.com/mysql/mysql-regexps.htm
+^-beginning %-ending  ___-in between chars

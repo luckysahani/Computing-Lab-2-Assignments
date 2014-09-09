@@ -1,0 +1,10 @@
+alter table marks add grade varchar(2);
+alter table marks add total INT(3);
+update marks set total=assignment+project+exam;
+update marks set grade="A*" where total >= 0.95*150;
+update marks set grade="A" where total >= 0.80*150 and total < 0.95*150;
+update marks set grade="B" where total >= 0.60*150 and total < 0.80*150; 
+update marks set grade="C" where total >= 0.45*150 and total < 0.60*150;
+update marks set grade="D" where total >= 0.30*150 and total < 0.45*150;
+update marks set grade="F" where total < 0.30*150;
+select course,grade,count(roll) from marks group by course,grade ;

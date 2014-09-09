@@ -1,0 +1,18 @@
+\begin{thebibliography}{1}
+
+\bibitem{book3}
+Helmut Kopka and Patrick~W. Daly.
+\newblock {\em {Guide to LaTeX}}.
+\newblock 4 edition, 2003.
+
+\bibitem{book2}
+Leslie Lamport.
+\newblock {\em {LaTeX: A Document Preparation System}}.
+\newblock 2 edition, 1994.
+
+\bibitem{book1}
+Irene~Hyna Tobias~Oetiker, Hubert~Partl and Elisabeth Schlegl.
+\newblock {\em {Introduction to Latex}}.
+\newblock 2 edition, 2011.
+
+\end{thebibliography}

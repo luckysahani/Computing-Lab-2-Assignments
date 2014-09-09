@@ -1,0 +1,68 @@
+#1 Installing OpenLDAP and Server :
+sudo apt-get install slapd ldap-utils
+
+#2 Reconfiguring
+sudo dpkg-reconfigure slapd
+
+#3 Initial DIT structure is only root:
+ldapsearch -h localhost -x -LLL -W -D "cn=admin,dc=cse,dc=iitk,dc=ac,dc=in" -b "dc=cse,dc=iitk,dc=ac,dc=in"
+
+#3 Install LDAP Browser:
+sudo apt-get install phpldapadmin
+Configuration Link: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-a-basic-ldap-server-on-an-ubuntu-12-04-vps
+
+#4 Creating a simple DIT 
+sudo ldapadd -x -D "cn=admin,dc=cse,dc=iitk,dc=ac,dc=in" -W -f ~/Desktop/LDAP/simple.ldif
+
+#5 Query for DIT Entries:
+ldapsearch -h localhost -x -LLL -W -D "cn=admin,dc=cse,dc=iitk,dc=ac,dc=in" -b "dc=cse,dc=iitk,dc=ac,dc=in"
+
+#6 Adding extra entries to the existing DIT
+sudo ldapadd -x -D "cn=admin,dc=cse,dc=iitk,dc=ac,dc=in" -W -f ~/Desktop/LDAP/user2.ldif
+
+#7. Modify the cn=config admin password
+(a)create rootpw_cnconfig.ldif with the following contents
+dn: olcDatabase={0}config,cn=config
+changetype: modify
+replace: olcRootPW
+olcRootPW: foobar123
+
+(b) sudo ldapmodify -Y EXTERNAL -H ldapi:/// -f rootpw_cnconfig.ldif
+
+Refernce Link: http://serverfault.com/questions/556629/unknown-ldap-cn-config-admin-password
+
+#8 Creating a new object class and adding attributes:
+(a) Create new.schema (contains set of classes and attributes)
+    Example Link: http://www.yolinux.com/TUTORIALS/LinuxTutorialLDAP-DefineObjectsAndAttributes.html
+(b) create new.conf
+   include ~/Desktop/LDAP/new.schema
+(c) mkdir ~/Desktop/LDAP/new
+(d) slaptest -f new.conf -F ~/Desktop/LDAP/new
+   This will generate testdir/cn=config/cn=schema/cn={0}test.ldif
+(e) chagne the file cn={0}test.ldif and add the following 
+   dn: cn=test,cn=schema,cn=config  instead of dn: cn={0}test
+   and remove the structural entries.
+(f) sudo ldapadd -x -D "cn=config" -W -f ~/Desktop/LDAP/new.ldif
+
+#9 Adding a new entry to DIT with new schema
+sudo ldapadd -x -D "cn=admin,dc=cse,dc=iitk,dc=ac,dc=in" -W -f ~/Desktop/LDAP/user3.ldif
+ldapsearch -h localhost -x -LLL -W -D "cn=admin,dc=cse,dc=iitk,dc=ac,dc=in" -b "dc=cse,dc=iitk,dc=ac,dc=in"
+
+#10 User-1 Trying to modify User-1 Data 
+sudo ldapmodify -x -D "cn=user1,ou=people,dc=cse,dc=iitk,dc=ac,dc=in" -W -f  ~/Desktop/LDAP/modify.ldif
+
+
+LDAP Search Utility:
+ldapsearch -h localhost -x -LLL -W -D "cn=user4,ou=people,dc=cse,dc=iitk,dc=ac,dc=in" -b cn=user3,ou=people,dc=cse,dc=iitk,dc=ac,dc=in
+
+
+
+
+Removing LDAP completely 
+sudo apt-get install 
+apt-get remove --purge slapd ldap-utils
+
+OLC Search:
+ldapsearch -xLLL -b cn=config -D "cn=config" -W
+
+

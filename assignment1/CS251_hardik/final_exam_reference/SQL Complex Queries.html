@@ -1,0 +1,2042 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0072)http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" slick-uniqueid="3"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./SQL Complex Queries_files/auth016.js"></script><link rel="stylesheet" type="text/css" href="./SQL Complex Queries_files/widget118.css" media="all">
+    <script type="text/javascript">
+var siteurl='/';
+var tmplurl='/templates/ja_purity_ii/';
+var isRTL = false;
+</script>
+
+  <!--<base href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql">--><base href=".">
+  
+  <meta name="keywords" content="interview questions, complex sql queries asked in interview">
+  <meta name="author" content="Abhiram Mishra">
+  <meta name="description" content="Most frequently asked interview question from oracle.Complex queries asked in interview.">
+  <meta name="generator" content="Joomla! - Open Source Content Management">
+  <title>SQL Complex Queries</title>
+  <link rel="stylesheet" href="./SQL Complex Queries_files/index.php" type="text/css">
+  <link rel="stylesheet" href="./SQL Complex Queries_files/index(1).php" type="text/css">
+  <script src="./SQL Complex Queries_files/index(2).php" type="text/javascript"></script><style type="text/css"></style><style type="text/css"></style>
+  <script type="text/javascript">
+window.addEvent('load', function() {
+				new JCaption('img.caption');
+			});
+			  SyntaxHighlighter.all();
+		 
+  </script>
+
+<!--[if ie]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/plugins/system/jat3/jat3/base-themes/default/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+<!--[if ie 7]><link href="/templates/ja_purity_ii/css/template-ie7.css" type="text/css" rel="stylesheet" /><![endif]--> 
+
+
+
+
+<link href="http://www.bullraider.com/plugins/system/jat3/jat3/base-themes/default/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+
+<!--[if IE 7.0]>
+<style>
+.clearfix { display: inline-block; } /* IE7xhtml*/
+</style>
+<![endif]-->
+
+<script language="javascript" type="text/javascript">
+var rightCollapseDefault='show';
+var excludeModules='38';
+</script>
+<script language="javascript" type="text/javascript" src="./SQL Complex Queries_files/ja.rightcol.js"></script>
+    
+    <style type="text/css">
+/*dynamic css*/
+
+    body.bd .main {width: 95%;}
+    body.bd #ja-wrapper {min-width: 95%;}
+</style><script type="text/javascript" async="" src="http://cdn1.developermedia.com/a.min.js"></script><script type="text/javascript" async="" src="http://cdn2.developermedia.com/a.min.js"></script></head>
+
+<body id="bd" class="bd fs3 com_content">
+<a name="Top" id="Top"></a>
+<div id="ja-wrapper">
+
+
+                <div id="ja-header" class="wrap ">
+                   <div class="main">
+                           <div class="main-inner1 clearfix">
+                <h1 class="logo">
+    <a href="" title="www.bullraider.com"><span>www.bullraider.com</span></a>
+</h1>
+
+<div id="ja-search">
+    <form action="./SQL Complex Queries_files/SQL Complex Queries.html" method="post" class="searchbullshit">
+		<label for="mod-search-searchword">Search...</label><input name="searchword" id="mod-search-searchword" maxlength="20" class="inputboxbullshit" type="text" size="30" value="Search" onblur="if (this.value==&#39;&#39;) this.value=&#39;Search&#39;;" onfocus="if (this.value==&#39;Search&#39;) this.value=&#39;&#39;;"><input type="image" value="Search" class="buttonbullshit" src="" onclick="this.form.searchword.focus();">	<input type="hidden" name="task" value="search">
+	<input type="hidden" name="option" value="com_search">
+	<input type="hidden" name="Itemid" value="205">
+</form>
+
+</div>                </div>
+                            </div>
+                        </div>
+            <div id="ja-mainnav" class="wrap ">
+                   <div class="main">
+                           <div class="main-inner1 clearfix">
+                	<div class="ja-megamenu clearfix" id="ja-megamenu">
+<ul class="megamenu level0"><li class="mega first"><a href="http://bullraider.com/" class="mega first" id="menu101" title="Home"><span class="menu-title">Home</span></a></li><li class="mega haschild"><a href="http://www.bullraider.com/joomla" class="mega haschild" id="menu125" title="Joomla!"><span class="menu-title">Joomla!</span></a><div class="childcontent cols1 " style="width: 222px; height: 119px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level1"><li class="mega first haschild"><a href="http://www.bullraider.com/joomla/joomla-tutorials" class="mega first haschild" id="menu126" title="Joomla! Tutorials"><span class="menu-title">Joomla! Tutorials</span></a><div class="childcontent cols1 " style="width: 222px; height: 93px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/joomla/joomla-tutorials/extension-tutorials" class="mega first" id="menu171" title="Extension Tutorials"><span class="menu-title">Extension Tutorials</span></a></li><li class="mega last"><a href="http://www.bullraider.com/joomla/joomla-tutorials/random-articles" class="mega last" id="menu172" title="Random Articles On Joomla!"><span class="menu-title">Random Articles On Joomla!</span></a></li></ul></div></div>
+</div></div></li><li class="mega"><a href="http://www.bullraider.com/joomla/tools" class="mega" id="menu127" title="Tools"><span class="menu-title">Tools</span></a></li><li class="mega last haschild"><a href="http://www.bullraider.com/joomla/extensions" class="mega last haschild" id="menu226" title="Extensions"><span class="menu-title">Extensions</span></a><div class="childcontent cols1 " style="width: 222px; height: 67px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/joomla/extensions/joocomments" class="mega first" id="menu227" title="JooComments"><span class="menu-title">JooComments</span></a></li></ul></div></div>
+</div></div></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/java" class="mega haschild " id="menu130" title="Java"><span class="menu-title">Java</span></a><div class="childcontent cols1 " style="width: 222px; height: 301px; display: none; margin-left: 0px; left: 156px; z-index: 1019; overflow: hidden;">
+<div class="childcontent-inner-wrap" style="width: 202px; margin-top: -281px; opacity: 0;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level1"><li class="mega first haschild"><a href="http://www.bullraider.com/java/core-java" class="mega first haschild" id="menu131" title="Core Java"><span class="menu-title">Core Java</span></a><div class="childcontent cols1 " style="width: 222px; height: 264px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/java/core-java/33-interview-questions" class="mega first" id="menu140" title="Programming Interview"><span class="menu-title">Programming Interview</span></a></li><li class="mega"><a href="http://www.bullraider.com/java/core-java/random-articles" class="mega" id="menu199" title="Random Articles"><span class="menu-title">Random Articles</span></a></li><li class="mega"><a href="http://www.bullraider.com/java/core-java/basic-pogramming" class="mega" id="menu280" title="Basic Pogramming "><span class="menu-title">Basic Pogramming </span></a></li><li class="mega"><a href="http://www.bullraider.com/java/core-java/frequently-asked-interview-question" class="mega" id="menu320" title="Frequently Asked Interview Question"><span class="menu-title">Frequently Asked Interview Question</span></a></li><li class="mega"><a href="http://www.bullraider.com/java/core-java/collection-tutorials" class="mega" id="menu347" title="Collection Tutorials"><span class="menu-title">Collection Tutorials</span></a></li><li class="mega"><a href="http://www.bullraider.com/java/core-java/scjp-ocjp" class="mega" id="menu377" title="SCJP/OCJP"><span class="menu-title">SCJP/OCJP</span></a></li><li class="mega"><a href="http://www.bullraider.com/java/core-java/advanced-interview-questions" class="mega" id="menu380" title="Advanced Interview Questions"><span class="menu-title">Advanced Interview Questions</span></a></li><li class="mega last"><a href="http://www.bullraider.com/java/core-java/data-structures" class="mega last" id="menu381" title="Data Structures"><span class="menu-title">Data Structures</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/java/servlet-and-jsp" class="mega haschild" id="menu180" title="Servlet &amp; JSP"><span class="menu-title">Servlet &amp; JSP</span></a><div class="childcontent cols1 " style="width: 222px; height: 67px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/java/servlet-and-jsp/interview-questions" class="mega first" id="menu181" title="Interview Questions"><span class="menu-title">Interview Questions</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/java/j2ee" class="mega haschild" id="menu132" title="J2EE"><span class="menu-title">J2EE</span></a><div class="childcontent cols1 " style="width: 222px; height: 67px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/java/j2ee/articles" class="mega first" id="menu141" title="Random Articles"><span class="menu-title">Random Articles</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/java/struts2" class="mega haschild" id="menu133" title="Struts2"><span class="menu-title">Struts2</span></a><div class="childcontent cols1 " style="width: 222px; height: 119px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/java/struts2/tutorials" class="mega first" id="menu137" title="Tutorials"><span class="menu-title">Tutorials</span></a></li><li class="mega"><a href="http://www.bullraider.com/java/struts2/interview-questions" class="mega" id="menu138" title="Interview Questions"><span class="menu-title">Interview Questions</span></a></li><li class="mega last"><a href="http://www.bullraider.com/java/struts2/random-articles" class="mega last" id="menu139" title="Random Articles"><span class="menu-title">Random Articles</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/java/ejb3" class="mega haschild" id="menu134" title="EJB 3"><span class="menu-title">EJB 3</span></a><div class="childcontent cols1 " style="width: 222px; height: 93px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/java/ejb3/ejb-3-interview-questions" class="mega first" id="menu135" title="Interview Questions"><span class="menu-title">Interview Questions</span></a></li><li class="mega last"><a href="http://www.bullraider.com/java/ejb3/tutorials" class="mega last" id="menu136" title="Tutorials"><span class="menu-title">Tutorials</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/java/spring3" class="mega haschild" id="menu183" title="Spring 3.0"><span class="menu-title">Spring 3.0</span></a><div class="childcontent cols1 " style="width: 222px; height: 119px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/java/spring3/tutorials" class="mega first" id="menu190" title="Tutorials"><span class="menu-title">Tutorials</span></a></li><li class="mega"><a href="http://www.bullraider.com/java/spring3/ioc-walk-through" class="mega" id="menu189" title="IOC walk-through"><span class="menu-title">IOC walk-through</span></a></li><li class="mega last"><a href="http://www.bullraider.com/java/spring3/interview-questions" class="mega last" id="menu348" title="interview questions"><span class="menu-title">interview questions</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/java/hibernate-36" class="mega haschild" id="menu206" title="Hibernate 3.6"><span class="menu-title">Hibernate 3.6</span></a><div class="childcontent cols1 " style="width: 222px; height: 93px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/java/hibernate-36/tutorials" class="mega first" id="menu207" title="Tutorials"><span class="menu-title">Tutorials</span></a></li><li class="mega last"><a href="http://www.bullraider.com/java/hibernate-36/interview-questions" class="mega last" id="menu382" title="Interview Questions"><span class="menu-title">Interview Questions</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/java/ajax" class="mega haschild" id="menu247" title="Ajax "><span class="menu-title">Ajax </span></a><div class="childcontent cols1 " style="width: 222px; height: 67px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/java/ajax/ajax-with-servletjson" class="mega first" id="menu248" title="Ajax with servlet,json"><span class="menu-title">Ajax with servlet,json</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/java/android" class="mega haschild" id="menu342" title="Android"><span class="menu-title">Android</span></a><div class="childcontent cols1 " style="width: 222px; height: 67px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/java/android/tips-and-tricks" class="mega first" id="menu343" title="Tips and Tricks"><span class="menu-title">Tips and Tricks</span></a></li></ul></div></div>
+</div></div></li><li class="mega last haschild"><a href="http://www.bullraider.com/java/java-oo-design" class="mega last haschild" id="menu344" title="Java OO &amp; Design"><span class="menu-title">Java OO &amp; Design</span></a><div class="childcontent cols1 " style="width: 222px; height: 93px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/java/java-oo-design/interview-qustions" class="mega first" id="menu345" title="Interview Qustions"><span class="menu-title">Interview Qustions</span></a></li><li class="mega last"><a href="http://www.bullraider.com/java/java-oo-design/oop-tutorials" class="mega last" id="menu376" title="OOP tutorials"><span class="menu-title">OOP tutorials</span></a></li></ul></div></div>
+</div></div></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/flex" class="mega haschild " id="menu128" title="Flex"><span class="menu-title">Flex</span></a><div class="childcontent cols1 " style="width: 222px; height: 67px; display: none; margin-left: 0px; left: 228px; z-index: 1020; overflow: hidden;">
+<div class="childcontent-inner-wrap" style="width: 202px; margin-top: -47px; opacity: 0;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level1"><li class="mega first "><a href="http://www.bullraider.com/flex/flex-tips-and-tricks" class="mega first " id="menu129" title="Flex Tips And Tricks"><span class="menu-title">Flex Tips And Tricks</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/stellent-oracle-ucm" class="mega haschild " id="menu102" title="Stelent/Oracle UCM"><span class="menu-title">Stelent/Oracle UCM</span></a><div class="childcontent cols1 " style="width: 222px; height: 93px; display: none; margin-left: 0px; left: 296px; z-index: 1022; overflow: hidden;">
+<div class="childcontent-inner-wrap" style="width: 202px; margin-top: -73px; opacity: 0;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level1"><li class="mega first"><a href="http://www.bullraider.com/stellent-oracle-ucm/tutorials" class="mega first" id="menu103" title="Tutorials"><span class="menu-title">Tutorials</span></a></li><li class="mega last"><a href="http://www.bullraider.com/stellent-oracle-ucm/interview-questions" class="mega last" id="menu104" title=" Interview QnA"><span class="menu-title"> Interview QnA</span></a></li></ul></div></div>
+</div></div></li><li class="mega active haschild"><a href="http://www.bullraider.com/database" class="mega haschild active " id="menu105" title="Database"><span class="menu-title">Database</span></a><div class="childcontent cols1 " style="width: 222px; height: 197px; display: none; margin-left: 0px; left: 452px; z-index: 1016; overflow: hidden;">
+<div class="childcontent-inner-wrap" style="width: 202px; margin-top: -177px; opacity: 0;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level1"><li class="mega first haschild active"><a href="http://www.bullraider.com/database/sql-tutorial" class="mega first haschild active" id="menu106" title="SQL Tutorial"><span class="menu-title">SQL Tutorial</span></a><div class="childcontent cols1 " style="width: 222px; height: 353px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/database/sql-tutorial/6-select-query" class="mega first" id="menu196" title="Select Query"><span class="menu-title">Select Query</span></a></li><li class="mega"><a href="http://www.bullraider.com/database/sql-tutorial/sql-joins" class="mega" id="menu198" title="SQL Joins"><span class="menu-title">SQL Joins</span></a></li><li class="mega active"><a href="./SQL Complex Queries_files/SQL Complex Queries.html" class="mega active" id="menu205" title="SQL Complex Queries"><span class="menu-title">SQL Complex Queries</span></a></li><li class="mega"><a href="http://www.bullraider.com/database/sql-tutorial/oracle-literals" class="mega" id="menu364" title="Oracle Literals"><span class="menu-title">Oracle Literals</span></a></li><li class="mega"><a href="http://www.bullraider.com/database/sql-tutorial/types-of-sql-statements" class="mega" id="menu365" title="Types Of SQL Statements"><span class="menu-title">Types Of SQL Statements</span></a></li><li class="mega"><a href="http://www.bullraider.com/database/sql-tutorial/oracle-constraints" class="mega" id="menu366" title="Oracle constraints"><span class="menu-title">Oracle constraints</span></a></li><li class="mega"><a href="http://www.bullraider.com/database/sql-tutorial/view-and-materialized-view" class="mega" id="menu367" title="View And Materialized View"><span class="menu-title">View And Materialized View</span></a></li><li class="mega"><a href="http://www.bullraider.com/database/sql-tutorial/synonyms" class="mega" id="menu368" title="Synonyms"><span class="menu-title">Synonyms</span></a></li><li class="mega"><a href="http://www.bullraider.com/database/sql-tutorial/sequences" class="mega" id="menu369" title="Sequences"><span class="menu-title">Sequences</span></a></li><li class="mega"><a href="http://www.bullraider.com/database/sql-tutorial/sql-functions" class="mega" id="menu370" title="Sql Functions"><span class="menu-title">Sql Functions</span></a></li><li class="mega"><a href="http://www.bullraider.com/database/sql-tutorial/global-temporary-table" class="mega" id="menu371" title="Global Temporary Table"><span class="menu-title">Global Temporary Table</span></a></li><li class="mega last"><a href="http://www.bullraider.com/database/sql-tutorial/set-operators" class="mega last" id="menu372" title="Set Operators"><span class="menu-title">Set Operators</span></a></li></ul></div></div>
+</div></div></li><li class="mega"><a href="http://www.bullraider.com/database/tips-and-tricks" class="mega" id="menu107" title="Tips And Tricks"><span class="menu-title">Tips And Tricks</span></a></li><li class="mega haschild"><a href="http://www.bullraider.com/database/informatica" class="mega haschild" id="menu108" title="Informatica"><span class="menu-title">Informatica</span></a><div class="childcontent cols1 " style="width: 222px; height: 93px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/database/informatica/scenario" class="mega first" id="menu109" title="Scenario"><span class="menu-title">Scenario</span></a></li><li class="mega last"><a href="http://www.bullraider.com/quiz/informatica-quiz" class="mega last" id="menu257" title="Informatica quiz"><span class="menu-title">Informatica quiz</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/database/pl-sql" class="mega haschild" id="menu251" title="PL SQL"><span class="menu-title">PL SQL</span></a><div class="childcontent cols1 " style="width: 222px; height: 67px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/database/pl-sql/pl-sql-examples" class="mega first" id="menu252" title="Pl Sql Examples"><span class="menu-title">Pl Sql Examples</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/database/bo" class="mega haschild" id="menu275" title="BO"><span class="menu-title">BO</span></a><div class="childcontent cols1 " style="width: 222px; height: 67px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/database/bo/bo-tutorial" class="mega first" id="menu276" title="BO Tutorial"><span class="menu-title">BO Tutorial</span></a></li></ul></div></div>
+</div></div></li><li class="mega last"><a href="http://www.bullraider.com/database/couchdb" class="mega last" id="menu341" title="CouchDB"><span class="menu-title">CouchDB</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/5-php" class="mega haschild " id="menu277" title="Php"><span class="menu-title">Php</span></a><div class="childcontent cols1 " style="width: 222px; height: 67px; display: none; margin-left: 0px; left: 551px; z-index: 1011; overflow: hidden;">
+<div class="childcontent-inner-wrap" style="width: 202px; margin-top: -47px; opacity: 0;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level1"><li class="mega first"><a href="http://www.bullraider.com/5-php/php-basic-programming" class="mega first" id="menu321" title="PHP Basic Programming"><span class="menu-title">PHP Basic Programming</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/webs" class="mega haschild " id="menu351" title="Web"><span class="menu-title">Web</span></a><div class="childcontent cols1 " style="width: 222px; height: 93px; display: none; margin-left: 0px; left: 617px; z-index: 1018; overflow: hidden;">
+<div class="childcontent-inner-wrap" style="width: 202px; margin-top: -73px; opacity: 0;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level1"><li class="mega first haschild"><a href="http://www.bullraider.com/webs/javascript" class="mega first haschild " id="menu352" title="JavaScript"><span class="menu-title">JavaScript</span></a><div class="childcontent cols1 " style="width: 222px; height: 67px; display: none; margin-left: 0px; left: 186px; z-index: 1008; overflow: hidden;">
+<div class="childcontent-inner-wrap" style="width: 202px; margin-left: -202px; opacity: 0;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first "><a href="http://www.bullraider.com/webs/javascript/mootools-tutorials" class="mega first " id="menu353" title="Mootools Tutorials"><span class="menu-title">Mootools Tutorials</span></a></li></ul></div></div>
+</div></div></li><li class="mega last haschild"><a href="http://www.bullraider.com/webs/testing" class="mega last haschild " id="menu373" title="Testing"><span class="menu-title">Testing</span></a><div class="childcontent cols1 " style="width: 222px; height: 93px; display: none; margin-left: 0px; left: 186px; z-index: 1009; overflow: hidden;">
+<div class="childcontent-inner-wrap" style="width: 202px; margin-left: -202px; opacity: 0;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first "><a href="http://www.bullraider.com/webs/testing/selenium" class="mega first " id="menu374" title="Selenium"><span class="menu-title">Selenium</span></a></li><li class="mega last "><a href="http://www.bullraider.com/webs/testing/jmeter" class="mega last " id="menu390" title="JMeter"><span class="menu-title">JMeter</span></a></li></ul></div></div>
+</div></div></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/quiz" class="mega haschild " id="menu229" title="Quiz"><span class="menu-title">Quiz</span></a><div class="childcontent cols1 " style="width: 222px; height: 171px; display: none; margin-left: 0px; left: 686px; z-index: 1013; overflow: hidden;">
+<div class="childcontent-inner-wrap" style="width: 202px; margin-top: -151px; opacity: 0;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level1"><li class="mega first haschild"><a href="http://www.bullraider.com/quiz/core-java-quiz" class="mega first haschild" id="menu230" title="Core Java Quiz"><span class="menu-title">Core Java Quiz</span></a><div class="childcontent cols1 " style="width: 222px; height: 301px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/quiz/core-java-quiz/java-collections" class="mega first" id="menu231" title="Java Collections Part 1"><span class="menu-title">Java Collections Part 1</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/core-java-quiz/java-collection-part-2" class="mega" id="menu379" title="Java Collections Part 2"><span class="menu-title">Java Collections Part 2</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/core-java-quiz/java-overrding-part-1" class="mega" id="menu378" title="Java Overriding Part 1"><span class="menu-title">Java Overriding Part 1</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/core-java-quiz/java-overriding-part-2" class="mega" id="menu383" title="Java Overriding Part 2"><span class="menu-title">Java Overriding Part 2</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/core-java-quiz/java-annotation" class="mega" id="menu322" title="Java Annotation"><span class="menu-title">Java Annotation</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/core-java-quiz/java-strings-part-1" class="mega" id="menu386" title="Java Strings Part 1"><span class="menu-title">Java Strings Part 1</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/core-java-quiz/java-strings-part-2" class="mega" id="menu387" title="Java Strings Part 2"><span class="menu-title">Java Strings Part 2</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/core-java-quiz/java-strings-part-3" class="mega" id="menu388" title="Java Strings Part 3"><span class="menu-title">Java Strings Part 3</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/core-java-quiz/java-coding-standard" class="mega" id="menu350" title="Java Coding Standard"><span class="menu-title">Java Coding Standard</span></a></li><li class="mega last"><a href="http://www.bullraider.com/quiz/core-java-quiz/java-operator-part-1" class="mega last" id="menu389" title="Java Operator Part 1"><span class="menu-title">Java Operator Part 1</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/quiz/computer-awareness" class="mega haschild" id="menu249" title="Computer Awareness"><span class="menu-title">Computer Awareness</span></a><div class="childcontent cols2 " style="width: 422px; height: 405px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 402px;">
+<div class="childcontent-inner clearfix" style="width: 400px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-1" class="mega first" id="menu250" title="Computer Knowledge Set 1"><span class="menu-title">Computer Knowledge Set 1</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-2" class="mega" id="menu323" title="Computer Knowledge Set 2"><span class="menu-title">Computer Knowledge Set 2</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-3" class="mega" id="menu324" title="Computer Knowledge Set 3"><span class="menu-title">Computer Knowledge Set 3</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-4" class="mega" id="menu325" title="Computer Knowledge Set 4"><span class="menu-title">Computer Knowledge Set 4</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-5" class="mega" id="menu327" title="Computer Knowledge Set 5"><span class="menu-title">Computer Knowledge Set 5</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-6" class="mega" id="menu328" title="Computer Knowledge Set 6"><span class="menu-title">Computer Knowledge Set 6</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-7" class="mega" id="menu329" title="Computer Knowledge Set 7"><span class="menu-title">Computer Knowledge Set 7</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-8" class="mega" id="menu326" title="Computer Knowledge Set 8"><span class="menu-title">Computer Knowledge Set 8</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-9" class="mega" id="menu330" title="Computer Knowledge Set 9"><span class="menu-title">Computer Knowledge Set 9</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-10" class="mega" id="menu331" title="Computer Knowledge Set 10"><span class="menu-title">Computer Knowledge Set 10</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-11" class="mega" id="menu332" title="Computer Knowledge Set 11"><span class="menu-title">Computer Knowledge Set 11</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-12" class="mega" id="menu333" title="Computer knowledge Set 12"><span class="menu-title">Computer knowledge Set 12</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-13" class="mega" id="menu334" title="Computer Knowledge Set 13"><span class="menu-title">Computer Knowledge Set 13</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-14" class="mega" id="menu335" title="Computer Knowledge Set 14"><span class="menu-title">Computer Knowledge Set 14</span></a></li></ul></div><div class="megacol column2 last" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-15" class="mega first" id="menu336" title="Computer Knowledge Set 15"><span class="menu-title">Computer Knowledge Set 15</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-16" class="mega" id="menu354" title="Computer Knowledge Set 16"><span class="menu-title">Computer Knowledge Set 16</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-17" class="mega" id="menu355" title="Computer Knowledge Set 17"><span class="menu-title">Computer Knowledge Set 17</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-18" class="mega" id="menu356" title="Computer Knowledge Set 18"><span class="menu-title">Computer Knowledge Set 18</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-19" class="mega" id="menu357" title="Computer Knowledge Set 19"><span class="menu-title">Computer Knowledge Set 19</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-20" class="mega" id="menu358" title="Computer Knowledge Set 20"><span class="menu-title">Computer Knowledge Set 20</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-21" class="mega" id="menu359" title="Computer Knowledge Set 21"><span class="menu-title">Computer Knowledge Set 21</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-22" class="mega" id="menu360" title="Computer Knowledge Set 22"><span class="menu-title">Computer Knowledge Set 22</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-23" class="mega" id="menu361" title="Computer Knowledge Set 23"><span class="menu-title">Computer Knowledge Set 23</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-24" class="mega" id="menu362" title="Computer Knowledge Set 24"><span class="menu-title">Computer Knowledge Set 24</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-25" class="mega" id="menu363" title="Computer Knowledge Set 25"><span class="menu-title">Computer Knowledge Set 25</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-26" class="mega" id="menu391" title="Computer Knowledge Set 26"><span class="menu-title">Computer Knowledge Set 26</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/computer-awareness/computer-knowledge-set-27" class="mega" id="menu392" title="Computer Knowledge Set 27"><span class="menu-title">Computer Knowledge Set 27</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/quiz/informatica-quiz" class="mega haschild" id="menu253" title="Informatica Quiz"><span class="menu-title">Informatica Quiz</span></a><div class="childcontent cols2 " style="width: 422px; height: 249px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 402px;">
+<div class="childcontent-inner clearfix" style="width: 400px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/quiz/informatica-quiz/informatica-set-1" class="mega first" id="menu254" title="Informatica Set 1"><span class="menu-title">Informatica Set 1</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/informatica-quiz/informatica-set2" class="mega" id="menu255" title="informatica  set2"><span class="menu-title">informatica  set2</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/informatica-quiz/informatica-set-3" class="mega" id="menu258" title="Informatica Set 3"><span class="menu-title">Informatica Set 3</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/informatica-quiz/informatica-set-4" class="mega" id="menu264" title="Informatica Set 4"><span class="menu-title">Informatica Set 4</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/informatica-quiz/informatica-set-5" class="mega" id="menu265" title="Informatica Set 5"><span class="menu-title">Informatica Set 5</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/informatica-quiz/informatica-set-6" class="mega" id="menu266" title="Informatica Set 6"><span class="menu-title">Informatica Set 6</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/informatica-quiz/informatica-set-7" class="mega" id="menu267" title="Informatica Set 7"><span class="menu-title">Informatica Set 7</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/informatica-quiz/informatica-set-8" class="mega" id="menu268" title="Informatica Set 8"><span class="menu-title">Informatica Set 8</span></a></li></ul></div><div class="megacol column2 last" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/quiz/informatica-quiz/informatica-set-9" class="mega first" id="menu269" title="Informatica Set 9"><span class="menu-title">Informatica Set 9</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/informatica-quiz/informatica-set-10" class="mega" id="menu271" title="Informatica Set 10"><span class="menu-title">Informatica Set 10</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/informatica-quiz/informatica-set-11" class="mega" id="menu272" title="Informatica Set 11"><span class="menu-title">Informatica Set 11</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/informatica-quiz/informatica-set-12" class="mega" id="menu273" title="Informatica Set 12"><span class="menu-title">Informatica Set 12</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/informatica-quiz/informatica-set-13" class="mega" id="menu274" title="Informatica Set 13"><span class="menu-title">Informatica Set 13</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/informatica-quiz/informatica-set-14" class="mega" id="menu279" title="Informatica Set 14"><span class="menu-title">Informatica Set 14</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/informatica-quiz/informatica-set-15" class="mega" id="menu282" title="Informatica Set 15"><span class="menu-title">Informatica Set 15</span></a></li></ul></div></div>
+</div></div></li><li class="mega haschild"><a href="http://www.bullraider.com/quiz/servlet-and-jsp-quiz" class="mega haschild" id="menu283" title="Servlet And Jsp Quiz "><span class="menu-title">Servlet And Jsp Quiz </span></a><div class="childcontent cols1 " style="width: 222px; height: 305px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/quiz/servlet-and-jsp-quiz/servlet-basics-set-1" class="mega first" id="menu284" title="Servlet Basics Set 1"><span class="menu-title">Servlet Basics Set 1</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/servlet-and-jsp-quiz/servlet-basics-set-2" class="mega" id="menu285" title="Servlet Basics Set 2"><span class="menu-title">Servlet Basics Set 2</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/servlet-and-jsp-quiz/servlet-basics-set-3" class="mega" id="menu286" title="Servlet Basics Set 3"><span class="menu-title">Servlet Basics Set 3</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/servlet-and-jsp-quiz/servlet-basics-set-4" class="mega" id="menu287" title="Servlet Basics Set 4"><span class="menu-title">Servlet Basics Set 4</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/servlet-and-jsp-quiz/servlet-basics-set-5" class="mega" id="menu289" title="Servlet Basics Set 5"><span class="menu-title">Servlet Basics Set 5</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/servlet-and-jsp-quiz/servlet-basics-set-6" class="mega" id="menu290" title="Servlet Basics Set 6"><span class="menu-title">Servlet Basics Set 6</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/servlet-and-jsp-quiz/servlet-advance-understanding-set-1" class="mega" id="menu291" title="Servlet Advance Understanding Set 1"><span class="menu-title">Servlet Advance Understanding Set 1</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/servlet-and-jsp-quiz/servlet-advance-understanding-set-2" class="mega" id="menu292" title="Servlet Advance Understanding Set 2"><span class="menu-title">Servlet Advance Understanding Set 2</span></a></li><li class="mega last"><a href="http://www.bullraider.com/quiz/servlet-and-jsp-quiz/jsp-set-1" class="mega last" id="menu346" title="JSP Set 1"><span class="menu-title">JSP Set 1</span></a></li></ul></div></div>
+</div></div></li><li class="mega last haschild"><a href="http://www.bullraider.com/quiz/sql-quiz" class="mega last haschild" id="menu393" title="SQL Quiz "><span class="menu-title">SQL Quiz </span></a><div class="childcontent cols3 " style="width: 622px; height: 238px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 602px;">
+<div class="childcontent-inner clearfix" style="width: 600px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-fundamental-set-1" class="mega first" id="menu394" title="Sql Fundamental Set 1"><span class="menu-title">Sql Fundamental Set 1</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-fundamental-set-2" class="mega" id="menu395" title="Sql Fundamental Set 2"><span class="menu-title">Sql Fundamental Set 2</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-fundamental-set-3" class="mega" id="menu396" title="Sql Fundamental Set 3"><span class="menu-title">Sql Fundamental Set 3</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-ddl-statement-set-1" class="mega" id="menu397" title="Sql DDL Statement  Set 1"><span class="menu-title">Sql DDL Statement  Set 1</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-ddl-statement-set-2" class="mega" id="menu398" title="Sql DDL Statement  Set 2"><span class="menu-title">Sql DDL Statement  Set 2</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-dml-statement-set-1" class="mega" id="menu399" title="Sql  DML Statement Set 1"><span class="menu-title">Sql  DML Statement Set 1</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-dml-statement-set-2" class="mega" id="menu400" title="Sql  DML Statement Set 2"><span class="menu-title">Sql  DML Statement Set 2</span></a></li></ul></div><div class="megacol column2" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-dml-statement-set-3" class="mega first" id="menu401" title="Sql  DML Statement Set 3"><span class="menu-title">Sql  DML Statement Set 3</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-tcl-and-dcl-set-1" class="mega" id="menu404" title="Sql  TCL and DCL Set 1"><span class="menu-title">Sql  TCL and DCL Set 1</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-tcl-and-dcl-set-2" class="mega" id="menu405" title="Sql TCL and DCL Set 2"><span class="menu-title">Sql TCL and DCL Set 2</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-operator-set-1" class="mega" id="menu406" title="SQL Operator Set 1"><span class="menu-title">SQL Operator Set 1</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-operator-set-2" class="mega" id="menu407" title="SQL Operator Set 2"><span class="menu-title">SQL Operator Set 2</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-operator-set-3" class="mega" id="menu408" title="SQL Operator Set 3"><span class="menu-title">SQL Operator Set 3</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-operator-set-4" class="mega" id="menu409" title="SQL Operator Set 4"><span class="menu-title">SQL Operator Set 4</span></a></li></ul></div><div class="megacol column3 last" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-group-by-order-by-and-having" class="mega first" id="menu410" title="SQL Group By Order By and Having"><span class="menu-title">SQL Group By Order By and Having</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-constraint-1" class="mega" id="menu411" title="SQL Constraint 1"><span class="menu-title">SQL Constraint 1</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-constraint-2" class="mega" id="menu412" title="SQL Constraint 2"><span class="menu-title">SQL Constraint 2</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-function-1" class="mega" id="menu413" title="SQL Function 1"><span class="menu-title">SQL Function 1</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-function-2" class="mega" id="menu414" title="SQL Function 2"><span class="menu-title">SQL Function 2</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-function-3" class="mega" id="menu415" title="SQL Function 3"><span class="menu-title">SQL Function 3</span></a></li><li class="mega"><a href="http://www.bullraider.com/quiz/sql-quiz/sql-function-4" class="mega" id="menu416" title="SQL Function 4"><span class="menu-title">SQL Function 4</span></a></li></ul></div></div>
+</div></div></li></ul></div></div>
+</div></div></li><li class="mega last haschild"><a href="http://www.bullraider.com/download" class="mega last haschild " id="menu119" title="Downloads"><span class="menu-title">Downloads</span></a><div class="childcontent cols1 " style="width: 222px; height: 145px; display: none; margin-left: 0px; left: 755px; z-index: 1015; overflow: hidden;">
+<div class="childcontent-inner-wrap" style="width: 202px; margin-top: -125px; opacity: 0;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level1"><li class="mega first"><a href="http://www.bullraider.com/download/struts2-tutorials" class="mega first" id="menu120" title="Struts2 Downloads"><span class="menu-title">Struts2 Downloads</span></a></li><li class="mega haschild"><a href="http://www.bullraider.com/download/joomla-downloads" class="mega haschild" id="menu121" title="Joomla Downloads"><span class="menu-title">Joomla Downloads</span></a><div class="childcontent cols1 " style="width: 222px; height: 119px; display: none;">
+<div class="childcontent-inner-wrap" style="width: 202px;">
+<div class="childcontent-inner clearfix" style="width: 200px;"><div class="megacol column1 first" style="width: 200px;"><ul class="megamenu level2"><li class="mega first"><a href="http://www.bullraider.com/download/joomla-downloads/eclipse-plug-ins" class="mega first" id="menu122" title="Eclipse Plug-ins"><span class="menu-title">Eclipse Plug-ins</span></a></li><li class="mega"><a href="http://www.bullraider.com/download/joomla-downloads/joomla-components" class="mega" id="menu123" title="Joomla! Components"><span class="menu-title">Joomla! Components</span></a></li><li class="mega last"><a href="http://www.bullraider.com/download/joomla-downloads/joomla-modules" class="mega last" id="menu124" title="Joomla! Modules"><span class="menu-title">Joomla! Modules</span></a></li></ul></div></div>
+</div></div></li><li class="mega"><a href="http://www.bullraider.com/download/hibernate" class="mega" id="menu197" title="Hibernate"><span class="menu-title">Hibernate</span></a></li><li class="mega last"><a href="http://www.bullraider.com/download/ejb3-download" class="mega last" id="menu270" title="Ejb3 Download"><span class="menu-title">Ejb3 Download</span></a></li></ul></div></div>
+</div></div></li></ul>
+</div>            <script type="text/javascript">
+                var megamenu = new jaMegaMenuMoo ('ja-megamenu', {
+                    'bgopacity': 0,
+                    'delayHide': 500,
+                    'slide'    : 1,
+                    'fading'   : 1,
+                    'direction': 'down',
+                    'action'   : 'mouseover',
+                    'tips'     : false,
+                    'duration' : 300,
+                    'hidestyle': 'fastwhenshow'
+                });
+            </script>
+                            </div>
+                            </div>
+                        </div>
+            
+<!-- jdoc:include type="menu" level="0" / -->
+
+<ul class="no-display">
+    <li><a href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#ja-content" title="Skip to content">Skip to content</a></li>
+</ul>            <div id="ja-topsl" class="wrap ">
+                   <div class="main">
+                           <div class="main-inner1 clearfix">
+                <!-- SPOTLIGHT -->
+<div class="ja-box column ja-box-full" style="width: 100%;">
+    	<div class="ja-moduletable moduletable  clearfix" id="Mod17">
+						<div class="ja-box-ct clearfix">
+		<span class="breadcrumbs pathway">
+<strong>You are here: </strong><a href="http://www.bullraider.com/" class="pathway">     Home</a> <img src="./SQL Complex Queries_files/arrow.png" alt=""> <a href="http://www.bullraider.com/database" class="pathway">Database</a> <img src="./SQL Complex Queries_files/arrow.png" alt=""> <a href="http://www.bullraider.com/database/sql-tutorial" class="pathway">SQL Tutorial</a></span>
+		</div>
+    </div>
+	
+</div>
+<!-- SPOTLIGHT -->
+
+<script type="text/javascript">
+    window.addEvent('load', function (){ equalHeight ('#ja-topsl .ja-box') });
+</script>                </div>
+                            </div>
+                        </div>
+            
+    <!-- MAIN CONTAINER -->
+    <div id="ja-container" class="wrap ja-l1r1">
+               <div class="main clearfix">
+                   <div id="ja-mainbody" style="width:79.99%">
+            <!-- CONTENT -->
+            <div id="ja-main" style="width:74.99%">
+            <div class="inner clearfix">
+
+                
+<div id="system-message-container">
+</div>
+                
+                <div id="ja-contentwrap" class="clearfix ">
+                    <div id="ja-content" class="column" style="width:99.99%">
+                        <div id="ja-current-content" class="column" style="width:99.99%">
+                            
+                                                        <div id="ja-content-main" class="ja-content-main clearfix">
+                                <div class="item-page">
+		<h2 class="contentheading">
+										Complex Queries in SQL ( Oracle )						</h2>
+
+<div class="article-tools clearfix">
+
+	
+	
+
+
+</div>
+
+	
+	 <div class="joomla_add_this" style="float:right"><!-- AddThis Button BEGIN -->
+<script type="text/javascript">
+var addthis_product = 'jlp-1.2';
+var addthis_config =
+{username : 'aaraksheet',
+ui_language : 'en',
+ui_hide_embed : false,
+data_track_clickback : true}</script>
+<a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this,&#39;&#39;, &#39;http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql&#39;, &#39;Complex Queries in SQL ( Oracle )&#39; )" onmouseout="addthis_close();" onclick="return addthis_sendto();"><img src="./SQL Complex Queries_files/lg-share-en.gif" border="0" alt="AddThis Social Bookmark Button"></a>
+<script type="text/javascript" src="./SQL Complex Queries_files/addthis_widget.js"></script><div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe id="_atssh314" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;" src="./SQL Complex Queries_files/sh142.html"></iframe></div><script type="text/javascript" src="./SQL Complex Queries_files/core108.js"></script>
+<!-- AddThis Button END -->
+</div><p style="text-align: justify;">
+	These questions are the most frequently asked in interviews.</p>
+<ol>
+	<li style="text-align: justify;">
+		<strong>To fetch ALTERNATE records from a table. (EVEN NUMBERED)<br>
+		</strong>select * from emp where rowid in (select decode(mod(rownum,2),0,rowid,&nbsp;null) from emp);</li>
+	<li style="text-align: justify;">
+		<strong>To select ALTERNATE records from a table. (ODD NUMBERED)<br>
+		</strong>select * from emp where rowid in (select decode(mod(rownum,2),0,null ,rowid) from emp);</li>
+	<li style="text-align: justify;">
+		<strong>Find the 3rd MAX salary in the emp table.<br>
+		</strong>select distinct sal from emp e1 where 3 = (select count(distinct sal) from emp e2 where e1.sal &lt;= e2.sal);</li>
+	<li style="text-align: justify;">
+		<strong>Find the 3rd MIN salary in the emp table.<br>
+		</strong>select distinct sal from emp e1 where 3 = (select count(distinct sal) from emp e2where e1.sal &gt;= e2.sal);</li>
+	<li style="text-align: justify;">
+		<strong>Select FIRST n records from a table.<br>
+		</strong>select * from emp where rownum &lt;= &amp;n;</li>
+	<li style="text-align: justify;">
+		<strong>Select LAST n records from a table<br>
+		</strong>select * from emp minus select * from emp where rownum &lt;= (select count(*) - &amp;n from emp);</li>
+	<li style="text-align: justify;">
+		<strong>List dept no., Dept name for all the departments in which there are no employees in the department.<br>
+		</strong>select * from dept where deptno not in (select deptno from emp);&nbsp;&nbsp;<br>
+		alternate solution:&nbsp;&nbsp;select * from dept a where&nbsp;not exists (select * from emp b where a.deptno = b.deptno);<br>
+		altertnate solution:&nbsp;&nbsp;select empno,ename,b.deptno,dname from emp a, dept b where a.deptno(+) = b.deptno and empno is null;</li>
+	<li style="text-align: justify;">
+		<strong>How to get 3 Max salaries ?<br>
+		</strong>select distinct sal from emp a where 3 &gt;= (select count(distinct sal) from emp b where a.sal &lt;= b.sal) order by a.sal desc;</li>
+	<li style="text-align: justify;">
+		<strong>How to get 3 Min salaries ?<br>
+		</strong>select distinct sal from emp a&nbsp; where 3 &gt;= (select count(distinct sal) from emp b&nbsp; where a.sal &gt;= b.sal);</li>
+	<li style="text-align: justify;">
+		<strong>How to get nth max salaries ?</strong><br>
+		select distinct hiredate from emp a where &amp;n =&nbsp; (select count(distinct sal) from emp b where a.sal &gt;= b.sal);</li>
+	<li style="text-align: justify;">
+		<strong>Select DISTINCT RECORDS from emp table.<br>
+		</strong>select * from emp a where&nbsp; rowid = (select max(rowid) from emp b where&nbsp; a.empno=b.empno);</li>
+	<li style="text-align: justify;">
+		<strong>How to delete duplicate rows in a table?<br>
+		</strong>delete from emp a where rowid != (select max(rowid) from emp b where&nbsp; a.empno=b.empno);</li>
+	<li style="text-align: justify;">
+		<strong>Count of number of employees in&nbsp; department&nbsp; wise.<br>
+		</strong>select count(EMPNO), b.deptno, dname from emp a, dept b&nbsp; where a.deptno(+)=b.deptno&nbsp; group by b.deptno,dname;</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>&nbsp;Suppose there is annual salary information provided by emp table. How to fetch monthly salary of each and every employee?</strong></p>
+		<p>
+			select ename,sal/12 as monthlysal from emp;</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>Select all record from emp table where deptno =10 or 40.</strong></p>
+		<p>
+			select * from emp where deptno=30 or deptno=10;</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>Select all record from emp table where deptno=30 and sal&gt;1500.</strong></p>
+		<p>
+			select * from emp where deptno=30 and sal&gt;1500;</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>Select&nbsp; all record&nbsp; from emp where job not in SALESMAN&nbsp; or CLERK.</strong></p>
+		<p>
+			select * from emp where job not in ('SALESMAN','CLERK');</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>Select all record from emp where ename in 'BLAKE','SCOTT','KING'and'FORD'.</strong></p>
+		<p>
+			select * from emp where ename in('JONES','BLAKE','SCOTT','KING','FORD');</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>Select all records where ename starts with ‘S’ and its lenth is 6 char.</strong></p>
+		<p>
+			select * from emp where ename like'S____';</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>Select all records where ename may be any no of&nbsp; character but it should end with ‘R’.</strong></p>
+		<p>
+			select * from emp where ename like'%R';</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>Count&nbsp; MGR and their salary in emp table.</strong></p>
+		<p>
+			select count(MGR),count(sal) from emp;</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>In emp table add comm+sal as total sal&nbsp; .</strong></p>
+		<p>
+			select ename,(sal+nvl(comm,0)) as totalsal from emp;</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>Select&nbsp; any salary &lt;3000 from emp table.&nbsp;</strong></p>
+		<p>
+			select * from emp&nbsp; where sal&gt; any(select sal from emp where sal&lt;3000);</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>Select&nbsp; all salary &lt;3000 from emp table.&nbsp;</strong></p>
+		<p>
+			select * from emp&nbsp; where sal&gt; all(select sal from emp where sal&lt;3000);</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>Select all the employee&nbsp; group by deptno and sal in descending order.</strong></p>
+		<p>
+			select ename,deptno,sal from emp order by deptno,sal desc;</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>How can I create an empty table emp1 with same structure as emp?</strong></p>
+		<p>
+			Create table emp1 as select * from emp where 1=2;</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>How to retrive record where sal between 1000 to 2000?</strong><br>
+			Select * from emp where sal&gt;=1000 And&nbsp; sal&lt;2000</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>Select all records where dept no of both emp and dept table matches.</strong><br>
+			select * from emp where exists(select * from dept where emp.deptno=dept.deptno)</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>If there are two tables emp1 and emp2, and both have common record. How can I fetch all the recods but common records only once?</strong><br>
+			(Select * from emp) Union (Select * from emp1)</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>How to fetch only common records from two tables emp and emp1?</strong><br>
+			(Select * from emp) Intersect (Select * from emp1)</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>&nbsp;How can I retrive all records of emp1 those should not present in emp2?</strong><br>
+			(Select * from emp) Minus (Select * from emp1)</p>
+	</li>
+	<li style="text-align: justify;">
+		<p>
+			<strong>Count the totalsa&nbsp; deptno wise where more than 2 employees exist.</strong><br>
+			SELECT&nbsp; deptno, sum(sal) As totalsal<br>
+			FROM emp<br>
+			GROUP BY deptno<br>
+			HAVING COUNT(empno) &gt; 2</p>
+		<br>
+		<p>
+			&nbsp;</p>
+		<p>
+			&nbsp;</p>
+		<p>
+			&nbsp;</p>
+	</li>
+</ol>
+ <br><div data-type="ad" data-publisher="lqm.bullraider.site" data-zone="ron" data-format="728x90"></div>
+				<ul class="pagenav">
+					<li class="pagenav-next">
+						<a href="http://www.bullraider.com/database/sql-tutorial/6-select-query" rel="next">Next &gt;</a>
+					</li>
+				</ul>
+<div id="comment-wrapper"><div id="comments"><style type="text/css">
+
+</style>
+<h2 class="comment-header">37 Comments. </h2><hr>
+<div id="joo-comments-entries">
+<div class="baksha" id="jooCommentsId1774">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Ram</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1774, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1774, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1774" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">1 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2013-02-07      </em>
+    </p>
+</div>
+<div class="body" id="commentid0">
+<img src="./SQL Complex Queries_files/9d89c3f3d21a2e8a6b4c8bbe29d33d94" class="avatar"><div id="text">
+   <p>Answer to Aneela Question:
+select ename, hiredate, to<em>char(hiredate, 'd'),  to</em>char(hiredate, 'DAY') from emp order by to_char(hiredate, 'd');</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1612">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Naina</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1612, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1612, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1612" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">6 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-11-13      </em>
+    </p>
+</div>
+<div class="body" id="commentid1">
+<img src="./SQL Complex Queries_files/b678a0d24c822bf5fcb82635f9baca26" class="avatar"><div id="text">
+   <p>Hi,
+Thanks a lot...got to learn...I have a question...
+I have a table with deptno and ename as columns....
+It has values like 
+Deptno   Ename
+10            aaa
+10            bbb
+20            ccc
+20            ddd
+I want my o/p like
+10             aaa,bbb
+20             ccc,ddd
+Is there any function to get this result.</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1567">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">lakshmi</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1567, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1567, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1567" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">8 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-10-23      </em>
+    </p>
+</div>
+<div class="body" id="commentid2">
+<img src="./SQL Complex Queries_files/e11acc1c1ff3b68a127fd6da352ec25b" class="avatar"><div id="text">
+   <p>can anybody tell me how to get dept wise highest sal??
+thanks in advance</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1537">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Ashish</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1537, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1537, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1537" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">0 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-10-08      </em>
+    </p>
+</div>
+<div class="body" id="commentid3">
+<img src="./SQL Complex Queries_files/b143b5d6f99a5facd98ba71139dd999d" class="avatar"><div id="text">
+   <p>Output:
+we will get the below output through hierarchal queries.</p>
+
+<p>empno manager1 manager2 manager3 manager4 7788 7699 3425 8756 2876</p>
+
+<p>Thanks,
+Ashish Niranjan</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1507">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Martin Jerenje</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1507, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1507, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1507" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">0 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-09-28      </em>
+    </p>
+</div>
+<div class="body" id="commentid4">
+<img src="./SQL Complex Queries_files/30e78c24d5293c644450d5c3ca6985ce" class="avatar"><div id="text">
+   <p>Brilliant. I like it Bravo</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1493">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Deepak</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1493, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1493, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1493" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">3 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-09-21      </em>
+    </p>
+</div>
+<div class="body" id="commentid5">
+<img src="./SQL Complex Queries_files/2812316dc9a0ab902f03c3ac3b12c23b" class="avatar"><div id="text">
+   <p>Thank's , its very helpfull</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1478">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">pooja</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1478, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1478, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1478" style="display:block;padding-top:3px;text-align:center;color:#EE845F;">-4 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-09-16      </em>
+    </p>
+</div>
+<div class="body" id="commentid6">
+<img src="./SQL Complex Queries_files/a007c0b915c7636a2bea075056fe01dc" class="avatar"><div id="text">
+   <p>it is very helpful.thanks</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1438">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">srujan</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1438, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1438, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1438" style="display:block;padding-top:3px;text-align:center;color:#EE845F;">-4 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-08-27      </em>
+    </p>
+</div>
+<div class="body" id="commentid7">
+<img src="./SQL Complex Queries_files/5c659e0340feee807e337faf7832dc6f" class="avatar"><div id="text">
+   <p>What a nice article.. You made my day</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1418">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">FAIZAN KHANANI</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1418, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1418, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1418" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">0 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-08-16      </em>
+    </p>
+</div>
+<div class="body" id="commentid8">
+<img src="./SQL Complex Queries_files/95780376fb2f671b771c26ad54ff412f" class="avatar"><div id="text">
+   <p>SELECT  CONFIRMDATE AS TRANSDATE, ITEMID , NAME AS ITEMNAME, 0 AS DEBITQTY, QTY AS CREDITQTY, 0 AS DEBITAMOUNT, LINEAMOUNT AS CREDITAMOUNT  FROM CUSTCONFIRMTRANS
+union all
+SELECT  DELIVERYDATE AS TRANSDATE, ITEMID , NAME AS ITEMNAME, 0 AS DEBITQTY, QTY AS CREDITQTY, 0 AS DEBITAMOUNT, VALUEMST AS CREDITAMOUNT  FROM CUSTPACKINGSLIPTRANS
+from     SALESLINE INNER JOIN
+                     CUSTCONFIRMTRANS ON SALESLINE.INVENTTRANSID = CUSTCONFIRMTRANS.INVENTTRANSID INNER JOIN
+                     CUSTPACKINGSLIPTRANS ON SALESLINE.INVENTTRANSID = CUSTPACKINGSLIPTRANS.INVENTTRANSID</p>
+
+<p>ITS MY QUERY..ITS NOT WORKING..KINDLY CHECK IT</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1370">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Gaurav</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1370, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1370, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1370" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">4 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-07-24      </em>
+    </p>
+</div>
+<div class="body" id="commentid9">
+<img src="./SQL Complex Queries_files/990ca60d730aec97b4bed48a2e0d7860" class="avatar"><div id="text">
+   <p>Thank you very much..:)</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1367">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">shanu</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1367, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1367, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1367" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">1 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-07-22      </em>
+    </p>
+</div>
+<div class="body" id="commentid10">
+<img src="./SQL Complex Queries_files/f688b5383b90bfcb45e706f94f500a3f" class="avatar"><div id="text">
+   <p>very helpful!!!!!</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1363">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Satyajit</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1363, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1363, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1363" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">7 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-07-18      </em>
+    </p>
+</div>
+<div class="body" id="commentid11">
+<img src="./SQL Complex Queries_files/c7405a6807a0f433a81e19164192e5b9" class="avatar"><div id="text">
+   <p>Thanx a lot!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1351">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">ramesh</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1351, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1351, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1351" style="display:block;padding-top:3px;text-align:center;color:#EE845F;">-1 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-07-15      </em>
+    </p>
+</div>
+<div class="body" id="commentid12">
+<img src="./SQL Complex Queries_files/2f06f4b2f782f6b7b6de278cd781fc84" class="avatar"><div id="text">
+   <p>Thanks a lot!!!</p>
+
+<p>It's very hepls people,who are try to learn!</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1337">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">varun</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1337, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1337, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1337" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">2 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-07-10      </em>
+    </p>
+</div>
+<div class="body" id="commentid13">
+<img src="./SQL Complex Queries_files/d0eefec33ce474a33fa5e602bb4cac4f" class="avatar"><div id="text">
+   <p>HELLO bro  can u sent me the all advanced query in my mail which is usefull for interview ,, my email id is varungallary@gmail.com.</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1335">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">asma</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1335, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1335, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1335" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">6 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-07-09      </em>
+    </p>
+</div>
+<div class="body" id="commentid14">
+<img src="./SQL Complex Queries_files/3825ed8f2a278acdf8e422ef9dcb6f35" class="avatar"><div id="text">
+   <p>thankx a lot</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1332">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">suchita</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1332, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1332, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1332" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">0 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-07-08      </em>
+    </p>
+</div>
+<div class="body" id="commentid15">
+<img src="./SQL Complex Queries_files/03f281a8a2ee950d49807b70bb7d246d" class="avatar"><div id="text">
+   <p>thanks.. its really nice</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1315">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Sudarshan</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1315, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1315, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1315" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">7 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-07-04      </em>
+    </p>
+</div>
+<div class="body" id="commentid16">
+<img src="./SQL Complex Queries_files/49f4d51656659b7884f8dcf149d5cb42" class="avatar"><div id="text">
+   <p>To Sharad,</p>
+
+<p>select count(sal) from emp;  -- It will count the number of salaries excluding nulls</p>
+
+<p>select count(*) from emp; -- It will count number of records but this includes null values too</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1306">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Dhinesh</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1306, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1306, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1306" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">8 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-06-28      </em>
+    </p>
+</div>
+<div class="body" id="commentid17">
+<img src="./SQL Complex Queries_files/366a3dc2c8eb8a303a29f382d1adb47c" class="avatar"><div id="text">
+   <p>its very useful</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1303">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">waseem</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1303, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1303, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1303" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">3 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-06-27      </em>
+    </p>
+</div>
+<div class="body" id="commentid18">
+<img src="./SQL Complex Queries_files/16c5a6bb0e6930f98239e146fbef2116" class="avatar"><div id="text">
+   <p>its very helpful..Thanks a lot......I have a question i think i will got through it.
+suppose  i have emp table i want output like that</p>
+
+<p>empno    manager1          manager2              manager3               manager4
+7788      7699                 3425                      8756                    2876</p>
+
+<p>means 7788 manager is '7699' and manager1 manager is '3425' and manager2 manager is 8756
+etc.      i want like that pls give me a hint</p>
+
+<p>thanks</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1292">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Mallikarjun</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1292, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1292, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1292" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">4 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-06-22      </em>
+    </p>
+</div>
+<div class="body" id="commentid19">
+<img src="./SQL Complex Queries_files/d98c8c05c4b77a662a14417065c84714" class="avatar"><div id="text">
+   <p>Its very very helpfull thanks..........</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1288">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">kumar</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1288, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1288, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1288" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">3 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-06-21      </em>
+    </p>
+</div>
+<div class="body" id="commentid20">
+<img src="./SQL Complex Queries_files/1b6fdc26b8f5633b93344975976970e7" class="avatar"><div id="text">
+   <p>Thanks budy.It helps alot</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1231">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">murali</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1231, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1231, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1231" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">4 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-05-25      </em>
+    </p>
+</div>
+<div class="body" id="commentid21">
+<img src="./SQL Complex Queries_files/f9030fc2c56c387d129ea7ec9e4b6968" class="avatar"><div id="text">
+   <p>thanks its good</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1195">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Samsuddin</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1195, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1195, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1195" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">14 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-05-05      </em>
+    </p>
+</div>
+<div class="body" id="commentid22">
+<img src="./SQL Complex Queries_files/0f7a6feaaaa23dcf1c30fc4791a399c5" class="avatar"><div id="text">
+   <p>These are very helpful queries...Thanks a lot :)
+I have a question in my mind...suppose there are three employees in a dept having different salaries e.g; empA=1000,
+empB=1500 and empC=1200...I require two columns one salaries of each employee and percentage of salaries out of total salary
+empA  1000  27.03%
+empB  1500  40.54%
+empC  1200  32.43%</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1173">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Shishir</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1173, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1173, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1173" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">0 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-04-27      </em>
+    </p>
+</div>
+<div class="body" id="commentid23">
+<img src="./SQL Complex Queries_files/6797eee507d1f021f89a15d96c9a882c" class="avatar"><div id="text">
+   <p>Very helpful thanks</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1172">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Shishir</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1172, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1172, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1172" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">1 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-04-27      </em>
+    </p>
+</div>
+<div class="body" id="commentid24">
+<img src="./SQL Complex Queries_files/6797eee507d1f021f89a15d96c9a882c" class="avatar"><div id="text">
+   <p>its very helpful</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId1037">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">sharad</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(1037, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(1037, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike1037" style="display:block;padding-top:3px;text-align:center;color:#EE845F;">-1 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-03-27      </em>
+    </p>
+</div>
+<div class="body" id="commentid25">
+<img src="./SQL Complex Queries_files/452633a416f5dce09d3ef7bdd32738e4" class="avatar"><div id="text">
+   <p>sir its too good ...</p>
+
+<p>sir what the difference between two queries....</p>
+
+<p>select count(sal) from emp;</p>
+
+<p>select count(*) from emp;</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId922">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Anurag</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(922, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(922, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike922" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">3 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-03-01      </em>
+    </p>
+</div>
+<div class="body" id="commentid26">
+<img src="./SQL Complex Queries_files/e547c069d16bb25e67930f0f756ac75d" class="avatar"><div id="text">
+   <p>To bharath....hope this works for u</p>
+
+<p>select e.employee<em>id,e.first</em>name||' '||last<em>name as name,e.salary,d.department</em>id
+from employees e join departments d 
+on (e.department<em>id=d.department</em>id)</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId921">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Anurag</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(921, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(921, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike921" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">3 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-03-01      </em>
+    </p>
+</div>
+<div class="body" id="commentid27">
+<img src="./SQL Complex Queries_files/e547c069d16bb25e67930f0f756ac75d" class="avatar"><div id="text">
+   <p>To aneela hope this works for you...</p>
+
+<p>select first<em>name||last</em>name as Name,hire<em>date,to</em>char(hire<em>date,'DY')
+from employees
+order by to</em>char(hire_date,'DY')</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId918">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Anbu</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(918, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(918, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike918" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">0 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-02-29      </em>
+    </p>
+</div>
+<div class="body" id="commentid28">
+<img src="./SQL Complex Queries_files/13c9351ec0e877dfabe74d35f7ebb869" class="avatar"><div id="text">
+   <p>very good post than other site</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId863">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">aneela</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(863, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(863, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike863" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">5 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-02-21      </em>
+    </p>
+</div>
+<div class="body" id="commentid29">
+<img src="./SQL Complex Queries_files/05dcef36466bd21ad4b6887de20e7654" class="avatar"><div id="text">
+   <p>its nice.but can u give me the answer for this query.
+Display the name,hiredate and the day of week on which the employee started.lable the column day order the result by the day of the week.
+please send me the answer.please.</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId820">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">R. Azu</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(820, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(820, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike820" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">5 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-02-14      </em>
+    </p>
+</div>
+<div class="body" id="commentid30">
+<img src="./SQL Complex Queries_files/abc79acb99387d2a3b9938e05c32a8e9" class="avatar"><div id="text">
+   <p>It is so nice</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId806">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">interview questions</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(806, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(806, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike806" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">1 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-02-11      </em>
+    </p>
+</div>
+<div class="body" id="commentid31">
+<img src="./SQL Complex Queries_files/94824117989340835682a401e86698ac" class="avatar"><div id="text">
+   <p>hi. appreciate that all oracle learning its help lot....</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId653">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Manish</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(653, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(653, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike653" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">1 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-01-23      </em>
+    </p>
+</div>
+<div class="body" id="commentid32">
+<img src="./SQL Complex Queries_files/741ff8ff21353eef4d71e09cd69431c2" class="avatar"><div id="text">
+   <p>Thanks , very good post</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId651">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">lakmi</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(651, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(651, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike651" style="display:block;padding-top:3px;text-align:center;color:#EE845F;">-3 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2012-01-23      </em>
+    </p>
+</div>
+<div class="body" id="commentid33">
+<img src="./SQL Complex Queries_files/f74afe920d348bee11977a27c8d3e9ed" class="avatar"><div id="text">
+   <p>IT IS VERY HELPFUL TO ME N ALL..
+NICE COLLECTION..
+THANQQQ..</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId501">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">Varun</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(501, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(501, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike501" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">0 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2011-12-22      </em>
+    </p>
+</div>
+<div class="body" id="commentid34">
+<img src="./SQL Complex Queries_files/9e197ac048963b385e5cc0055bffe156" class="avatar"><div id="text">
+   <p>Good one it helps alot</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId426">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">bharath</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(426, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(426, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike426" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">3 </span>
+</div>
+	<p class="info">
+      <em class="date">
+      	2011-12-07      </em>
+    </p>
+</div>
+<div class="body" id="commentid35">
+<img src="./SQL Complex Queries_files/8bb2e685e469950d08fc1a8a39c28cfa" class="avatar"><div id="text">
+   <p>thanks  it really helps i have a query to be solved</p>
+
+<p>display empno,ename,total salary from emp and deptno from dept table and sort them using dname</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+<div class="baksha" id="jooCommentsId364">
+<div class="comment normal-comment">
+<div class="cmeta">
+<p class="author"><strong class="author">vasavi</strong>
+<em class="action-text">Said... </em></p>
+<div style="   
+    float: right;
+    margin-top: 6px;
+    width: 63px;">
+    
+    	    		<a class="like" onclick="vote(364, 1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps up"></a>
+    	    	
+		
+		<a class="dislike" onclick="vote(364, -1);return false;" href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#" title="Thumps down"></a>
+		<span id="jooCommLike364" style="display:block;padding-top:3px;text-align:center;color:#78A8E2;">3 </span>
+</div>
+</div>
+<div class="body" id="commentid36">
+<img src="./SQL Complex Queries_files/2327e3b92f222b9f751354f0c7a0a272" class="avatar"><div id="text">
+   <p>Thanks a lot!!! :)</p>
+
+<p>It realy helps ppl like me, god bless!</p>
+</div>
+
+
+
+</div>
+</div>
+</div>
+<div style="padding-top:12px;"></div>
+
+</div>
+
+</div>
+
+<div id="comments_form" class="clearfix">
+
+
+
+<form id="myForm" action="http://www.bullraider.com/index.php?option=com_joocomments&task=postComment" method="post" onsubmit="return false;">
+<fieldset><legend>Tell us what do you think</legend>
+
+<ul>
+	<li>
+	<div id="wmd-button-bar" class="wmd-panel"><ul id="wmd-button-row"><li class="wmd-button" id="wmd-bold-button" title="Strong &lt;strong&gt; Ctrl+B" style="background-position: 0px 0px;"></li><li class="wmd-button" id="wmd-italic-button" title="Emphasis &lt;em&gt; Ctrl+I" style="background-position: -20px 0px;"></li><li class="wmd-spacer" id="wmd-spacer1"></li><li class="wmd-button" id="wmd-link-button" title="Hyperlink &lt;a&gt; Ctrl+L" style="background-position: -40px 0px;"></li><li class="wmd-button" id="wmd-quote-button" title="Blockquote &lt;blockquote&gt; Ctrl+Q" style="background-position: -60px 0px;"></li><li class="wmd-button" id="wmd-code-button" title="Code Sample &lt;pre&gt;&lt;code&gt; Ctrl+K" style="background-position: -80px 0px;"></li><li class="wmd-button" id="wmd-image-button" title="Image &lt;img&gt; Ctrl+G" style="background-position: -100px 0px;"></li><li class="wmd-spacer" id="wmd-spacer2"></li><li class="wmd-button" id="wmd-olist-button" title="Numbered List &lt;ol&gt; Ctrl+O" style="background-position: -120px 0px;"></li><li class="wmd-button" id="wmd-ulist-button" title="Bulleted List &lt;ul&gt; Ctrl+U" style="background-position: -140px 0px;"></li><li class="wmd-button" id="wmd-heading-button" title="Heading &lt;h1&gt;/&lt;h2&gt; Ctrl+H" style="background-position: -160px 0px;"></li><li class="wmd-button" id="wmd-hr-button" title="Horizontal Rule &lt;hr&gt; Ctrl+R" style="background-position: -180px 0px;"></li><li class="wmd-spacer" id="wmd-spacer3"></li><li class="wmd-button" id="wmd-undo-button" title="Undo - Ctrl+Z" style="background-position: -200px -20px;"></li><li class="wmd-button" id="wmd-redo-button" title="Redo - Ctrl+Shift+Z" style="background-position: -220px -20px;"></li><li class="wmd-button" id="wmd-help-button" style="background-position: -240px 0px;"><a href="http://wmd-editor.com/" target="_blank" title="WMD website"></a></li></ul></div>
+	<div id="input-panel"><textarea tabindex="1" id="wmd-input" name="userComment" title="Comment is required" class="required wmd-panel"></textarea><label class="overTxtLabel" for="wmd-input" style="line-height: normal; position: absolute; cursor: text; left: 4px; top: 25px;">Comment is required</label></div>
+	</li>
+	<li id="progress"></li>
+	<li><input type="text" tabindex="2" size="20" name="userName" id="userName" class="required" title="Name is required" value=""><label class="overTxtLabel" for="userName" style="line-height: normal; position: absolute; cursor: text; left: 6px; top: 5px;">Name is required</label></li>
+	<li><input type="text" tabindex="3" name="userEmail" id="userEmail" class="required validate-email" title="Email is required" value=""><label class="overTxtLabel" for="userEmail" style="line-height: normal; position: absolute; cursor: text; left: 6px; top: 5px;">Email is required</label></li>
+	<li><input type="text" tabindex="4" name="url" title="Website / blog" id="input_hntccxba"><label class="overTxtLabel" for="input_hntccxba" style="line-height: normal; position: absolute; cursor: text; left: 6px; top: 5px;">Website / blog</label></li>
+			<li><img id="captcha_image" onclick="refreshCaptcha();" title="Click to refresh captcha." alt="Captcha Image" src="./SQL Complex Queries_files/index(3).php"><input type="text" value="" class="required captchaValidator" tabindex="5" id="captchaText" name="captchaText"></li>
+			<li><input type="submit" value="Submit Comment" id="btlAddNewComment" title="Post new comment" tabindex="6" class="btTxt" onclick="commentWait();"> </li>
+</ul>
+</fieldset>
+		<input type="hidden" name="9e40ccf1054fd3ffd601100ca3f90f8a" value="1"></form>
+</div>
+</div>
+			<script src="./SQL Complex Queries_files/showdown.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript"><!--
+            //<![CDATA[
+			// version 1.0.4
+		   	var currentLanguage='en-GB';
+            var arr=Locale.list().toString();
+            var tempUrl='';
+            var waitTitle='Please wait...';
+            var waitMessage='...While I steal your wallet';
+            
+            
+           // check if current language is already available in Locale
+           if(arr.indexOf(currentLanguage)==-1){
+               Locale.define('en-GB', 'FormValidator', {required: 'This field is required.',email: 'Please enter a valid email address. For example: fred@domain.com.',errorPrefix: 'Error: '});           }        
+	   		Locale.use('en-GB');
+            var article_id="7";
+            var urlCurrentPage=window.location;
+        	var valCU=urlCurrentPage.toString().indexOf("://www.", 0);
+        	tempUrl = "http://bullraider.com/index.php?option=com_joocomments";
+			var valTU=tempUrl.toString().indexOf("://www.",0);
+        	if((valCU==4 || valCU==5) && valTU <4 ){tempUrl=tempUrl.replace("://","://www.");}
+            if(valCU<4 && (valTU==4 || valTU==5)){tempUrl=tempUrl.replace("://www.","://");}
+            var paImg='';
+            window.addEvent("load", function() {
+            	initialize(tempUrl);
+            	paImg='http://bullraider.com/components/com_joocomments/assets/img/';
+            	var myImages = Asset.images([paImg+'okMedium.png',paImg+'cautionMedium.png',paImg+'blackWaiter.gif']);
+                //comments are not closed ie 0 then only load.
+            	            	
+               //	url = "http://bullraider.com/index.php?option=com_joocomments&random=" + Math.random();     
+               	document.id('comment-wrapper').set('html', '<img src="http://bullraider.com/components/com_joocomments/assets/img/spinner.gif" />Loading Comments...');      	            	        
+				var req = new Request({
+					 method: 'get',
+                         url: tempUrl+"&random=" + Math.random(),                         
+                         onComplete: function(text) { 
+						document.id('comment-wrapper').innerHTML = "" + text;	
+						loadTextEditor();																	 						
+                        }						
+					}).send();		
+							 							
+            	});	
+                        function loadTextEditor(){
+                wmd_options.ajaxForm=true;   
+            	Attacklab.wmd();
+            	Attacklab.wmd_defaults={buttons:"bold italic link blockquote code image ol ul heading hr"};
+            	Attacklab.wmdBase();
+            	Attacklab.loadEnv();
+            	Attacklab.Util.startEditor();
+                var myForm = document.id('myForm');
+                myForm.action=tempUrl+"&task=postComment";
+            // Labels over the inputs.
+            myForm.getElements('[type=text], textarea').each(function(el){
+                new OverText(el);
+            });
+            // Validation.
+            var formValidator=new Form.Validator.Inline(myForm,{evaluateFieldsOnBlur:false,
+                												evaluateFieldsOnChange:false,
+                												onFormValidate:function(s,ele,on){
+																refreshCaptcha();
+																document.id('captchaText').value="";
+																		
+																if(sp!=null)sp.hide(true);										
+																}
+																}																
+														);
+                       formValidator.add('captchaValidator',{errorMsg:'Captcha is wrong.',
+                									  test:function(field){
+				  									return validateCaptcha(field);
+				  									  }
+			  									  }
+			  				);
+            // Ajax (integrates with the validator).
+            new Form.Request(myForm,null, {
+            	onComplete:function(){showComments();showEffect(arguments);refreshCaptcha();if(sp!=null)sp.hide(true);}
+                ,async:false,
+                requestOptions: {'spinnerTarget': 'progress'},
+                extraData: {'article_id': article_id}
+             	});
+            	showComments();
+            }            function showComments(){
+            	var parameter="&article_id="+article_id;
+            	var htmlRequest = new Request.HTML({url: tempUrl+'&task=showComments&view=commentpage'+parameter,
+            		onRequest: function(){
+            		document.id('comments').set('html', '<img src="http://bullraider.com/components/com_joocomments/assets/img/spinner.gif"/>Loading Comments...');
+                },
+                onSuccess: function(responseTree, responseElements, responseHTML, responseJavaScript){
+                	document.id('comments').empty();
+                    document.id('comments').innerHTML=responseHTML;
+                    
+                     refreshCaptcha();            	}}).send();
+            }
+				//]]>						
+				--></script>
+<script src="./SQL Complex Queries_files/wmd.js" type="text/javascript"></script>
+			<style>#wmd-button-bar #wmd-bold-button{left: 0px !important;}#wmd-button-bar #wmd-italic-button{left: 25px !important;}#wmd-button-bar #wmd-spacer1{left: 50px !important;}#wmd-button-bar #wmd-link-button{left: 75px !important;}#wmd-button-bar #wmd-quote-button{left: 100px !important;}#wmd-button-bar #wmd-code-button{left: 125px !important;}#wmd-button-bar #wmd-image-button{left: 150px !important;}#wmd-button-bar #wmd-spacer2{left: 175px !important;}#wmd-button-bar #wmd-olist-button{left: 200px !important;}#wmd-button-bar #wmd-ulist-button{left: 225px !important;}#wmd-button-bar #wmd-heading-button{left: 250px !important;}#wmd-button-bar #wmd-hr-button{left: 275px !important;}#wmd-button-bar #wmd-spacer3{left: 300px !important;}#wmd-button-bar #wmd-undo-button{left: 325px !important;}#wmd-button-bar #wmd-redo-button{left: 350px !important;}</style><center>Powered by <a href="http://www.bullraider.com/" title="bullraider">Bullraider.com</a></center>
+	<script type="text/javascript">
+    function _dmBootstrap(file) { 
+        var _dma = document.createElement('script');  
+        _dma.type = 'text/javascript'; 
+        _dma.async = true;  
+        _dma.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + file; 
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(_dma);
+    }
+    function _dmFollowup(file) { if (typeof DMAds === 'undefined')  _dmBootstrap('cdn2.DeveloperMedia.com/a.min.js');}
+    (function () { _dmBootstrap('cdn1.DeveloperMedia.com/a.min.js'); setTimeout(_dmFollowup, 2000);})();
+</script>	
+		
+</div>                            </div>
+                            
+                                                    </div>
+
+                                            </div>
+
+                    
+                </div>
+
+                            </div>
+            </div>
+            <!-- //CONTENT -->
+                        <!-- LEFT COLUMN-->
+            <div id="ja-left" class="column sidebar" style="width:25%">
+                
+                                <div class="ja-colswrap clearfix ja-l1">
+                                    <div id="ja-left1" class="ja-col  column" style="width:100%">
+                        	<div class="ja-moduletable moduletable_noborder  clearfix" id="Mod22">
+						<div class="ja-box-ct clearfix">
+		<div style="text-align:center;">
+<!-- Joomla Google AdSense module by http://tridentsystemsgroup.com -->
+<script type="text/javascript"><!--
+google_ad_client = "pub-0288961158112679";
+google_ad_width = 160; 
+google_ad_height = 600; 
+google_ad_format = "160x600_as"; 
+google_ad_type = "text_image"; 
+google_ad_channel = ""; 
+google_color_border = "FFFFFF"; 
+google_color_bg = "FFFFFF"; 
+google_color_link = "006699"; 
+google_color_text = "222222"; 
+google_color_url = "006699"; 
+google_ui_features = "rc:6"; 
+//--> 
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<!-- Joomla Google AdSense module by http://tridentsystemsgroup.com -->
+</div>		</div>
+    </div>
+		<div class="ja-moduletable moduletable  clearfix" id="Mod28">
+						<div class="ja-box-ct clearfix">
+		<div style="text-align:center;">
+<!-- Joomla Google AdSense module by http://tridentsystemsgroup.com -->
+<script type="text/javascript"><!--
+google_ad_client = "pub-0288961158112679";
+google_ad_width = 160; 
+google_ad_height = 600; 
+google_ad_format = "160x600_as"; 
+google_ad_type = "image"; 
+google_ad_channel = ""; 
+google_color_border = "FFFFFF"; 
+google_color_bg = "FFFFFF"; 
+google_color_link = "0000FF"; 
+google_color_text = "222222"; 
+google_color_url = "222222"; 
+google_ui_features = "rc:6"; 
+//--> 
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<!-- Joomla Google AdSense module by http://tridentsystemsgroup.com -->
+</div>		</div>
+    </div>
+	                    </div>
+                
+                                </div>
+                                            </div>
+            <!-- //LEFT COLUMN-->
+            
+        </div>
+                <!-- RIGHT COLUMN-->
+        <div id="ja-right" class="column sidebar" style="width:20%">
+
+            
+                        <div class="ja-colswrap clearfix ja-r1">
+                                <div id="ja-right1" class="ja-col  column" style="width:100%">
+                    	<div class="ja-module ja-box-br module_noborder" id="Mod23">
+	<div class="ja-box-bl"><div class="ja-box-tr"><div class="ja-box-tl clearfix">
+						<div class="jamod-content ja-box-ct clearfix">
+		<div style="text-align:center;">
+<!-- Joomla Google AdSense module by http://tridentsystemsgroup.com -->
+<script type="text/javascript"><!--
+google_ad_client = "pub-0288961158112679";
+google_ad_width = 160; 
+google_ad_height = 600; 
+google_ad_format = "160x600_as"; 
+google_ad_type = "text_image"; 
+google_ad_channel = ""; 
+google_color_border = "FFFFFF"; 
+google_color_bg = "FFFFFF"; 
+google_color_link = "006699"; 
+google_color_text = "333333"; 
+google_color_url = "006699"; 
+google_ui_features = "rc:6"; 
+//--> 
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<!-- Joomla Google AdSense module by http://tridentsystemsgroup.com -->
+</div>		</div>
+	</div></div></div>
+	</div>
+		<div class="ja-module ja-box-br module" id="Mod24">
+	<div class="ja-box-bl"><div class="ja-box-tr"><div class="ja-box-tl clearfix">
+						<h3 class="show"><span>Most Read Articles</span></h3>
+				<div class="jamod-content ja-box-ct clearfix" style="overflow: hidden;">
+		<ul class="mostread">
+	<li>
+		<a href="http://www.bullraider.com/quiz/computer-awareness">
+			Computer Awareness Home</a>
+	</li>
+	<li>
+		<a href="./SQL Complex Queries_files/SQL Complex Queries.html">
+			Complex Queries in SQL ( Oracle )</a>
+	</li>
+	<li>
+		<a href="http://www.bullraider.com/java/struts2/interview-questions">
+			Struts2 Interview Questions  and Answers</a>
+	</li>
+	<li>
+		<a href="http://www.bullraider.com/java/core-java/33-interview-questions">
+			Java Programming Interview Questions</a>
+	</li>
+	<li>
+		<a href="http://www.bullraider.com/quiz/informatica-quiz">
+			Informatica Quiz Home</a>
+	</li>
+</ul>
+		</div>
+	</div></div></div>
+	</div>
+	                </div>
+                
+                            </div>
+                                </div>
+        <!-- //RIGHT COLUMN-->
+                        </div>
+                </div>
+        <!-- //MAIN CONTAINER -->
+
+                <div id="ja-navhelper" class="wrap ">
+                   <div class="main">
+                           <div class="main-inner1 clearfix">
+                <div class="ja-breadcrums">
+    <span class="breadcrumbs pathway">
+<strong>You are here: </strong><a href="http://www.bullraider.com/" class="pathway">     Home</a> <img src="./SQL Complex Queries_files/arrow.png" alt=""> <a href="http://www.bullraider.com/database" class="pathway">Database</a> <img src="./SQL Complex Queries_files/arrow.png" alt=""> <a href="http://www.bullraider.com/database/sql-tutorial" class="pathway">SQL Tutorial</a></span>
+
+</div>
+
+<ul class="ja-links">
+        <li class="top"><a href="javascript:scroll(0,0)" title="Back to top">Top</a></li>
+</ul>
+
+<ul class="no-display">
+    <li><a href="http://www.bullraider.com/database/sql-tutorial/7-complex-queries-in-sql#ja-content" title="Skip to content">Skip to content</a></li>
+</ul>                </div>
+                            </div>
+                        </div>
+                        <div id="ja-footer" class="wrap ">
+                   <div class="main clearfix">
+           <div class="ja-copyright">
+	
+</div>            </div>
+                        </div>
+            
+</div>
+
+
+
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./SQL Complex Queries_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10792935-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body></html>

@@ -1,0 +1,46 @@
+attributetype ( 1.3.6.1.4.1.4203.666.1.90
+        NAME 'CPI'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{1024} )
+
+attributetype ( 1.3.6.1.4.1.4203.666.1.91
+        NAME 'ResourceID'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{1024} )  
+
+attributetype ( 1.3.6.1.4.1.4203.666.1.92
+        NAME 'ResourceName'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{1024} )              
+
+attributetype ( 1.3.6.1.4.1.4203.666.1.93
+        NAME 'ResourceDate'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{1024} )       
+
+objectClass     ( 1.3.6.1.4.1.4203.666.1.100
+    	NAME 'Student'
+        DESC 'Student of the department'
+    	SUP inetOrgPerson
+    	STRUCTURAL
+    	MUST ( CPI )
+    	)
+
+objectClass     ( 1.3.6.1.4.1.4203.666.1.101
+    	NAME 'LabAdmin'
+        DESC 'Laboratory administrators of the department'
+    	SUP inetOrgPerson
+    	STRUCTURAL
+        )
+
+objectClass     ( 1.3.6.1.4.1.4203.666.1.102
+    	NAME 'Resources'
+        DESC 'Resources: need I say more'
+    	SUP device
+    	STRUCTURAL
+    	MUST ( ResourceID $ ResourceName $ ResourceDate)
+        )        

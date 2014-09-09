@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			XML Reader
+		</title>
+		<script>
+			function getNextSibling(t)
+			{
+				s = t.nextSibling;
+				while (s.nodeType != 1)
+				{
+					s = s.nextSibling;
+				}
+				return s;
+			}
+		</script>
+	</head>
+
+	<body>
+		<script>
+
+			xhttp = new XMLHttpRequest();
+			xhttp.open("GET","forms.xml",false);
+			xhttp.send();
+			xmlDoc = xhttp.responseXML;
+			document.write("XML document forms.xml loaded into an XML DOM object.<br>");
+
+			//text = "<book>B</book>";
+			//parser = new DOMParser();
+			//xmlDoc = parser.parseFromString(text,"text/xml");
+			//document.write("XML document book loaded into an XML DOM object.");
+
+			document.write(xmlDoc);
+			document.write("<br>");
+
+			x = xmlDoc.getElementsByTagName("dept");
+			document.write(x);
+			document.write("<br>");
+			document.write("<br>");
+
+			document.write("There are " + x.length + " nodes");
+			document.write("<br>");
+			document.write("<br>");
+
+			for (i = 0; i < x.length; i++)
+			{
+				y = x[i];
+				document.write(y.nodeName);
+				document.write("<br>");
+
+				document.write("Parent is " + y.parentNode.nodeName);
+				document.write("<br>");
+
+				z = y.childNodes;
+				document.write("There are " + z.length + " children");
+				document.write("<br>");
+
+				text = y.parentNode.nodeName + " -> " + y.nodeName + " -> "; 
+
+				for (j = 0; j < z.length; j++)
+				{
+					w = z[j];
+					document.write(w.nodeName);
+					document.write("<br>");
+
+					document.write(w.nodeValue);
+					document.write("<br>");
+
+					text = text + w.nodeValue + "(" + w.nodeName + ")<br>";
+				}
+
+				document.write("<br>");
+
+				document.write(text);
+				document.write("<br>");
+
+				/*
+				n = getNextSibling(y);
+				if (n != null)
+				{
+					//document.write("Next sibling is  " + n.nodeName + " with value " + n.nodeValue);
+					document.write("Next sibling is  " + n.nodeName);
+					document.write("<br>");
+					document.write("<br>");
+				}
+				//*/
+			}
+
+		</script>
+	</body>
+</html>

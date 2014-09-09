@@ -1,0 +1,368 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" >
+<html>
+    <head>
+        <title>
+            CS251-Intro to HTML,XML and Javascipt
+        </title>
+       <script>
+           function getNextSibling(t) {
+               s = t.nextSibling;
+               while (s.nodeType != 1) {
+                   s = s.nextSibling;
+               }
+               return s;
+           }
+           function bibfile() {
+               xhttp = new XMLHttpRequest();
+               xhttp.open("GET", "form1.xml", false);
+               xhttp.send();
+               xmlDoc = xhttp.responseXML;
+               //document.write("XML document form1.xml loaded into an XML DOM object<br>");
+               author = xmlDoc.getElementsByTagName("author");
+               password = xmlDoc.getElementsByTagName("key");
+               journal = xmlDoc.getElementsByTagName("journal");
+               chapter = xmlDoc.getElementsByTagName("chapter");
+               booktitle = xmlDoc.getElementsByTagName("booktitle");
+               editor = xmlDoc.getElementsByTagName("editor");
+               title = xmlDoc.getElementsByTagName("title");
+               releasedate = xmlDoc.getElementsByTagName("Releasedate");
+               volume = xmlDoc.getElementsByTagName("volume");
+               pages = xmlDoc.getElementsByTagName("pages");
+               publisher = xmlDoc.getElementsByTagName("publisher");
+               series = xmlDoc.getElementsByTagName("series");
+               organisation = xmlDoc.getElementsByTagName("organisation");
+
+               var br = "<br>";
+               var art = "@ARTICLE{";
+               var book="@BOOK{";
+               var inbook="@INBOOK{";
+               var incollection="@INCOLLECTION{";
+               //var y = new Array;
+               var i = 0;
+               var bib = "XML document form1.xml loaded into an XML DOM object<br>";// + x[0].childNodes[0].nodeValue;
+               for ( i = 0; i < author.length; i++) {
+                   y = author[i];
+                   //bib = bib + y.nodeValue;
+                   z=y.childNodes;
+                   for (var j = 0; j < z.length; j++) {
+                       if (y.parentNode.nodeName == "article") {
+                           art = art + br + "author = {" + z[j].nodeValue + "}," ;
+                       }
+                       if (y.parentNode.nodeName == "book") {
+                           book = book + br + "author = {" + z[j].nodeValue + "}," ;
+                       }
+                       if (y.parentNode.nodeName == "inbook") {
+                           inbook = inbook + br + "author = {" + z[j].nodeValue + "}," ;
+                       }
+                       if (y.parentNode.nodeName == "incollection") {
+                           incollection = incollection + br + "author = {" + z[j].nodeValue + "}," ;
+                       }
+                   }
+
+               }
+               for (i = 0; i < title.length; i++) {
+                   y = title[i];
+                   //bib = bib + y.nodeValue;
+                   z = y.childNodes;
+                   for (var j = 0; j < z.length; j++) {
+                       if (y.parentNode.nodeName == "article") {
+                           art = art + br + "title = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "book") {
+                           book = book + br + "title = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "inbook") {
+                           inbook = inbook + br + "title = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "incollection") {
+                           incollection = incollection + br + "title = {" + z[j].nodeValue + "}," ;
+                       }
+                   }
+
+               }
+               for (i = 0; i < organisation.length; i++) {
+                   y = organisation[i];
+                   //bib = bib + y.nodeValue;
+                   z = y.childNodes;
+                   for (var j = 0; j < z.length; j++) {
+                       if (y.parentNode.nodeName == "article") {
+                           art = art + br + "organisation = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "book") {
+                           book = book + br + "organisation = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "inbook") {
+                           inbook = inbook + br + "organisation = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "incollection") {
+                           incollection = incollection + br + "organisation = {" + z[j].nodeValue + "},";
+                       }
+                   }
+
+               }
+               for (i = 0; i < password.length; i++) {
+                   y = password[i];
+                   //bib = bib + y.nodeValue;
+                   z = y.childNodes;
+                   for (var j = 0; j < z.length; j++) {
+                       if (y.parentNode.nodeName == "article") {
+                           art = art + br + "password = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "book") {
+                           book = book + br + "password = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "inbook") {
+                           inbook = inbook + br + "password = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "incollection") {
+                           incollection = incollection + br + "password = {" + z[j].nodeValue + "},";
+                       }
+                   }
+
+               }
+               for (i = 0; i < journal.length; i++) {
+                   y = journal[i];
+                   //bib = bib + y.nodeValue;
+                   z = y.childNodes;
+                   for (var j = 0; j < z.length; j++) {
+                       if (y.parentNode.nodeName == "article") {
+                           art = art + br + "journal = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "book") {
+                           book = book + br + "journal = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "inbook") {
+                           inbook = inbook + br + "journal = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "incollection") {
+                           incollection = incollection + br + "journal = {" + z[j].nodeValue + "},";
+                       }
+                   }
+
+               }
+               for (i = 0; i < chapter.length; i++) {
+                   y = chapter[i];
+                   //bib = bib + y.nodeValue;
+                   z = y.childNodes;
+                   for (var j = 0; j < z.length; j++) {
+                       if (y.parentNode.nodeName == "article") {
+                           art = art + br + "chapter = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "book") {
+                           book = book + br + "chapter = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "inbook") {
+                           inbook = inbook + br + "chapter = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "incollection") {
+                           incollection = incollection + br + "chapter = {" + z[j].nodeValue + "},";
+                       }
+                   }
+
+               }
+               for (i = 0; i < booktitle.length; i++) {
+                   y = booktitle[i];
+                   //bib = bib + y.nodeValue;
+                   z = y.childNodes;
+                   for (var j = 0; j < z.length; j++) {
+                       if (y.parentNode.nodeName == "article") {
+                           art = art + br + "booktitle = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "book") {
+                           book = book + br + "booktitle = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "inbook") {
+                           inbook = inbook + br + "booktitle = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "incollection") {
+                           incollection = incollection + br + "booktitle = {" + z[j].nodeValue + "},";
+                       }
+                   }
+
+               }
+               for (i = 0; i < editor.length; i++) {
+                   y = editor[i];
+                   //bib = bib + y.nodeValue;
+                   z = y.childNodes;
+                   for (var j = 0; j < z.length; j++) {
+                       if (y.parentNode.nodeName == "article") {
+                           art = art + br + "editor = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "book") {
+                           book = book + br + "editor = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "inbook") {
+                           inbook = inbook + br + "editor = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "incollection") {
+                           incollection = incollection + br + "editor = {" + z[j].nodeValue + "},";
+                       }
+                   }
+
+               }
+               for (i = 0; i < releasedate.length; i++) {
+                   y = releasedate[i];
+                   //bib = bib + y.nodeValue;
+                   z = y.childNodes;
+                   for (var j = 0; j < z.length; j++) {
+                       if (y.parentNode.nodeName == "article") {
+                           art = art + br + "releasedate = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "book") {
+                           book = book + br + "releasedate = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "inbook") {
+                           inbook = inbook + br + "releasedate = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "incollection") {
+                           incollection = incollection + br + "releasedate = {" + z[j].nodeValue + "},";
+                       }
+                   }
+
+               }
+               for (i = 0; i < volume.length; i++) {
+                   y = volume[i];
+                   //bib = bib + y.nodeValue;
+                   z = y.childNodes;
+                   for (var j = 0; j < z.length; j++) {
+                       if (y.parentNode.nodeName == "article") {
+                           art = art + br + "volume = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "book") {
+                           book = book + br + "volume = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "inbook") {
+                           inbook = inbook + br + "volume = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "incollection") {
+                           incollection = incollection + br + "volume = {" + z[j].nodeValue + "},";
+                       }
+                   }
+
+               }
+               for (i = 0; i < pages.length; i++) {
+                   y = pages[i];
+                   //bib = bib + y.nodeValue;
+                   z = y.childNodes;
+                   for (var j = 0; j < z.length; j++) {
+                       if (y.parentNode.nodeName == "article") {
+                           art = art + br + "pages = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "book") {
+                           book = book + br + "pages = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "inbook") {
+                           inbook = inbook + br + "pages = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "incollection") {
+                           incollection = incollection + br + "pages = {" + z[j].nodeValue + "},";
+                       }
+                   }
+
+               }
+               for (i = 0; i < publisher.length; i++) {
+                   y = publisher[i];
+                   //bib = bib + y.nodeValue;
+                   z = y.childNodes;
+                   for (var j = 0; j < z.length; j++) {
+                       if (y.parentNode.nodeName == "article") {
+                           art = art + br + "publisher = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "book") {
+                           book = book + br + "publisher = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "inbook") {
+                           inbook = inbook + br + "publisher = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "incollection") {
+                           incollection = incollection + br + "publisher = {" + z[j].nodeValue + "},";
+                       }
+                   }
+
+               }
+               for (i = 0; i < series.length; i++) {
+                   y = series[i];
+                   //bib = bib + y.nodeValue;
+                   z = y.childNodes;
+                   for (var j = 0; j < z.length; j++) {
+                       if (y.parentNode.nodeName == "article") {
+                           art = art + br + "series = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "book") {
+                           book = book + br + "series = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "inbook") {
+                           inbook = inbook + br + "series = {" + z[j].nodeValue + "},";
+                       }
+                       if (y.parentNode.nodeName == "incollection") {
+                           incollection = incollection + br + "series = {" + z[j].nodeValue + "},";
+                       }
+                   }
+
+               }
+
+               art = art + br + "}," + br;
+               book = book + br + "}," + br;
+               inbook = inbook + br + "}," + br;
+               incollection = incollection + br + "}," + br;
+
+               bib = bib + art +incollection+inbook+book;
+
+               document.getElementById("bib").innerHTML = bib;
+               return false;
+           }
+
+       </script>
+        <style>
+            body {
+                background-image: url('body6.jpg');
+                background-attachment: fixed;
+            }
+            .bordered {
+                border-style: dotted;
+                color: darkslateblue;
+                text-align:center;
+            }
+            .bordered2 {
+                border-style: double;
+                color: cornflowerblue;
+                text-align: center;
+                font:bold 18px;
+            }
+            .emphasis {
+                color: dodgerblue;
+                text-align: center;
+            }
+            .background1 {
+                background-color: antiquewhite;
+                text-align: left;
+                font: bold 28px;
+                font-family: 'Adobe Caslon Pro';
+            }
+            .mytext {
+                width: 300px;
+            }
+            .c {
+                text-align: left;
+             
+            }
+        </style>
+	</head>
+
+	<body>
+        <div class="bordered">
+            <h1 style="font:bold ;background-color:greenyellow;opacity:0.8 " >CS251</h1>
+            <h2 style="font:bold;color:aqua;opacity: 0.9;">Assignment 9 : Introduction to HTML,XML and JavaScript-PART II</h2>
+            <h2 style="font:bold;color:red;opacity: 0.6" class="emphasis">Lucky Sahani<br />12383</h2>
+            <h4 style="font:bold;color:orchid;opacity:0.7">Date:5 Nov 2013</h4>
+        </div>
+        <form id="form" action="" onsubmit="return bibfile()">
+            <div class="c" id="bib" >
+                Click the  button to view bibliography file :
+                <input type="submit" value="View your bib file!!!!" style="color:blue;font-size:large;text-align:center" onsubmit="return bibfile()" /><br />
+            </div>
+        </form>
+        
+        
+    </body>
+</html>

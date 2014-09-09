@@ -1,0 +1,5 @@
+ select p1.emp_no from employees AS p1,employees AS p2,dept_emp AS p3, dept_manager AS p4 where p3.dept_no=p4.dept_no and p1.emp_no=p4.emp_no and p2.emp_no=p3.emp_no and p1.hire_date=p2.hire_date;
+
+select emp_no from employees where DATEDIFF(CURDATE(),birth_date)/365.25>=60 and gender='F';
+
+select DISTINCT employees.emp_no from employees,dept_emp where dept_emp.emp_no=employees.emp_no and from_date>hire_date;

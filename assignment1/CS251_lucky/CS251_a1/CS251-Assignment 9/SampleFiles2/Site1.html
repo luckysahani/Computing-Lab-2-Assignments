@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" >
+<html>
+    <head>
+        <title>
+            CS251-Intro to HTML,XML and Javascipt
+        </title>
+        <script>
+            function close_window() {
+                if (confirm("Close Window?")) {
+                    close();
+                }
+            }
+            function getNextSibling(t) {
+                s = t.nextSibling;
+                while (s.nodeType != 1) {
+                    s = s.nextSibling;
+                }
+                return s;
+            }
+
+		</script>
+        <style>
+            body {
+                background-image: url('body.png');
+                background-attachment: fixed;
+            }
+            .bordered {
+                border-style: dotted;
+                color: darkslateblue;
+                text-align:center;
+            }
+            .emphasis {
+                color: dodgerblue;
+                text-align: center;
+            }
+            .background1 {
+                background-color: antiquewhite;
+                text-align: left;
+                font: bold 14px;
+                font-family: 'Adobe Caslon Pro';
+            }
+            .mytext {
+                width: 300px;
+            }
+            .c {
+                text-align: center;
+            }
+        </style>
+	</head>
+
+	<body>
+        <div class="bordered">
+            <h1 style="font:bold 20px;background-color:greenyellow;opacity:0.8 " >CS251</h1>
+            <h2 style="font:bold;color:aqua;opacity: 0.6;">Assignment 9 : Introduction to HTML,XML and JavaScript-PART II</h2>
+            <h2 style="font:bold;color:red;opacity: 0.6" class="emphasis">Lucky Sahani<br />12383</h2>
+            <h4 style="font:bold;color:orchid;opacity:0.4">Date:5 Nov 2013</h4>
+        </div>
+        <div class="c" >
+            Bibliography file is displayed below:
+            
+        </div>
+        <div>
+            <b></b>
+        </div>
+        <script style="text-align:center;">
+            xhttp = new XMLHttpRequest();
+            xhttp.open("GET", "form1.xml", false);
+            xhttp.send();
+            xmlDoc = xhttp.responseXML;
+            document.write("XML document form1.xml loaded into an XML DOM object<br>");
+            x = xmlDoc.getElementsByTagName("author");
+            document.write(x);
+
+        </script>
+    </body>
+</html>

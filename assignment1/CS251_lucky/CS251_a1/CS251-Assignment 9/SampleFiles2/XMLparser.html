@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" >
+<html>
+    <head>
+        <title>
+            CS251-Intro to HTML,XML and Javascipt
+        </title>
+       <script>
+           
+           function getNextSibling(t) {
+               s = t.nextSibling;
+               while (s.nodeType != 1) {
+                   s = s.nextSibling;
+               }
+               return s;
+           }
+           function bibfile() {
+               
+               xhttp = new XMLHttpRequest();
+               xhttp.open("GET", "form1.xml", false);
+               xhttp.send();
+               xmlDoc = xhttp.responseXML;
+               //document.write("XML document form1.xml loaded into an XML DOM object<br>");
+               author = xmlDoc.getElementsByTagName("author");
+               password = xmlDoc.getElementsByTagName("key");
+               journal = xmlDoc.getElementsByTagName("journal");
+               chapter = xmlDoc.getElementsByTagName("chapter");
+               booktitle = xmlDoc.getElementsByTagName("booktitle");
+               editor = xmlDoc.getElementsByTagName("editor");
+               title = xmlDoc.getElementsByTagName("title");
+               releasedate = xmlDoc.getElementsByTagName("Releasedate");
+               volume = xmlDoc.getElementsByTagName("volume");
+               pages = xmlDoc.getElementsByTagName("pages");
+               publisher = xmlDoc.getElementsByTagName("publisher");
+               series = xmlDoc.getElementsByTagName("series");
+               organisation = xmlDoc.getElementsByTagName("organisation");
+               var bib = "XML document form1.xml loaded into an XML DOM object<br>";// + x[0].childNodes[0].nodeValue;
+               var type = [author, password, journal, chapter, booktitle, editor, title, releasedate, volume, pages, publisher, series, organisation];
+               var br = "<br>";
+               var art = "";
+               var book = "";
+               var inbook = "";
+               var incollection = "";
+               var i, k, j = 0;
+               
+               var t1, t2 =0;
+               var arti=[]; var boo=[];var inboo=[];var incoll = [];
+               var te2 = 0;
+               var te = [0, 0, 0, 0];
+               
+
+               
+               for (k = 0; k < 13; k++) {
+                   te = [0, 0, 0, 0];
+                   if (k != 0) { te2 = 1; }
+                   
+                    for (i = 0; i < type[k].length; i++) {
+                        y = type[k][i];
+                        z = y.childNodes; //te = 0;
+
+                        for (j = 0; j < z.length; j++) {
+                            if (y.parentNode.nodeName == "article") {
+                                if (te2 == 0) { arti[te[0]] = "<br>@ARTICLE{"; }
+                                arti[te[0]] = arti[te[0]] + br + z[j].parentNode.nodeName + "= {" + z[j].nodeValue + "},";
+                                te[0]++;
+                            }
+                            if (y.parentNode.nodeName == "book") {
+                                if (te2 == 0) { boo[te[1]] = "<br>@BOOK{"; }
+                                boo[te[1]] = boo[te[1]] + br + z[j].parentNode.nodeName + "= {" + z[j].nodeValue + "},";
+                                te[1]++;
+                            }
+                            if (y.parentNode.nodeName == "inbook") {
+                                if (te2 == 0) { inboo[te[2]] = "<br>@INBOOK{"; }
+                                inboo[te[2]] = inboo[te[2]] + br + z[j].parentNode.nodeName + "= {" + z[j].nodeValue + "},";
+                                te[2]++;
+                            }
+                            if (y.parentNode.nodeName == "incollection") {
+                                if (te2 == 0) { incoll[te[3]] = "<br>@INCOLLECTION{"; }
+                                incoll[te[3]] = incoll[te[3]] + br + z[j].parentNode.nodeName + "= {" + z[j].nodeValue + "},";
+                                te[3]++;
+                            }
+
+                              
+                        }
+
+                    }
+                }
+                   
+                   
+               
+               for (t2 = 0; arti[t2]!=null; t2++) {
+                   
+                   arti[t2] = arti[t2] + br + "}," + br;
+                   art = art+arti[t2] ;
+               }
+               for (t2 = 0; boo[t2] != null; t2++) {
+
+                   boo[t2] = boo[t2] + br + "}," + br;
+                   book = book + boo[t2];
+               }
+               for (t2 = 0; inboo[t2] != null; t2++) {
+
+                   inboo[t2] = inboo[t2] + br + "}," + br;
+                   inbook = inbook + inboo[t2];
+               }
+               for (t2 = 0; incoll[t2] != null; t2++) {
+
+                   incoll[t2] = incoll[t2] + br + "}," + br;
+                   incollection = incollection + incoll[t2];
+               }
+
+
+               
+               bib = bib + art +incollection+inbook+book;
+
+               document.getElementById("bib").innerHTML = bib;
+               return false;
+           }
+
+       </script>
+        <style>
+            body {
+                background-image: url('body6.jpg');
+                background-attachment: fixed;
+            }
+            .bordered {
+                border-style: dotted;
+                color: darkslateblue;
+                text-align:center;
+            }
+            .bordered2 {
+                border-style: double;
+                color: cornflowerblue;
+                text-align: center;
+                font:bold 18px;
+            }
+            .emphasis {
+                color: dodgerblue;
+                text-align: center;
+            }
+            .background1 {
+                background-color: antiquewhite;
+                text-align: left;
+                font: bold 28px;
+                font-family: 'Adobe Caslon Pro';
+            }
+            .mytext {
+                width: 300px;
+            }
+            .c {
+                text-align: left;
+             
+            }
+        </style>
+	</head>
+
+	<body>
+        <div class="bordered">
+            <h1 style="font:bold ;background-color:greenyellow;opacity:0.8 " >CS251</h1>
+            <h2 style="font:bold;color:aqua;opacity: 0.9;">Assignment 9 : Introduction to HTML,XML and JavaScript-PART II</h2>
+            <h2 style="font:bold;color:red;opacity: 0.6" class="emphasis">Lucky Sahani<br />12383</h2>
+            <h4 style="font:bold;color:orchid;opacity:0.7">Date:5 Nov 2013</h4>
+        </div>
+        <form id="form" action="" onsubmit="return bibfile()">
+            <div class="c" id="bib" >
+                Click the  button to view bibliography file :
+                <input type="submit" value="View your bib file!!!!" style="color:blue;font-size:large;text-align:center" onsubmit="return bibfile()" /><br />
+            </div>
+        </form>
+        
+        
+    </body>
+</html>

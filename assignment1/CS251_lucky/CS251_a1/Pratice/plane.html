@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <title>
+        Another sample file
+    </title>
+    <script>
+        function a() {
+            var xml_1 = new ActiveXObject("Microsoft.XMLDOM");
+            var fso = new ActiveXObject("Scripting.FileSystemObject");
+            var file_add = 'C:\\Users\\Lucky\\Desktop\\CS251-Ass8\\a1.xml';
+            var file = fso.CreateTextFile(file_add, true);
+            file.WriteLine('<?xml version="1.0" encoding="utf-8"?>\n');
+            file.WriteLine('<PersonInfo>\n');
+            file.WriteLine('</PersonInfo>\n');
+            file.Close();
+            close_window();
+        }
+    </script>
+</head>
+<body>
+    <p>This is a plane </p>
+    <a href="sample2.html#2" >2nd reference</a>
+    <meta http-equiv="refresh" content="30"/><p>Refresh document after 30 sec <br />  </p>
+    <div id="header" style="background-color:#FFA500;">
+    <h1 style="margin-bottom:0;">Main Title of Web Page</h1></div>
+    <p style="border:dashed;padding-left: 2em ; padding-right: 2em;color:rgb(182, 255, 0)">
+            This is Lucky Sahani , a 2nd year cse guy who is currently doing this as an assignment to cs251 
+            course. Thank you for listening me.Her goes my theory: HTML is written in the form of HTML 
+            elements consisting of tags enclosed in angle brackets , within the web page content.
+            HTML tags most commonly come in pairs , although some tags represent empty
+            elements and so are unpaired. The first tag in a pair is the start tag, and
+            the second tag is the end tag (they are also called opening tags and closing tags). In between
+            these tags web designers can add text, further tags, comments and other types of text-based content.
+
+    </p>
+    <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+<input type="range" id="a" value="50">100 +
+<input type="number" id="b" value="50">=
+<output name="x" for="a b"></output>
+        <input type="date" name="bday" max="1979-12-31">
+        <p>/*function xml_1() {
+                var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+                var fso = new ActiveXObject("Scripting.FileSystemObject");
+                //var FILENAME = 'C:\Users\Lucky\Desktop\CS251-Ass8\a1.xml';
+                var file = fso.CreateTextFile(a1.xml, true);
+                file.WriteLine('<?xml version="1.0" encoding="utf-8"?>\n');
+                file.WriteLine('<PersonInfo>\n');
+            }
+            /*function SaveXML(UserData) {
+                var file = fso.CreateTextFile(FILENAME, true);
+                file.WriteLine('<?xml version="1.0" encoding="utf-8"?>\n');
+                file.WriteLine('<PersonInfo>\n');
+
+                for (countr = 0; countr < UserData.length; countr++) {
+                    file.Write('    <Person ');
+                    file.Write('author="' + UserData[countr][0] + '" ');
+                    file.Write('editor="' + UserData[countr][1] + '" ');
+                    file.Write('title="' + UserData[countr][2] + '" ');
+                    file.Write('date="' + UserData[countr][3] + '" ');
+                    file.Write('Volume="' + UserData[countr][4] + '" ');
+                    file.Write('Page="' + UserData[countr][5] + '" ');
+                    file.Write('series="' + UserData[countr][6] + '" ');
+                    file.Write('publisher="' + UserData[countr][7] + '"');
+                    file.WriteLine('></Person>\n');
+                } // end for countr
+
+                file.WriteLine('</PersonInfo>\n');
+                file.Close();
+
+            } // end SaveXML function --------------------
+
+            /*function LoadXML(xmlFile) {
+                xmlDoc.load(xmlFile);
+                return xmlDoc.documentElement;
+            } //end function LoadXML()
+
+            /*function initialize_array() {
+                var person = new Array();
+                var noFile = true;
+                var xmlObj;
+                if (fso.FileExists(FILENAME)) {
+                    xmlObj = LoadXML(FILENAME);
+                    noFile = false;
+                } // if
+                else {
+                    xmlObj = LoadXML("a1.xml");
+                    //alert("local" + xmlObj);
+                } // end if
+
+                var usrCount = 0;
+                while (usrCount < xmlObj.childNodes.length) {
+                    var tmpUsrs = new Array(xmlObj.childNodes(usrCount).getAttribute("author"),
+                                            xmlObj.childNodes(usrCount).getAttribute("editor"),
+                                            xmlObj.childNodes(usrCount).getAttribute("title"),
+                                            xmlObj.childNodes(usrCount).getAttribute("releasedate"),
+                                            xmlObj.childNodes(usrCount).getAttribute("volume"),
+                                            xmlObj.childNodes(usrCount).getAttribute("pages"),
+                                            xmlObj.childNodes(usrCount).getAttribute("series"),
+                                            xmlObj.childNodes(usrCount).getAttribute("publisher"));
+                    person.push(tmpUsrs);
+                    usrCount++;
+                }   //end while
+                if (noFile == false)
+                    fso.DeleteFile(FILENAME);
+                SaveXML(person);
+            }   // end function initialize_array()*/</p>
+</form>
+</body>
+</html>

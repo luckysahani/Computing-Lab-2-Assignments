@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Forms
+		</title>
+
+		<link rel="stylesheet" type="text/css" href="example.css"/>
+
+		<script>
+			function genXML()
+			{
+
+				var name = document.forms["advisors"]["Name"].value;
+				var advisor = document.forms["advisors"]["Advisor"].value;
+
+
+				if ((name == null) || (name == ""))
+				{
+					alert("Empty name!");
+					return false;
+				}
+				else if ((advisor == null) || (advisor == ""))
+				{
+					alert("Empty advisor!");
+					return false;
+				}
+
+				var br = "\n";
+				var doc = "&lt?xml version=\"1.0\" encoding=\"UTF-8\"?&gt";
+				var css = "&lt?xml-stylesheet type=\"text\/css\" href=\"example_xml.css\"?&gt";
+
+				var root = "relationships";
+				var broot = "&lt" + root + "&gt";
+				var eroot = "&lt\/" + root + "&gt";
+
+				var adv = "advisor";
+				var badv = "&lt" + adv + "&gt";
+				var eadv = "&lt\/" + adv + "&gt";
+
+				var stu = "student";
+				var bstu = "&lt" + stu + "&gt";
+				var estu = "&lt\/" + stu + "&gt";
+
+				var xml = doc + br + css + br + broot + br + badv + advisor + eadv + br + bstu + name + estu + br + eroot;
+
+				document.getElementById("change").innerHTML=xml;
+
+				//document.write(xml);
+
+				return false;
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<form name="advisors" action="" onsubmit="return genXML();">
+			<input type="text" name="Name">
+			<input type="text" name="Advisor">
+			<input type="submit" value="Register">
+		</form>
+
+		<p id="change">No information!</p>
+
+		<script>
+			document.write("XML written");
+		</script>
+	</body>
+</html>
+

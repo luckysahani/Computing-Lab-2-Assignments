@@ -1,0 +1,17 @@
+dn: ou=people, dc=cse,dc=iitk,dc=ac,dc=in
+ou: people
+description: All people in organisation
+objectclass: organizationalunit
+
+
+dn: cn=user1,ou=people,dc=cse,dc=iitk,dc=ac,dc=in
+objectclass: inetOrgPerson
+cn: user1
+sn: user1
+uid: user1
+userpassword: user1
+carlicense: HISCAR 123
+homephone: 555-111-2222
+mail: user1@cse.iitk.ac.in
+description: Testing_User1
+ou: Student

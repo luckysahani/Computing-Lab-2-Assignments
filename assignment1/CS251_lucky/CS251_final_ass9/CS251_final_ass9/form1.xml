@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="example_xml.css"?>
+<formdata>
+  <article>
+    <author>
+      Devendra Choudhary
+    </author>
+    <journal>
+      Pacific Journal of Mathematics
+    </journal>
+    <title>
+      A note on Hanf numbers
+    </title>
+    <Releasedate>
+      2008-01
+    </Releasedate>
+    <volume>
+      3
+    </volume>
+    <pages>
+       500-1000
+    </pages>
+    <key>
+      refer to page 567
+    </key>
+  </article>
+  <article>
+    <author>
+      Hardik Bansal
+    </author>
+    <journal>
+      Pacific Journal of Mathematics
+    </journal>
+    <title>
+      Quantum
+    </title>
+    <Releasedate>
+      2008-01
+    </Releasedate>
+    <volume>
+      3
+    </volume>
+    <pages>
+       500-1000
+    </pages>
+    <key>
+      refer to page 597
+    </key>
+  </article>
+  <article>
+    <author>
+      Adarsh Jain
+    </author>
+    <journal>
+      Pacific Journal of Mathematics
+    </journal>
+    <title>
+      A note on Hanf numbers
+    </title>
+    <Releasedate>
+      2008-01
+    </Releasedate>
+    <volume>
+      3
+    </volume>
+    <pages>
+       500-1000
+    </pages>
+    <key>
+      refer to page 560
+    </key>
+  </article>
+  <book>
+    <author>
+      Adarsh jain
+    </author>
+    <editor>
+      Myself
+    </editor>
+    <title>
+      HTML and CSS
+    </title>
+    <publisher>
+      Hardik Bansal
+    </publisher>
+    <Releasedate>
+      2013-11
+    </Releasedate>
+    <volume>
+      4
+    </volume>
+    <pages>
+       50-500
+    </pages>
+    <key>
+      refer to page 97
+    </key>
+  </book>
+  <article>
+    <author>
+      Lucky Sahani
+    </author>
+    <journal>
+      Pacific Journal of Mathematics
+    </journal>
+    <title>
+      A note on Hanf numbers
+    </title>
+    <Releasedate>
+      2008-01
+    </Releasedate>
+    <volume>
+      3
+    </volume>
+    <pages>
+       500-1000
+    </pages>
+    <key>
+      refer to page 567
+    </key>
+  </article>
+
+  <book>
+    <author>
+      Lucky Sahani
+    </author>
+    <editor>
+      Adarsh Jain
+    </editor>
+    <title>
+      HTML and CSS
+    </title>
+    <publisher>
+      Hardik Bansal
+    </publisher>
+    <Releasedate>
+      2013-10
+    </Releasedate>
+    <volume>
+      2
+    </volume>
+    <pages>
+       5000-10000
+    </pages>
+    <key>
+      refer to page 5767
+    </key>
+  </book>
+  <incollection>
+    <author>
+      Lucky Sahani
+    </author>
+    <editor>
+      Adarsh Jain
+    </editor>
+    <title>
+      HTML and CSS
+    </title>
+    <publisher>
+      Hardik Bansal
+    </publisher>
+    <Releasedate>
+      2013-10
+    </Releasedate>
+    <organisation>
+      Yes
+    </organisation>
+    <booktitle>
+      Intro to XML
+    </booktitle>
+    <volume>
+      1
+    </volume>
+    <pages>
+       5000-10000
+    </pages>
+    <key>
+      refer to page 5867
+    </key>
+  </incollection>
+  <incollection>
+    <author>
+      Adarsh Jain
+    </author>
+    <editor>
+      Adarsh Jain
+    </editor>
+    <title>
+      HTML and CSS
+    </title>
+    <publisher>
+      Hardik Bansal
+    </publisher>
+    <Releasedate>
+      2013-10
+    </Releasedate>
+    <organisation>
+      Yes
+    </organisation>
+    <booktitle>
+      Intro to XML
+    </booktitle>
+    <volume>
+      1
+    </volume>
+    <pages>
+       5000-10000
+    </pages>
+    <key>
+      refer to page 9967
+    </key>
+  </incollection>
+  <inbook>
+    <author>
+      Lucky Sahani
+    </author>
+    <series>
+      XML special
+    </series>
+    <editor>
+      Adarsh Jain
+    </editor>
+    <title>
+      HTML and CSS
+    </title>
+    <publisher>
+      Hardik Bansal
+    </publisher>
+    <Releasedate>
+      2001-09
+    </Releasedate>
+    <organisation>
+      Yes
+    </organisation>
+    <chapter>
+      14th
+    </chapter>
+    <volume>
+      7
+    </volume>
+    <pages>
+      10000-50000
+    </pages>
+    <key>
+      refer to page 12267
+    </key>
+  </inbook>
+  <inbook>
+    <author>
+      Adarsh Jain
+    </author>
+    <series>
+      XML special
+    </series>
+    <editor>
+      Adarsh Jain
+    </editor>
+    <title>
+      HTML and CSS
+    </title>
+    <publisher>
+      Hardik Bansal
+    </publisher>
+    <Releasedate>
+      2001-09
+    </Releasedate>
+    <organisation>
+      Yes
+    </organisation>
+    <chapter>
+      14th
+    </chapter>
+    <volume>
+      7
+    </volume>
+    <pages>
+      10000-50000
+    </pages>
+    <key>
+      refer to page 22567
+    </key>
+  </inbook>
+</formdata>

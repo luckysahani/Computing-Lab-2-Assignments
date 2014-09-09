@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" >
+<html>
+    <head>
+        <title>
+            CS251-Intro to HTML,XML and Javascipt
+        </title>
+        <script>
+            
+            function close_window() {
+                if (confirm("Close Window?")) {
+                    close();
+                }
+            }
+            function create_xml() {
+                var xml_1 = new ActiveXObject("Microsoft.XMLDOM");
+                //var shell = new ActiveXObject("WScript.Shell");
+                //alert(shell.currentDirectory);
+                var fso = new ActiveXObject("Scripting.FileSystemObject");
+                var file_add = 'C:\\Users\\Lucky\\Desktop\\CS251-Assignment8\\Xml_file_final.xml';
+                var file = fso.CreateTextFile(file_add, true);
+                file.WriteLine('<?xml version="1.0" encoding="utf-8"?>\n');
+                file.WriteLine('<Formdata>\n' + '\t<author>' + author + '</author>');
+                file.WriteLine('\t<editor>' + editor + '</editor>\n' + '\t<title>' + title + '</title>');
+                file.WriteLine('\t<Releasedate>' + releasedate + '</Releasedate>\n' + '\t<volume>' + volume + '</volume>');
+                file.WriteLine('\t<pages>' + pages + '</pages>\n' + '\t<series>' + series + '</series>');
+                file.WriteLine('\t<publisher>' + publisher + '</publisher>\n' + '\t<organsiation>' + organisation + '</organisation>');
+                file.WriteLine('\t<userid>' + userid + '</userid>');
+                //file.WriteLine('\t<note>' + note + '</note>' );
+                //file.WriteLine('\t<address>' + address + '</address>\n' );
+                file.WriteLine('</Formdata>\n');
+                file.Close();
+                //var address[];
+                //var inputValue=document.getElementById("address");
+                //for (var i = 0; i < inputValue.value; ++i)
+                //{
+                //   inputValue.innerHTML = "";
+                //   address[i] = document.getElementById("address").value;
+                ///}
+            }
+
+           
+            function forXML() {
+                
+
+                var author = document.forms["formnew"]["author"].value;
+                var editor = document.forms["formnew"]["editor"].value;
+                var title = document.forms["formnew"]["title"].value;
+                var releasedate = document.forms["formnew"]["releasedate"].value;
+                var volume = document.forms["formnew"]["volume"].value;
+                var pages = document.forms["formnew"]["pages"].value;                
+                var series = document.forms["formnew"]["series"].value;
+                var publisher = document.forms["formnew"]["publisher"].value;
+                //var organisation = document.getElementById("yn");
+                //var address = document.getElementById("address");
+                var userid = document.forms["formnew"]["userid"].value;
+                //var note = document.getElementById("note");
+                
+                
+                //document.write(note);
+                
+                
+
+                if ((author == null) || (author == "") ) {
+                    alert("Empty author!");
+                    return false;
+                }
+                if ((editor == null) || (editor == "")) {
+                    alert("Empty editor!");
+                    return false;
+                }
+                
+                if ((title == null) || (title == "") ) {
+                    alert("Empty title!");
+                    return false;
+                }
+                if ((releasedate == null) || (releasedate == "")) {
+                    alert("Please enter month and year of release!!!");
+                    return false;
+                }
+                if ((volume == null) || (volume == "")) {
+                    alert("Empty volume/edition!");
+                    return false;
+                }
+                if ((series == null) || (series == "")) {
+                    alert("Empty series!");
+                    return false;
+                }
+                if ((publisher == null) || (publisher == "")) {
+                    alert("Empty publisher!");
+                    return false;
+                }
+                if (document.forms["formnew"]["yn"][0].checked == false && document.forms["formnew"]["yn"][1].checked == false) {
+                    alert("Please provide details of the organisation");
+                }
+                if (document.forms["formnew"]["yn"][0].checked == true) {
+                    var organisation = "Yes";
+                }
+                else {
+                    var organisation = "No";
+                }
+
+                if ((userid == null) || (userid == "")) {
+                    alert("Empty Email address!!!!");
+                    return false;
+                }
+                var sp = "<br>&nbsp&nbsp&nbsp&nbsp";
+                var sp2 = "&nbsp&nbsp&nbsp&nbsp";
+               
+               
+                var temp = "&lt?xml version=\"1.0\" encoding=\"utf-8\"?&gt<br >" + "&ltFormdata&gt<br >" + sp2 + "&ltauthor&gt" + sp + sp2 +sp2 + author
+                    + sp + "&lt/author&gt<br >" + sp2 + "&lteditor&gt" + sp + sp2 +sp2 + editor + sp + "&lt/editor&gt<br >" + sp2 + "&lttitle&gt"
+                   + sp + sp2 + sp2+ title + sp + "&lt/title&gt<br >" + sp2 + "&ltReleasedate&gt" + sp + sp2 +sp2 + releasedate + sp + "&lt/Releasedate&gt<br >"
+                    + sp2 + "&ltvolume&gt" + sp + sp2 +sp2 + volume + sp + "&lt/volume&gt<br>" + sp2 + "&ltpages&gt" + sp + sp2 +sp2 + pages +
+                    sp + "&lt/pages&gt<br >" + sp2 + "&ltseries&gt" + sp + sp2 +sp2 + series + sp + "&lt/series&gt<br >" + sp2 + "&ltpublisher&gt" + sp + sp2 +sp2
+                    + publisher + sp + "&lt/publisher&gt<br >" + sp2 + "&ltorganisation&gt" + sp + sp2 +sp2 + organisation + sp + "&lt/organisation&gt<br >" +
+                    sp2 + "&ltuserid&gt" + sp + sp2 +sp2 + userid + sp + "&lt/userid&gt<br >" + "&lt/Formdata&gt<br >";
+
+                document.getElementById("temp_save").innerHTML = temp;
+                //document.write(temp);
+                //close_window();
+
+                
+                return false;
+            }
+        </script>
+        <style type="text/css">
+            body {
+                background-image: url('body.png');
+                background-attachment: fixed;
+            }
+            .bordered {
+                border-style: dotted;
+                color: darkslateblue;
+                text-align:center;
+            }
+            .emphasis {
+                color: dodgerblue;
+                text-align: center;
+            }
+            .background1 {
+                background-color: antiquewhite;
+                text-align: left;
+                font: bold 14px;
+                font-family: 'Adobe Caslon Pro';
+            }
+            .mytext {
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="bordered">
+            <h1 style="font:bold 20px;background-color:greenyellow;opacity:0.8 " >CS251</h1>
+            <h2 style="font:bold;color:aqua;opacity: 0.6;">Assignment 8 : Introduction to HTML,XML and JavaScript</h2>
+            <h2 style="font:bold;color:red;opacity: 0.6" class="emphasis">Lucky Sahani<br />12383</h2>
+            <h4 style="font:bold;color:orchid;opacity:0.4">Date:5 Nov 2013</h4>
+        </div>
+        
+        <form name="formnew" id="formnew" action=""  style="text-align:left;" onsubmit="return forXML()" >
+            <table cellspacing="20">
+                <tr>
+                    <td>
+                        <div id="form1" style="text-align:left;color:darkslateblue;">
+                            Author: <input size="25" type="text" name="author"/><br />
+                            Editor: <input size="25" type="text" name="editor"/><br />
+                            Title: <input size="25" type="text" name="title" />
+                        </div>
+                    </td>
+                    <td>
+                        <div id="form2" style="text-align:left;color:blue;">
+                            <b>Month and Year of release:</b>
+                             <input type="month" name="releasedate" max="2013-12">
+                        </div>      
+                    </td>
+                    <td>
+                        <div id="form3" style="text-align:left;color:darkolivegreen"  > 
+                            <b>Edition or Volume :</b>
+                            <input type="number" name="volume" id="edition" min="0" max="100" />
+                        </div>
+                    </td>
+                    <td>
+                        <div id="form4" style="text-align:left;color:darkslategrey">
+                            <b>Number of Pages:</b> 
+                            <select name="pages" >
+                            <optgroup label="0-1000">
+                                <option value="Less than 50">0-50</option>
+                                <option value="Between 50 and 500">50-500</option>
+                                <option value="Between 500 and 1000">500-1000</option>
+                            </optgroup>
+                            <optgroup label="1000-10000">
+                                <option value="Between 1000 and 5000">1000-5000</option>
+                                <option value="Between 5000 and 10000">5000-10000</option>
+                            </optgroup>
+                            <optgroup label="Greater than 10000">
+                                <option value="Greater than 10000">>10000</option>
+                            </optgroup>
+                            </select>
+                        </div>
+                    </td>
+                    
+                    <td>
+                        <div id="form5" style="text-align:left;color:blueviolet;">
+                            <fieldset>
+                                <legend >Series and Publisher :</legend>
+                                Series: <input size="25" type="text" name="series"/><br />
+                                Publisher: <input size="25" type="text" name="publisher" />
+                                
+                            </fieldset>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       <div id="form6" class="emphasis" style="color:cadetblue;text-align:left;">
+                           <b>Organisation:<br /></b>
+                           <input type="radio"  name="yn" value="y"/>Yes<br />
+                           <input type="radio" name="yn" value="n"/>No
+                       </div>
+                    </td>
+                    <!--<td >
+                        <div id="form7" style="color:cyan">
+                            <label for="address">Address:</label><br>
+                            <textarea name=“address” id="“address”"
+                            cols=30 rows=6 ></textarea>
+                        </div>
+                    </td>-->
+               
+                    <td>
+                        <div id="form8" style="text-align:center;color:blue">
+                                E-mail(for reference): <input size="25" type="email" name="userid" /> <br />
+                            
+                        </div>
+                    </td>
+                    <!--<td>
+                        <div id="form9" style="text-align:center;color:crimson">
+                            <label for="note">Note(if any):</label><br /><textarea name="note" id="note" rows=6></textarea>
+                        </div>
+                    </td>-->
+                    <td>
+                        <div  >
+                            <input type="submit" style="color:blue;font-size:larger;" /><br />
+                        </div>
+                        <div>
+                            <input type="reset"><br />
+                            <input type="button" name="Google" value="Exit(Close this form)" onclick="close_window()" > 
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <div id="temp_save" style="text-align:left;">Please provide the information and click submit!!!!!</div>
+    </body>
+</html>

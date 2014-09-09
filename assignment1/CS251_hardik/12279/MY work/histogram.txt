@@ -1,0 +1,13 @@
+set title "new"
+set auto x
+set yrange [0:30]
+set style data histogram
+set style histogram cluster gap 1
+set style fill solid border -1
+set boxwidth 0.9
+set xtic rotate by -45 scale 0 font ",8"
+#set bmargin 10 
+plot 'phase4.out' using 7:xtic(1)  ti col, '' u 2 ti col, '' u 3 ti col, '' u 4 ti col, '' u 5 ti col,'' u 6 ti col
+set term postscript eps color blacktext "Helvetica" 24
+set output
+quit

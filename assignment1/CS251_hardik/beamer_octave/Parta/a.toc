@@ -1,0 +1,18 @@
+\beamer@endinputifotherversion {3.10pt}
+\beamer@sectionintoc {1}{Introduction to Pythagoras Theorem}{3}{0}{1}
+\beamer@sectionintoc {2}{Theorem, Definition And Relation}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Theorem}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{Definition}{7}{0}{2}
+\beamer@subsectionintoc {2}{3}{Relation}{8}{0}{2}
+\beamer@sectionintoc {3}{Importance of Pythagoras theorem}{11}{0}{3}
+\beamer@subsectionintoc {3}{1}{Importance in Triangles}{12}{0}{3}
+\beamer@subsectionintoc {3}{2}{Importance in Finding Missing Side Lengths}{13}{0}{3}
+\beamer@sectionintoc {4}{Proof of the Pythagorean Theorem using Algebra}{14}{0}{4}
+\beamer@subsectionintoc {4}{1}{Figure}{15}{0}{4}
+\beamer@subsectionintoc {4}{2}{Area of Whole Square}{16}{0}{4}
+\beamer@subsectionintoc {4}{3}{Area of Other Pieces}{17}{0}{4}
+\beamer@subsectionintoc {4}{4}{Both Areas Must Be Equal}{19}{0}{4}
+\beamer@sectionintoc {5}{Examples and References of Pythagoras Theorem}{20}{0}{5}
+\beamer@subsectionintoc {5}{1}{Examples of Pythagoras theorem}{21}{0}{5}
+\beamer@subsectionintoc {5}{2}{References(Books)}{22}{0}{5}
+\beamer@subsectionintoc {5}{3}{References(Links)}{23}{0}{5}

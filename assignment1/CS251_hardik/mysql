@@ -1,0 +1,21 @@
+1.a select dept_no,max(salary)-min(salary) from dept_emp inner join salaries on dept_emp.emp_no=salaries.emp_no group by dept_no;
+1.b select dept_no, max(count1),min(count1),max(count1)-min(count1) from(select dept_no,count(from_date) as count1 from dept_emp group by dept_no,from_date) as s1 group by s1.dept_no;
+1.c select dept_no,M/F from (select dept_no,count(gender) as M from employees natural join dept_emp where gender='M' group by dept_no) as p1 natural join  (select dept_no,count(gender) as F from employees natural join dept_emp where gender='F' group by dept_no) as p2;
+
+2.a create table student (st_id varchar(6) check(st_id like 'Y%'), gender enum('MALE','FEMALE'), DOB date check(diffdate(currdate(),DOB)/365.25<30), tele_num varchar(11) not null);
+2.b create table course (course_id varchar(5) unique key, Instructor varchar(10) not null, sem enum ('1','2'), check(not (sem=2 and course_id like "CS%")));
+
+3.a alter table student modify st_id varchar(10) primary key;
+3.b alter table student modify tele_num varchar(11);
+3.c alter table course add constraint r check(Instructor like 'Prof%'); 
+
+4	insert into student values('Y12251','MALE','1989-12-09','9876543210'); 
+	insert into student values('Y12252','FEMALE','1990-02-19','9876543211');
+	insert into student values('Y12253','MALE','1989-05-29','9876543220');
+	insert into student (st_id,gender,DOB) values('Y12254','FEMALE','1990-11-12');
+
+
+5  update student set tele_num ="NULL" where datediff(DOB,'1990-01-01')>0;
+
+6 	drop table student;
+	drop table course;

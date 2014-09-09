@@ -1,0 +1,22 @@
+\begin{thebibliography}{1}
+
+\bibitem{google}
+Google!
+\newblock \url{http://www.google.com/}.
+
+\bibitem{perl}
+Allen~B. Downey.
+\newblock Learning perl the hard way.
+\newblock {\em Informatik Science 101}, 2003.
+
+\bibitem{cs251}
+Sumit Kalra and Arnab Bhattacharya.
+\newblock Course notes.
+\newblock \url{http://complab.cse.iitk.ac.in/}.
+
+\bibitem{sql}
+Dan Stellar.
+\newblock {\em Me with Mysql}.
+\newblock Euler Pvt. Ltd., 1992.
+
+\end{thebibliography}

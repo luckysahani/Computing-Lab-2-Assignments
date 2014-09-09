@@ -1,0 +1,8 @@
+version: 1
+
+## MODIFY the Robert Smith entry
+
+dn: cn=user1,ou=people,dc=cse,dc=iitk,dc=ac,dc=in
+changetype: modify
+replace: homePhone
+homePhone: 5679

@@ -1,0 +1,15 @@
+relationships
+{
+	background-color:white;
+	/*background-color:black;*/
+}
+advisor
+{
+	color:green;
+	/*color:yellow;*/
+}
+student
+{
+	color:blue;
+	/*color:aqua;*/
+}

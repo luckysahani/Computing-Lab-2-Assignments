@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="example_xml.css"?>
+<relationships>
+	<advisor>
+		<name>
+			Prof1
+		</name>
+		<dept>
+			CSE
+		</dept>
+		<student>
+			<roll>
+				12345
+			</roll>
+			<dept>
+				CSE
+			</dept>
+		</student>
+		<student>
+			<roll>
+				45678
+			</roll>
+			<dept>
+				HSS
+			</dept>
+		</student>
+	</advisor>
+	<advisor>
+		<name>
+			Prof2
+		</name>
+		<dept>
+			CSE
+		</dept>
+		<student>
+			<roll>
+				11111
+			</roll>
+			<dept>
+				CSE
+			</dept>
+		</student>
+	</advisor>
+</relationships>

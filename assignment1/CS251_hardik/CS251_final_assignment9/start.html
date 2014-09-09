@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" >
+<html>
+    <head>
+        <title>
+            CS251
+        </title>
+       
+        <style>
+            .bordered {
+                border-style: dotted;
+                color: darkslateblue;
+                text-align:center;
+            }
+            .bordered2 {
+                border-style: double;
+                color: cornflowerblue;
+                text-align: center;
+                font:bold 18px;
+            }
+            .emphasis {
+                color: black;
+                text-align: center;
+            }
+            .background1 {
+                background-color: antiquewhite;
+                text-align: left;
+                font: bold 28px;
+                font-family: 'Adobe Caslon Pro';
+            }
+            .mytext {
+                width: 300px;
+            }
+            .c {
+                text-align: center;
+             
+            }
+        </style>
+	</head>
+
+	<body>
+        <div class="bordered">
+            <h1 style="font:bold;opacity:0.8 " >CS251</h1>
+            <h2 style="font:bold;color:aqua;opacity: 0.9;">Assignment 9</h2>
+            <h2 style="font:bold;color:red;opacity: 0.6" class="emphasis">Hardik Bansal 12279</h2>
+        </div>
+        <form action="" method="post" >
+            <div id="form1" class="bordered2" style="color:black;text-align:center;">
+                <h3>
+                    <b><br /><br />Please enter the type of document you want to fill:<br /></b>
+                    <input type="radio"  name="article" value="article" onclick="document.location.href = 'article.html'"/>Article<br />
+                    <input type="radio" name="book" value="book" onclick="document.location.href = 'book.html'"/>Book<br />
+                    <input type="radio" name="inbook" value="inbook" onclick="document.location.href = 'inbook.html'" />Inbook<br />
+                    <input type="radio" name="inbook" value="incollection" onclick="document.location.href = 'incollection.html'" />Incollection<br />        
+                </h3>
+            </div>
+        </form>
+    </body>
+</html>

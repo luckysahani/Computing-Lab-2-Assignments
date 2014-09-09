@@ -1,0 +1,53 @@
+dn: ou=Dept,dc=cse,dc=iitk,dc=ac,dc=in
+objectClass: organizationalUnit
+ou: Dept
+description: Supergroup for entire Department
+
+dn: cn=LabAdmin, ou=Dept,dc=cse,dc=iitk,dc=ac,dc=in
+objectclass: groupofnames
+cn: LabAdmin
+description: Group of Lab Administrators
+member: cn= l1,ou=people,dc=cse,dc=iitk,dc=ac,dc=in
+member: cn= l2,ou=people,dc=cse,dc=iitk,dc=ac,dc=in
+
+dn: ou=People,ou=Dept,dc=cse,dc=iitk,dc=ac,dc=in
+objectclass: organizationalUnit
+ou: People
+description: Different people of the department
+
+dn: cn=Resources, ou=Dept,dc=cse,dc=iitk,dc=ac,dc=in
+objectclass: groupofnames
+cn: Resources
+description: Group of Lab Resources
+member: cn= r1,ou=people,dc=cse,dc=iitk,dc=ac,dc=in
+member: cn= r2,ou=people,dc=cse,dc=iitk,dc=ac,dc=in
+
+dn: ou=Faculty,ou=People,ou=Dept,dc=cse,dc=iitk,dc=ac,dc=in
+objectclass: organizationalUnit
+ou: Faculty
+description: Faculty of the department
+
+dn: ou=Students,ou=People,ou=Dept,dc=cse,dc=iitk,dc=ac,dc=in
+objectclass: organizationalUnit
+ou: Students
+description: Students of the department
+
+dn: ou=Staff,ou=People,ou=Dept,dc=cse,dc=iitk,dc=ac,dc=in
+objectclass: organizationalUnit
+ou: Staff
+description: Staff of the department
+
+dn: ou=BTech,ou=Students,ou=People,ou=Dept,dc=cse,dc=iitk,dc=ac,dc=in
+objectclass: organizationalUnit
+ou: BTech
+description: B.Tech. Students
+
+dn: ou=MTech,ou=Students,ou=People,ou=Dept,dc=cse,dc=iitk,dc=ac,dc=in
+objectclass: organizationalUnit
+ou: MTech
+description: M.Tech. Students
+
+dn: ou=PhD,ou=Students,ou=People,ou=Dept,dc=cse,dc=iitk,dc=ac,dc=in
+objectclass: organizationalUnit
+ou: PhD
+description: PhD Students

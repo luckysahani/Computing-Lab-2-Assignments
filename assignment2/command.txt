@@ -1,0 +1,19 @@
+ INSERT INTO `servermail`.`virtual_domains`
+ (`id` ,`name`)
+ VALUES
+ ('1', 'lucky.com'),
+ ('2', 'lucky.lucky.com');
+
+
+
+INSERT INTO `servermail`.`virtual_users`
+ (`id`, `domain_id`, `password` , `email`)
+ VALUES
+ ('1', '1', ENCRYPT('sahani', CONCAT('$6$', SUBSTRING(SHA(RAND()), -16))), 'lucky@lucky.com'),
+ ('2', '1', ENCRYPT('bansal', CONCAT('$6$', SUBSTRING(SHA(RAND()), -16))), 'hardik@lucky.com');
+
+
+INSERT INTO `servermail`.`virtual_aliases`
+(`id`, `domain_id`, `source`, `destination`)
+VALUES
+('1', '1', 'sahani@lucky.com', 'lucky@lucky.com');

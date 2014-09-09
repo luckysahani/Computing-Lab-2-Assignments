@@ -1,0 +1,33 @@
+Assign 6 - 
+1. create tables -
+  create database  - 
+	 books and users - 
+	books - 1. 10 digit unique isbn
+		2. title not null
+		3. author - anonymous by default
+		4. +ve no. of copies of a particular book
+	users - 1. the student id - Y7218
+		2. year of birth needed
+		3. gender enum 'M' or 'F'
+		4. no. of issued books < 99
+	create tables having infr of books and reg. users having constraints and memory management define fields.
+
+2. Alter tables
+ New req for the database, apply changes
+	make field containing isbn as primary key
+	can issue only 9 books now
+	
+3. Insert into tables
+	insert some books into the tables
+	r1 - 9604250590		intro to octave		xyz		4
+	9604250591		intro to latex		-		2
+	9604250592		intro to perl		abc		1
+
+4. update tables - change all anon authors to null.
+
+assign -5 
+
+1. use join
+  find ratio of male to female emp for every dept.
+  find all the female empl having 1st name from ''a or A and age > 60
+  find the dept name where no. of joining is highest on a single day.

@@ -1,0 +1,52 @@
+To be noted: Mam, The script contains the login to mysql as "mysql -u $user -ppassword ...." => 
+1.here please replace password with ur sql password and $user="your user name"
+2.replace lucky with ur user name and password(sahani here) with ur passoword
+3.In update 3rd part since there r no values satisfying it so no conditon satisfied.......
+
+Query
+1.perl new.pl - to_date 1998-05-01:1999-12-31
+2.perl new.pl - salary 40010:45678
+3 mysql -u lucky -psahani employees -e 'select max(avgsalary) from (select avg(salary) as avgsalary from salaries where emp_no>34000 and emp_no<36000 group by emp_no) as a1 '; 
+
+
+Insert
+1.      perl new.pl -i emp_no 15001  salary 50001 from_date 1988-01-10 to_date 1989-01-01
+	perl new.pl -i emp_no 15002  salary 50002 from_date 1988-01-10 to_date 1989-01-01
+	perl new.pl -i emp_no 15003  salary 50003 from_date 1988-01-10 to_date 1989-01-01
+	perl new.pl -i emp_no 15004  salary 50004 from_date 1988-01-10 to_date 1989-01-01
+	perl new.pl -i emp_no 15005  salary 50005 from_date 1988-01-10 to_date 1989-01-01
+	perl new.pl -i emp_no 15006  salary 50006 from_date 1988-01-10 to_date 1989-01-01
+	perl new.pl -i emp_no 15007  salary 50007 from_date 1988-01-10 to_date 1989-01-01
+	perl new.pl -i emp_no 15008  salary 50008 from_date 1988-01-10 to_date 1989-01-01
+	perl new.pl -i emp_no 15009  salary 50009 from_date 1988-01-10 to_date 1989-01-01
+	perl new.pl -i emp_no 15010  salary 50010 from_date 1988-01-10 to_date 1989-01-01
+	
+2.	perl new.pl -i emp_no 15001:15010  salary 50001 from_date 1988-01-10 to_date 1989-01-01
+
+3.	perl new.pl -i emp_no 15001  salary 50000 from_date 1988-01-10 to_date 1989-01-01
+	perl new.pl -i emp_no 15002  salary 50000 from_date 1988-01-11 to_date 1989-01-01
+	perl new.pl -i emp_no 15003  salary 50000 from_date 1988-01-12 to_date 1989-01-01
+	perl new.pl -i emp_no 15004  salary 50000 from_date 1988-01-13 to_date 1989-01-01
+	perl new.pl -i emp_no 15005  salary 50000 from_date 1988-01-14 to_date 1989-01-01
+	perl new.pl -i emp_no 15006  salary 50000 from_date 1988-01-15 to_date 1989-01-01
+	perl new.pl -i emp_no 15007  salary 50000 from_date 1988-01-16 to_date 1989-01-01
+	perl new.pl -i emp_no 15008  salary 50000 from_date 1988-01-17 to_date 1989-01-01
+	perl new.pl -i emp_no 15009  salary 50000 from_date 1988-01-18 to_date 1989-01-01
+	perl new.pl -i emp_no 15010  salary 50000 from_date 1988-01-19 to_date 1989-01-01
+
+
+Update
+
+1.mysql -u lucky -psahani  employees -e  'update salaries set salary=salary+5000 where from_date between "1988-01-11" and "1988-01-12"';
+2.perl new.pl -u salary 0:100000 salary 100000
+3.perl new.pl -i emp_no 16000 from_date 1989-01-01 to_date 1980-09-01 salary 50010;
+  perl new.pl -i emp_no 16001 from_date 1989-01-02 to_date 1980-09-02 salary 50009;
+  perl new.pl -i emp_no 16002 from_date 1989-01-03 to_date 1980-09-03 salary 50008;
+  perl new.pl -i emp_no 16003 from_date 1989-01-04 to_date 1980-09-04 salary 50007; 
+  perl new.pl -i emp_no 16004 from_date 1989-01-05 to_date 1980-09-05 salary 50006;
+  perl new.pl -i emp_no 16005 from_date 1989-01-06 to_date 1980-09-06 salary 50005;
+  perl new.pl -i emp_no 16006 from_date 1989-01-07 to_date 1980-09-07 salary 50004;
+  perl new.pl -i emp_no 16007 from_date 1989-01-08 to_date 1980-09-08 salary 50003;
+  perl new.pl -i emp_no 16008 from_date 1989-01-09 to_date 1980-09-09 salary 50002; 
+  perl new.pl -i emp_no 16009 from_date 1989-01-10 to_date 1980-09-19 salary 50001;
+  

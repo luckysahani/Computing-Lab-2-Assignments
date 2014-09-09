@@ -1,0 +1,1000 @@
+ 1073  ./a.out
+ 1074  g++ wpc221.cpp
+ 1075  ./a.out
+ 1076  g++ wpc221.cpp
+ 1077  ./a.out
+ 1078  g++ wpc221.cpp
+ 1079  ./a.out
+ 1080  g++ wpc221.cpp
+ 1081  ./a.out
+ 1082  g++ wpc221.cpp
+ 1083  ./a.out
+ 1084  g++ wpc221.cpp
+ 1085  ./a.out
+ 1086  g++ wpc221.cpp
+ 1087  ./a.out
+ 1088  g++ wpc221.cpp
+ 1089  ./a.out
+ 1090  g++ wpc221.cpp
+ 1091  ./a.out
+ 1092  g++ wpc221.cpp
+ 1093  ./a.out
+ 1094  g++ wpc221.cpp
+ 1095  ./a.out
+ 1096  g++ wpc221.cpp
+ 1097  ./a.out
+ 1098  g++ wpc221.cpp
+ 1099  ./a.out
+ 1100  cd Coding/wpc/
+ 1101  vim -g &
+ 1102  sudo  mount -t ntfs-3g -o remove_hiberfile /dev/sda5 /media/DA96299096296DE7
+ 1103  vim -g
+ 1104  history | grep hostapd
+ 1105  history | grep eth0
+ 1106  sudo iptables -t nat -A POSTROUTING -s 10.10.0.0/16 -o eth0 -j MASQUERADE
+ 1107  sudo hostapd -dd /etc/hostapd/hostapd.conf &
+ 1108  ssh hardik@webhome.cc.iitk.ac.in:20
+ 1109  ssh hardik@webhome.cc.iitk.ac.in:22
+ 1110  susudo ifconfig wlan0 down
+ 1111  sudo ifconfig wlan0 down
+ 1112  sudo ifconfig wlan0 up
+ 1113  sudo ifconfig wlan0 down
+ 1114  sudo ifconfig wlan0 up
+ 1115  df
+ 1116  ssh hardik@webhome.cc.iitk.ac.in
+ 1117  ssh hardik@webhome.cc.iitk.ac.in:22
+ 1118  ssh hardik@webhome.cc.iitk.ac.in
+ 1119  sudo apt-get install libgtk2.0-0:i386
+ 1120  sudo apt-get install xterm
+ 1121  uname –m
+ 1122  uname
+ 1123  uname -v
+ 1124  uname -m
+ 1125  sudo apt-get install ia32-libs-gtk
+ 1126  ssh hardik@webhome.cc.iitk.ac.in
+ 1127  exit
+ 1128  df
+ 1129  sudo ifconfig wlan0 down
+ 1130  sudo ifconfig wlan0 up
+ 1131  sudo ifconfig wlan0 down
+ 1132  sudo ifconfig wlan0 up
+ 1133  sudo ifconfig wlan0 down
+ 1134  sudo ifconfig wlan0 up
+ 1135  ifconfig
+ 1136  sudo ifconfig wlan0 down
+ 1137  sudo ifconfig wlan0 up
+ 1138  vim -g &
+ 1139  cd Coding/ahmed/7241/
+ 1140  g++ homo.cpp 
+ 1141  ./a.out
+ 1142  clr
+ 1143  vim -g
+ 1144  g++ ppath.cpp 
+ 1145  ./a.out
+ 1146  g++ ppath.cpp 
+ 1147  ./a.out
+ 1148  g++ ppath.cpp 
+ 1149  ./a.out
+ 1150  g++ ppath.cpp 
+ 1151  ./a.out
+ 1152  g++ ppath.cpp 
+ 1153  ./a.out
+ 1154  g++ ppath.cpp 
+ 1155  ./a.out
+ 1156  g++ ppath.cpp 
+ 1157  ./a.out
+ 1158  g++ ppath.cpp 
+ 1159  ./a.out
+ 1160  g++ ppath.cpp 
+ 1161  ./a.out
+ 1162  g++ ppath.cpp 
+ 1163  ./a.out
+ 1164  g++ ppath.cpp 
+ 1165  ./a.out
+ 1166  g++ ppath.cpp 
+ 1167  ./a.out
+ 1168  sudo ifconfig wlan0 down
+ 1169  sudo ifconfig wlan0 up
+ 1170  sudo ifconfig wlan0 down
+ 1171  sudo ifconfig wlan0 up
+ 1172  sudo ifconfig wlan0 down
+ 1173  sudo ifconfig wlan0 up
+ 1174  sudo ifconfig wlan0 down
+ 1175  sudo ifconfig wlan0 up
+ 1176  sudo ifconfig wlan0 down
+ 1177  sudo ifconfig wlan0 down
+ 1178  sudo ifconfig wlan0 up
+ 1179  sudo ifconfig wlan0 down
+ 1180  sudo ifconfig wlan0 up
+ 1181  sudo ifconfig wlan0 down
+ 1182  sudo ifconfig wlan0 up
+ 1183  sudo ifconfig wlan0 down
+ 1184  sudo ifconfig wlan0 up
+ 1185  sudo ifconfig wlan0 down
+ 1186  hutdown
+ 1187  shutdown
+ 1188  sudo shutdown
+ 1189  shutdown --help
+ 1190  shutdown --help |more
+ 1191  sudo shutdown -r
+ 1192  shutdown --help |mor
+ 1193  sudo shutdown -r now
+ 1194  sudo ifconfig wlan0 down
+ 1195  sudo ifconfig wlan0 up
+ 1196  sudo ifconfig wlan0 down
+ 1197  sudo ifconfig wlan0 up
+ 1198  sudo ifconfig wlan0 down
+ 1199  sudo ifconfig wlan0 up
+ 1200  sudo ifconfig wlan0 down
+ 1201  sudo ifconfig wlan0 up
+ 1202  sudo ifconfig wlan0 down
+ 1203  sudo ifconfig wlan0 up
+ 1204  sudo ifconfig wlan0 down
+ 1205  sudo ifconfig wlan0 up
+ 1206  sudo ifconfig wlan0 down
+ 1207  sudo ifconfig wlan0 up
+ 1208  sudo ifconfig wlan0 down
+ 1209  sudo ifconfig wlan0 up
+ 1210  sudo ifconfig wlan0 down
+ 1211  sudo ifconfig wlan0 up
+ 1212  sudo ifconfig wlan0 down
+ 1213  sudo ifconfig wlan0 up
+ 1214  vim -g
+ 1215  sudo ifconfig wlan0 down
+ 1216  sudo ifconfig wlan0 up
+ 1217  sudo ifconfig wlan0 down
+ 1218  sudo ifconfig wlan0 up
+ 1219  sudo ifconfig wlan0 down
+ 1220  sudo ifconfig wlan0 up
+ 1221  sudo ifconfig wlan0 down
+ 1222  sudo ifconfig wlan0 up
+ 1223  sudo ifconfig wlan0 down
+ 1224  sudo ifconfig wlan0 up
+ 1225  vim -g
+ 1226  cd Coding/ahmed/
+ 1227  g++ new.cpp
+ 1228  ./a.out
+ 1229  g++ new.cpp
+ 1230  ./a.out
+ 1231  g++ new.cpp
+ 1232  ./a.out
+ 1233  g++ new.cpp
+ 1234  ./a.out
+ 1235  g++ new.cpp
+ 1236  ./a.out
+ 1237  g++ new.cpp
+ 1238  ./a.out
+ 1239  g++ new.cpp
+ 1240  ./a.out
+ 1241  g++ new.cpp
+ 1242  ./a.out
+ 1243  g++ new.cpp
+ 1244  ./a.out
+ 1245  g++ new.cpp
+ 1246  ./a.out
+ 1247  g++ new.cpp
+ 1248  ./a.out
+ 1249  vim -g
+ 1250  :q
+ 1251  clr
+ 1252  cd Coding/
+ 1253  ls
+ 1254  cd Snippets/
+ 1255  git init new/
+ 1256  cd new/
+ 1257  ls
+ 1258  ls -a
+ 1259  cd ..
+ 1260  rm -rf n
+ 1261  rm -rf new
+ 1262  ls
+ 1263  cd Snippets/
+ 1264  git init Snippets/
+ 1265  clr
+ 1266  cd Snippets/
+ 1267  touch dijsktra.cpp
+ 1268  git add *
+ 1269  git status
+ 1270  git commit -m "dijsktra added"
+ 1271  git add remote origin https://github.com/hardikbansal/Snippets
+ 1272  git remote add origin https://github.com/hardikbansal/Snippets
+ 1273  git push origin master
+ 1274  git status
+ 1275  git origin
+ 1276  git status
+ 1277  git push origin master
+ 1278  git pull origin
+ 1279  git pull origin master
+ 1280  git push origin master
+ 1281  ls
+ 1282  ls -a
+ 1283  git push origin master
+ 1284  git remote -v
+ 1285  git remote add origin https://github.com/hardikbansal/Snippets.git
+ 1286  git remote remove origin
+ 1287  git remote rm origin
+ 1288  git remote remove origin https://github.com/hardikbansal/Snippets.git
+ 1289  git remote add origin https://github.com/hardikbansal/Snippets.git
+ 1290  git push origin master
+ 1291  git remote -v
+ 1292  git push origin master
+ 1293  clr
+ 1294  ls
+ 1295  git add *
+ 1296  git commit -m "initial commit"
+ 1297  git push origin master
+ 1298  git commit -am "dijsktra added"
+ 1299  git push origin master
+ 1300  clr
+ 1301  cd ../../
+ 1302  g++ bignum.cpp 
+ 1303  ./a.out
+ 1304  g++ bignum.cpp 
+ 1305  ./a.out
+ 1306  g++ bignum.cpp 
+ 1307  ./a.out
+ 1308  vim -g
+ 1309  mount -t ntfs-3g -o remove_hiberfile /dev/sda5 /media/DA96299096296DE7
+ 1310  sudo mount -t ntfs-3g -o remove_hiberfile /dev/sda5 /media/DA96299096296DE7
+ 1311  sudo ifconfig wlan0 down
+ 1312  sudo ifconfig wlan0 up
+ 1313  sudo ifconfig wlan0 down
+ 1314  sudo ifconfig wlan0 up
+ 1315  sudo ifconfig wlan0 down
+ 1316  sudo ifconfig wlan0 up
+ 1317  sudo ifconfig wlan0 down
+ 1318  sudo ifconfig wlan0 up
+ 1319  vim -g &
+ 1320  history | grep sudo edit
+ 1321  vim -g &
+ 1322  history | grep sudo edit
+ 1323  history | grep "sudo edit"
+ 1324  history | grep "sudo"
+ 1325  sudo gedit /etc/default/hostapd
+ 1326  sudo gedit /etc/dhcp/dhcpd.conf
+ 1327  clr
+ 1328  cd CS251/sql/employees_db/
+ 1329  ks
+ 1330  ls
+ 1331  clr
+ 1332  ls
+ 1333  perl new.pl - emp_no 1001:2001,4500,5400:5522,4555 - salary 4588:9522,5666,4512
+ 1334  perl new.pl - emp_no 150000 - salary 4588:588888;
+ 1335  perl new.pl - emp_no 150000
+ 1336  perl new.pl - emp_no 1:15000000
+ 1337  perl new.pl - emp_no 1:150000
+ 1338  perl new.pl - emp_no 150000
+ 1339  perl new.pl - emp_no 15000
+ 1340  perl new.pl -u emp_no 1200 1500;
+ 1341  perl new.pl -u salaries 1200 1500;
+ 1342  perl new.pl -u salary 1200 1500;
+ 1343  perl new.pl -u salary 12000 15000;
+ 1344  perl new.pl -u salary 120000 150000;
+ 1345  perl new.pl -u salary 52243 53341
+ 1346  perl new.pl - emp_no 15000
+ 1347  perl new.pl -emp_no 15000
+ 1348  perl new.pl - emp_no 15000
+ 1349  perl new.pl -emp_no 15000,123456
+ 1350  perl new.pl - emp_no 15000,123456
+ 1351  perl new.pl - emp_no 15000,42345
+ 1352  perl new.pl - emp_no 15000,42345:42399
+ 1353  perl new.pl - emp_no 15000,42345:42399,45678,67895
+ 1354  perl new.pl - emp_no 15000,42345:42399,45678,67895 from_date 1990-01-01 1995-01-01
+ 1355  perl new.pl - emp_no 15000,42345:42399,45678,67895 from_date 1995-01-01:2000-01-01
+ 1356  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01
+ 1357  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01
+ 1358  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000
+ 1359  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 to_date 2000-02-02:2002:02:02
+ 1360  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 - to_date 2000-02-02:2002:02:02
+ 1361  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 - to_date 1900-02-02:2002:02:02
+ 1362  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 - to_date 1900-02-02:2002-02-02
+ 1363  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 - to_date 2000-02-02:2002-02-02
+ 1364  perl new.pl -u  emp_no 42348:42353 
+ 1365  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 - to_date 2000-02-02:2002-02-02
+ 1366  perl new.pl -u  from_date 1999-09-17 2000-01-01
+ 1367  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 - to_date 2000-02-02:2002-02-02
+ 1368  perl new.pl -u  from_date 2000-01-01 1999-09-17
+ 1369  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 - to_date 2000-02-02:2002-02-02
+ 1370  perl new.pl -u  from_date 1999-09-17 2000-01-01
+ 1371  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 - to_date 2000-02-02:2002-02-02
+ 1372  perl new.pl -u emp_no 42345:42355 from_date 2000-01-01 salary 40000 
+ 1373  perl new.pl -u  from_date 1999-09-17 2000-01-01
+ 1374  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 - to_date 2000-02-02:2002-02-02
+ 1375  perl new.pl -u  from_date  2000-01-01 1999-09-17
+ 1376  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 - to_date 2000-02-02:2002-02-02
+ 1377  perl new.pl -u emp_no 42345:42355 from_date 2000-01-01 salary 40000 
+ 1378  perl new.pl -u emp_no 42345:42355 from_date 1999-01-01 salary 40000 
+ 1379  perl new.pl -u emp_no 42345:42355 from_date 1999-01-01 salary 40000
+ 1380  perl new.pl -u emp_no 42345:42355 from_date 1999-09-01 salary 40000
+ 1381  perl new.pl -u emp_no 42300:42355 from_date 1999-09-01 salary 40000
+ 1382  perl new.pl -u emp_no 42300 from_date 1999-09-01 salary 40000
+ 1383  perl new.pl -u emp_no 42348 from_date 1999-09-10 salary 46614
+ 1384  perl new.pl -u emp_no 42348  salary 46614
+ 1385  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 - to_date 2000-02-02:2002-02-02
+ 1386  mysql -u hardik -p hardik
+ 1387  mysql -u hardik -pfacebook
+ 1388  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 - to_date 2000-02-02:2002-02-02
+ 1389  perl new.pl -u emp_no 42348  to_date 2001-09-16
+ 1390  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 - to_date 2000-02-02:2002-02-02
+ 1391  perl new.pl -u emp_no 42348  to_date 2001-09-16 salary 45000
+ 1392  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 - to_date 2000-02-02:2002-02-02
+ 1393  perl new.pl -d emp_no 42348  to_date 2001-09-15 salary 45000
+ 1394  perl new.pl - emp_no 15000,42345:42399,45678,67895 - from_date 1995-01-01:2000-01-01,2001-01-01 - salary 40000:50000 - to_date 2000-02-02:2002-02-02
+ 1395  perl new.pl -d - emp_no 42345:42399,45678 - from_date 1995-01-01:2000-01-01 - salary 40000:50000 - to_date 2000-02-02:2002-02-02
+ 1396  perl new.pl  - emp_no 42345:42399,45678 - from_date 1995-01-01:2000-01-01 - salary 40000:50000 - to_date 2000-02-02:2002-02-02
+ 1397  perl new.pl  - emp_no 42345:42499,45678 - from_date 1995-01-01:2000-01-01 - salary 40000:50000 - to_date 2000-02-02:2002-02-02
+ 1398  perl new.pl  -i emp_no 42345:42399  from_date 1995-01-01  salary 40000  to_date 2000-02-02
+ 1399  perl new.pl  - emp_no 42345:42399 - from_date 1995-01-01 - salary 40000 - to_date 2000-02-02
+ 1400  perl new.pl  - emp_no 42345:42349
+ 1401  sudo gedit /etc/hostapd/hostapd.conf
+ 1402  sudo gedit /etc/default/hostapd
+ 1403  sudo gedit /etc/dhcp/dhcpd.conf
+ 1404  sudo gedit /etc/network/interfaces
+ 1405  sudo iptables -t nat -A POSTROUTING -s 10.10.0.0/16 -o eth0 -j MASQUERADE
+ 1406  sudo hostapd -dd /etc/hostapd/hostapd.conf &
+ 1407  sudo iptables -t nat -A POSTROUTING -s 10.10.0.0/16 -o eth0 -j MASQUERADE
+ 1408  sudo hostapd -dd /etc/hostapd/hostapd.conf &
+ 1409  sudo sudo service isc-dhcp-server start
+ 1410  sudo service hostapd start
+ 1411  echo 1| sudo tee /proc/sys/net/ipv4/ip_forward
+ 1412  sudo iptables -t nat -A POSTROUTING -s 10.10.0.0/16 -o ppp0 -j MASQUERADE
+ 1413  use sudo killall hostapd
+ 1414  sudo killall hostapd
+ 1415  sudo service hostapd start
+ 1416  sudo iptables -t nat -A POSTROUTING -s 10.10.0.0/16 -o ppp0 -j MASQUERADE
+ 1417  sudo hostapd -dd /etc/hostapd/hostapd.conf
+ 1418  df
+ 1419  sudo service hostapd start
+ 1420  sudo apt-get remove hostapd
+ 1421  sudo apt-get insta;; hostapd
+ 1422  sudo apt-get install hostapd
+ 1423  sudo rfkill unblock all
+ 1424  sudo rfkill all
+ 1425  sudo rfkill block all
+ 1426  sudo rfkill unblock all
+ 1427  sudo service hostapd start
+ 1428  sudo gedit /etc/network/interfaces
+ 1429  sudo gedit /etc/hostapd/hostapd.conf
+ 1430  sudo iptables -t nat -A POSTROUTING -s 10.10.0.0/16 -o eth0 -j MASQUERADE
+ 1431  sudo gedit /etc/hostapd/hostapd.conf
+ 1432  echo 1| sudo tee /proc/sys/net/ipv4/ip_forward
+ 1433  sudo hostapd -dd /etc/hostapd/hostapd.conf
+ 1434  sudo aptitude install iw
+ 1435  iw list
+ 1436  cd CS251/sql/employees_db/
+ 1437  perl commandn.pl - emp_no=15000
+ 1438  perl commandn.pl - emp_no 15000
+ 1439  perl commandn.pl -emp_no 15000
+ 1440  perl commandn.pl -emp_no 15000:15050 -salary 53341
+ 1441  perl commandn.pl -emp_no 15000:15050 -salary 53341 -from_date 1993-07-20
+ 1442  perl commandn.pl -u -emp_no 15000:15050 -salary 53341 -from_date 1993-07-20
+ 1443  perl commandn.pl -u -emp_no 15000 -salary 53341 -from_date 1993-07-20
+ 1444  perl commandn.pl -u -emp_no 15000 -salary 53341
+ 1445  perl commandn.pl -u -emp_no 15000
+ 1446  cd CS251/sql/employees_db/
+ 1447  perl commandn.pl -u -emp_no 15000
+ 1448  perl commandn.pl -u emp_no 15000
+ 1449  perl commandn.pl -u emp_no 15000 salary 1500
+ 1450  perl commandn.pl -i emp_no 15000 salary 1500 from_date 2013-09-09 to_date 2013-09-10
+ 1451  perl commandn.pl -emp_no 15000
+ 1452  perl commandn.pl -emp_no 15000:15001
+ 1453  perl commandn.pl -emp_no 15000:15001 from_date 1993-01-31:2002-01-29
+ 1454  perl commandn.pl -emp_no 15000:15001 -from_date 1993-01-31:2002-01-29
+ 1455  perl commandn.pl -u -emp_no 15000:15001 -from_date 1993-01-31
+ 1456  perl commandn.pl -u emp_no 15000:15001 from_date 1993-01-31
+ 1457  perl commandn.pl -u emp_no 15000:15001 salary 15500
+ 1458  perl commandn.pl -emp_no 15000:15001 
+ 1459  sudo apt-get install hostapd
+ 1460  sudo gedit /etc/hostapd/hostapd.conf
+ 1461  sudo gedit /etc/default/hostapd
+ 1462  sudo service hostapd start
+ 1463  ifconfig
+ 1464  sudo gedit /etc/hostapd/hostapd.conf
+ 1465  sudo service hostapd start
+ 1466  sudo /usr/sbin/hostapd -P /var/run/hostapd.pid -B /etc/hostapd/hostapd.conf
+ 1467  sudo service hostapd start
+ 1468  sudo iptables -t nat -A POSTROUTING -s 10.10.0.0/16 -o eth0 -j MASQUERADE
+ 1469  sudo gedit /etc/hostapd/hostapd.conf
+ 1470  sudo service hostapd start
+ 1471  sudo service isc-dhcp-server start
+ 1472  sudo hostapd -dd /etc/hostapd/hostapd.conf
+ 1473  vim -g
+ 1474  cd Coding/
+ 1475  gcc arpit.c 
+ 1476  ./a.out
+ 1477  gcc arpit.c 
+ 1478  ./a.out
+ 1479  gcc arpit.c 
+ 1480  ./a.out
+ 1481  gcc arpit.c 
+ 1482  ./a.out
+ 1483  gcc arpit.c 
+ 1484  ./a.out
+ 1485  gcc arpit.c 
+ 1486  ./a.out
+ 1487  gcc arpit.c 
+ 1488  ./a.out
+ 1489  gcc arpit.c 
+ 1490  ./a.out
+ 1491  gcc arpit.c 
+ 1492  ./a.out
+ 1493  gcc arpit.c 
+ 1494  ./a.out
+ 1495  gcc arpit.c 
+ 1496  ./a.out
+ 1497  sudo apt-get update
+ 1498  sudo apt-get install dcplusplus
+ 1499  sudo apt-get install dcpp
+ 1500  sudo apt-get install linuxdcpp
+ 1501  vim -g
+ 1502  sudo service hostapd start
+ 1503  sudo hostapd -dd /etc/hostapd/hostapd.conf
+ 1504  sudo apt-get install hostapd
+ 1505  sudo service hostapd start
+ 1506  sudo service isc-dhcp-server start
+ 1507  sudo service hostapd start
+ 1508  sudo /usr/sbin/hostapd -P /var/run/hostapd.pid -B /etc/hostapd/hostapd.conf
+ 1509  sudo service hostapd start
+ 1510  cd
+ 1511  clr
+ 1512  chmod ./wifi.ssh
+ 1513  chmod +x ./wifi.ssh
+ 1514  ./wifi.ssh 
+ 1515  ls
+ 1516  cd courses/
+ 1517  ls
+ 1518  cd cs210/
+ 1519  ls
+ 1520  mkdir Project
+ 1521  cd 
+ 1522  cd courses/cs210/Project/
+ 1523  ls
+ 1524  clr
+ 1525  c;r
+ 1526  clr
+ 1527  gpp huffman.cpp 
+ 1528  g++ huffman.cpp 
+ 1529  ./a.out
+ 1530  g++ huffman.cpp 
+ 1531  ./a.out
+ 1532  g++ huffman.cpp 
+ 1533  ./a.out
+ 1534  g++ huffman.cpp 
+ 1535  ./a.out
+ 1536  g++ huffman.cpp 
+ 1537  ./a.out
+ 1538  g++ huffman.cpp 
+ 1539  ./a.out
+ 1540  g++ huffman.cpp 
+ 1541  ./a.out
+ 1542  g++ huffman.cpp 
+ 1543  ./a.out
+ 1544  g++ huffman.cpp 
+ 1545  ./a.out
+ 1546  g++ huffman.cpp 
+ 1547  ./a.out
+ 1548  g++ huffman.cpp 
+ 1549  clr
+ 1550  g++ huffman.cpp 
+ 1551  clr
+ 1552  ./a.out
+ 1553  clr
+ 1554  g++ huffman.cpp 
+ 1555  ./a.out
+ 1556  g++ huffman.cpp 
+ 1557  ./a.out
+ 1558  g++ huffman.cpp 
+ 1559  ./a.out
+ 1560  g++ huffman.cpp 
+ 1561  ./a.out
+ 1562  g++ huffman.cpp 
+ 1563  ./a.out
+ 1564  g++ huffman.cpp 
+ 1565  ./a.out
+ 1566  g++ huffman.cpp 
+ 1567  ./a.out
+ 1568  g++ huffman.cpp 
+ 1569  ./a.out
+ 1570  g++ huffman.cpp 
+ 1571  ./a.out
+ 1572  g++ huffman.cpp 
+ 1573  ./a.out
+ 1574  g++ huffman.cpp 
+ 1575  ./a.out
+ 1576  g++ huffman.cpp 
+ 1577  ./a.out
+ 1578  g++ huffman.cpp 
+ 1579  ./a.out
+ 1580  g++ huffman.cpp 
+ 1581  ./a.out
+ 1582  g++ huffman.cpp 
+ 1583  ./a.out
+ 1584  g++ huffman.cpp 
+ 1585  ./a.out
+ 1586  g++ huffman.cpp 
+ 1587  ./a.out
+ 1588  g++ huffman.cpp 
+ 1589  ./a.out
+ 1590  g++ huffman.cpp 
+ 1591  ./a.out
+ 1592  g++ huffman.cpp 
+ 1593  ./a.out
+ 1594  g++ huffman.cpp 
+ 1595  ./a.out
+ 1596  g++ huffman.cpp 
+ 1597  ./a.out
+ 1598  g++ huffman.cpp 
+ 1599  ./a.out
+ 1600  g++ huffman.cpp 
+ 1601  ./a.out
+ 1602  g++ huffman.cpp 
+ 1603  ./a.out
+ 1604  g++ huffman.cpp 
+ 1605  ./a.out
+ 1606  g++ huffman.cpp 
+ 1607  ./a.out
+ 1608  g++ huffman.cpp 
+ 1609  ./a.out
+ 1610  g++ huffman.cpp 
+ 1611  ./a.out
+ 1612  g++ huffman.cpp 
+ 1613  ./a.out
+ 1614  g++ huffman.cpp 
+ 1615  ./a.out
+ 1616  g++ huffman.cpp 
+ 1617  ./a.out
+ 1618  g++ huffman.cpp 
+ 1619  ./a.out
+ 1620  g++ huffman.cpp 
+ 1621  ./a.out
+ 1622  g++ huffman.cpp 
+ 1623  ./a.out
+ 1624  g++ huffman.cpp 
+ 1625  ./a.out
+ 1626  g++ huffman.cpp 
+ 1627  ./a.out
+ 1628  g++ huffman.cpp 
+ 1629  ./a.out
+ 1630  g++ huffman.cpp 
+ 1631  ./a.out
+ 1632  g++ huffman.cpp 
+ 1633  ./a.out
+ 1634  g++ huffman.cpp 
+ 1635  ./a.out
+ 1636  g++ huffman.cpp 
+ 1637  ./a.out
+ 1638  g++ huffman.cpp 
+ 1639  ./a.out
+ 1640  g++ huffman.cpp 
+ 1641  ./a.out
+ 1642  g++ huffman.cpp 
+ 1643  ./a.out
+ 1644  g++ huffman.cpp 
+ 1645  ./a.out
+ 1646  g++ huffman.cpp 
+ 1647  ./a.out
+ 1648  g++ huffman.cpp 
+ 1649  ./a.out
+ 1650  g++ huffman.cpp 
+ 1651  ./a.out
+ 1652  g++ huffman.cpp 
+ 1653  ./a.out
+ 1654  g++ huffman.cpp 
+ 1655  ./a.out
+ 1656  g++ huffman.cpp 
+ 1657  ./a.out
+ 1658  g++ huffman.cpp 
+ 1659  ./a.out
+ 1660  g++ huffman.cpp 
+ 1661  ./a.out
+ 1662  g++ huffman.cpp 
+ 1663  ./a.out
+ 1664  g++ huffman.cpp 
+ 1665  ./a.out
+ 1666  g++ huffman.cpp 
+ 1667  ./a.out
+ 1668  g++ huffman.cpp 
+ 1669  ./a.out
+ 1670  g++ huffman.cpp 
+ 1671  ./a.out
+ 1672  g++ huffman.cpp 
+ 1673  ./a.out
+ 1674  g++ huffman.cpp 
+ 1675  ./a.out
+ 1676  g++ huffman.cpp 
+ 1677  ./a.out
+ 1678  g++ huffman.cpp 
+ 1679  ./a.out
+ 1680  g++ huffman.cpp 
+ 1681  ./a.out
+ 1682  g++ huffman.cpp 
+ 1683  ./a.out
+ 1684  g++ huffman.cpp 
+ 1685  ./a.out
+ 1686  g++ huffman.cpp 
+ 1687  ./a.out
+ 1688  g++ huffman.cpp 
+ 1689  ./a.out
+ 1690  g++ huffman.cpp 
+ 1691  ./a.out
+ 1692  g++ huffman.cpp 
+ 1693  ./a.out
+ 1694  g++ huffman.cpp 
+ 1695  ./a.out
+ 1696  g++ huffman.cpp 
+ 1697  ./a.out
+ 1698  g++ huffman.cpp 
+ 1699  ./a.out
+ 1700  g++ huffman.cpp 
+ 1701  ./a.out
+ 1702  g++ huffman.cpp 
+ 1703  ./a.out
+ 1704  g++ huffman.cpp 
+ 1705  ./a.out
+ 1706  g++ huffman.cpp 
+ 1707  ./a.out
+ 1708  g++ huffman.cpp 
+ 1709  ./a.out
+ 1710  g++ huffman.cpp 
+ 1711  ./a.out
+ 1712  g++ huffman.cpp 
+ 1713  ./a.out
+ 1714  g++ huffman.cpp 
+ 1715  ./a.out
+ 1716  g++ huffman.cpp 
+ 1717  ./a.out
+ 1718  g++ huffman.cpp 
+ 1719  ./a.out
+ 1720  g++ huffman.cpp 
+ 1721  ./a.out
+ 1722  g++ huffman.cpp 
+ 1723  ./a.out
+ 1724  g++ huffman.cpp 
+ 1725  ./a.out
+ 1726  g++ huffman.cpp 
+ 1727  ./a.out
+ 1728  g++ huffman.cpp 
+ 1729  ./a.out
+ 1730  g++ huffman.cpp 
+ 1731  ./a.out
+ 1732  g++ huffman.cpp 
+ 1733  ./a.out
+ 1734  g++ huffman.cpp 
+ 1735  ./a.out
+ 1736  g++ huffman.cpp 
+ 1737  ./a.out
+ 1738  g++ huffman.cpp 
+ 1739  ./a.out
+ 1740  g++ huffman.cpp 
+ 1741  ./a.out
+ 1742  g++ huffman.cpp 
+ 1743  ./a.out
+ 1744  g++ huffman.cpp 
+ 1745  ./a.out
+ 1746  g++ huffman.cpp 
+ 1747  ./a.out
+ 1748  g++ huffman.cpp 
+ 1749  ./a.out
+ 1750  g++ huffman.cpp 
+ 1751  ./a.out
+ 1752  g++ huffman.cpp 
+ 1753  ./a.out
+ 1754  g++ huffman.cpp 
+ 1755  ./a.out
+ 1756  g++ huffman.cpp 
+ 1757  ./a.out
+ 1758  g++ huffman.cpp 
+ 1759  ./a.out
+ 1760  g++ huffman.cpp 
+ 1761  ./a.out
+ 1762  g++ huffman.cpp 
+ 1763  ./a.out
+ 1764  g++ huffman.cpp 
+ 1765  ./a.out
+ 1766  g++ huffman.cpp 
+ 1767  ./a.out
+ 1768  g++ huffman.cpp 
+ 1769  ./a.out
+ 1770  g++ huffman.cpp 
+ 1771  ./a.out
+ 1772  g++ huffman.cpp 
+ 1773  ./a.out
+ 1774  g++ huffman.cpp 
+ 1775  ./a.out
+ 1776  g++ huffman.cpp 
+ 1777  ./a.out
+ 1778  g++ huffman.cpp 
+ 1779  ./a.out
+ 1780  g++ huffman.cpp 
+ 1781  ./a.out
+ 1782  g++ huffman.cpp 
+ 1783  ./a.out
+ 1784  g++ huffman.cpp 
+ 1785  ./a.out
+ 1786  g++ huffman.cpp 
+ 1787  ./a.out
+ 1788  g++ huffman.cpp 
+ 1789  ./a.out
+ 1790  g++ huffman.cpp 
+ 1791  ./a.out
+ 1792  g++ huffman.cpp 
+ 1793  ./a.out
+ 1794  g++ huffman.cpp 
+ 1795  ./a.out
+ 1796  g++ huffman.cpp 
+ 1797  ./a.out
+ 1798  g++ huffman.cpp 
+ 1799  ./a.out
+ 1800  df
+ 1801  vim -g
+ 1802  cd Downloads/
+ 1803  tar -xvf ta.zip 
+ 1804  unzip -xvf ta.zip 
+ 1805  unzip -xvf ta.zip clr
+ 1806  clr
+ 1807  cd ../courses/cs210/Project/
+ 1808  clr
+ 1809  g++ kmp_new.cpp 
+ 1810  ./a.out
+ 1811  g++ kmp_new.cpp 
+ 1812  ./a.out
+ 1813  g++ kmp_new.cpp 
+ 1814  ./a.out
+ 1815  g++ kmp_new.cpp 
+ 1816  ./a.out
+ 1817  g++ kmp_new.cpp 
+ 1818  ./a.out
+ 1819  g++ kmp_new.cpp 
+ 1820  ./a.out
+ 1821  g++ kmp_new.cpp 
+ 1822  ./a.out
+ 1823  g++ kmp_new.cpp 
+ 1824  ./a.out
+ 1825  g++ kmp_new.cpp 
+ 1826  ./a.out
+ 1827  g++ kmp_new.cpp 
+ 1828  ./a.out
+ 1829  g++ kmp_new.cpp 
+ 1830  clr
+ 1831  g++ kmp_new.cpp 
+ 1832  clr
+ 1833  g++ kmp_new.cpp 
+ 1834  ./a.out
+ 1835  g++ kmp_new.cpp 
+ 1836  ./a.out
+ 1837  g++ kmp_new.cpp 
+ 1838  ./a.out
+ 1839  g++ kmp_new.cpp 
+ 1840  ./a.out
+ 1841  g++ kmp_new.cpp 
+ 1842  ./a.out
+ 1843  g++ kmp_new.cpp 
+ 1844  ./a.out
+ 1845  g++ kmp_new.cpp 
+ 1846  ./a.out
+ 1847  g++ kmp_new.cpp 
+ 1848  ./a.out
+ 1849  g++ kmp_new.cpp 
+ 1850  ./a.out
+ 1851  g++ kmp_new.cpp 
+ 1852  ./a.out
+ 1853  clr
+ 1854  g++ kmp_new.cpp 
+ 1855  ./a.out
+ 1856  g++ kmp_new.cpp 
+ 1857  ./a.out
+ 1858  g++ kmp_new.cpp 
+ 1859  ./a.out
+ 1860  g++ kmp_new.cpp 
+ 1861  ./a.out
+ 1862  g++ kmp_new.cpp 
+ 1863  ./a.out
+ 1864  g++ kmp_new.cpp 
+ 1865  ./a.out
+ 1866  g++ kmp_new.cpp 
+ 1867  ./a.out
+ 1868  g++ kmp_new.cpp 
+ 1869  ./a.out
+ 1870  g++ kmp_new.cpp 
+ 1871  ./a.out
+ 1872  g++ kmp_new.cpp 
+ 1873  ./a.out
+ 1874  g++ kmp_new.cpp 
+ 1875  ./a.out
+ 1876  g++ kmp_new.cpp 
+ 1877  ./a.out
+ 1878  g++ kmp_new.cpp 
+ 1879  ./a.out
+ 1880  clr
+ 1881  ./a.out
+ 1882  clr
+ 1883  g++ kmp_new.cpp 
+ 1884  ./a.out
+ 1885  g++ kmp_new.cpp 
+ 1886  ./a.out
+ 1887  g++ kmp_new.cpp 
+ 1888  ./a.out
+ 1889  g++ kmp_new.cpp 
+ 1890  ./a.out
+ 1891  clr
+ 1892  ./a.out
+ 1893  g++ kmp_new.cpp 
+ 1894  ./a.out
+ 1895  g++ kmp_new.cpp 
+ 1896  ./a.out
+ 1897  g++ kmp_new.cpp 
+ 1898  ./a.out
+ 1899  g++ kmp_new.cpp 
+ 1900  ./a.out
+ 1901  g++ kmp_new.cpp 
+ 1902  ./a.out
+ 1903  g++ kmp_new.cpp 
+ 1904  ./a.out
+ 1905  g++ kmp_new.cpp 
+ 1906  ./a.out
+ 1907  g++ kmp_new.cpp 
+ 1908  ./a.out
+ 1909  g++ kmp_new.cpp 
+ 1910  ./a.out
+ 1911  g++ kmp_new.cpp 
+ 1912  ./a.out
+ 1913  g++ kmp_new.cpp 
+ 1914  ./a.out
+ 1915  g++ kmp_new.cpp 
+ 1916  ./a.out
+ 1917  g++ kmp_new.cpp 
+ 1918  ./a.out
+ 1919  g++ kmp_new.cpp 
+ 1920  ./a.out
+ 1921  g++ kmp_new.cpp 
+ 1922  ./a.out
+ 1923  g++ kmp_new.cpp 
+ 1924  ./a.out
+ 1925  g++ kmp_new.cpp 
+ 1926  ./a.out
+ 1927  g++ kmp_new.cpp 
+ 1928  ./a.out
+ 1929  g++ kmp_new.cpp 
+ 1930  ./a.out
+ 1931  g++ kmp_new.cpp 
+ 1932  ./a.out
+ 1933  g++ kmp_new.cpp 
+ 1934  ./a.out
+ 1935  g++ kmp_new.cpp 
+ 1936  ./a.out
+ 1937  g++ kmp_new.cpp 
+ 1938  ./a.out
+ 1939  g++ kmp_new.cpp 
+ 1940  ./a.out
+ 1941  g++ kmp_new.cpp 
+ 1942  ./a.out
+ 1943  g++ kmp_new.cpp 
+ 1944  ./a.out
+ 1945  g++ kmp_new.cpp 
+ 1946  ./a.out
+ 1947  g++ kmp_new.cpp 
+ 1948  ./a.out
+ 1949  g++ kmp_new.cpp 
+ 1950  ./a.out
+ 1951  g++ kmp_new.cpp 
+ 1952  ./a.out
+ 1953  g++ kmp_new.cpp 
+ 1954  ./a.out
+ 1955  g++ kmp_new.cpp 
+ 1956  ./a.out
+ 1957  g++ kmp_new.cpp 
+ 1958  ./a.out
+ 1959  g++ kmp_new.cpp 
+ 1960  ./a.out
+ 1961  g++ kmp_new.cpp 
+ 1962  ./a.out
+ 1963  g++ kmp_new.cpp 
+ 1964  ./a.out
+ 1965  g++ kmp_new.cpp 
+ 1966  ./a.out
+ 1967  g++ kmp_new.cpp 
+ 1968  ./a.out
+ 1969  g++ kmp_new.cpp 
+ 1970  ./a.out
+ 1971  g++ kmp_new.cpp 
+ 1972  ./a.out
+ 1973  g++ kmp_new.cpp 
+ 1974  ./a.out
+ 1975  g++ kmp_new.cpp 
+ 1976  ./a.out
+ 1977  cd
+ 1978  clr
+ 1979  locate sched.c
+ 1980  cd courses/cs210/Project/
+ 1981  g++ kmp_new.cpp 
+ 1982  cd courses/cs210/Project/
+ 1983  ./a.out
+ 1984  cd courses/cs210/Project/
+ 1985  g++ kmp_new.cpp 
+ 1986  ./a.out
+ 1987  g++ kmp_new.cpp 
+ 1988  ./a.out
+ 1989  g++ kmp_new.cpp 
+ 1990  ./a.out
+ 1991  g++ kmp_new.cpp 
+ 1992  ./a.out
+ 1993  g++ kmp_new.cpp 
+ 1994  ./a.out
+ 1995  g++ kmp_new.cpp 
+ 1996  ./a.out
+ 1997  ./wifi.ssh 
+ 1998  df
+ 1999  vim -g
+ 2000  ifconfig
+ 2001  ifconfig | grep "eth0"
+ 2002  ifconfig | grep -A1 "eth0"
+ 2003  ifconfig | grep -A1 "eth0" | grep "inet"
+ 2004  ifconfig | grep -A1 "eth0" | grep "inet" | awk '{print $1}'
+ 2005  ifconfig | grep -A1 "eth0" | grep "inet" | awk '{print $2}'
+ 2006  ifconfig | grep -A1 "eth0" | grep "inet" | awk '{print $2}'| sed -e 's/.://g'
+ 2007  ifconfig | grep -A1 "eth0" | grep "inet" | awk '{print $2}'| sed -e 's/.*://g'
+ 2008  ifconfig | grep  "eth0",1 | grep "inet" | awk '{print $2}'| sed -e 's/.*://g'
+ 2009  ifconfig | grep eth0,+1
+ 2010  ifconfig | sed 2
+ 2011  ifconfig | sed ie 2
+ 2012  ifconfig | sed -i 2
+ 2013  ifconfig | sed -i /2
+ 2014  ifconfig | sed  s/2
+ 2015  ifconfig | sed  's/2'
+ 2016  ifconfig | sed -e 's/2'
+ 2017  ifconfig | sed -e 's/2/'
+ 2018  ifconfig | sed 1p
+ 2019  ifconfig | sed '1!p'
+ 2020  ifconfig | sed '1!d'
+ 2021  ifconfig | sed -n -e 1,4p -e 10p
+ 2022  ifconfig
+ 2023  cd CS251/
+ 2024  cd Exam/
+ 2025  touch new.txt
+ 2026  hardik\nbansal>> new.txt
+ 2027  "hardik\nbansal">> new.txt
+ 2028  hardik>> new.txt
+ 2029  echo hardik>> new.txt
+ 2030  echo bansal>> new.txt
+ 2031  cat new.txt
+ 2032  cat new.txt | grep -e hardik
+ 2033  echo hard dick>> new.txt 
+ 2034  cat new.txt
+ 2035  cat new.txt | grep -e "hard "
+ 2036  cat new.txt | awk '{print}'
+ 2037  cat new.txt | awk '{print $1}'
+ 2038  cat new.txt | awk '{print $@}'
+ 2039  cat new.txt | awk '{print $2}'
+ 2040  awk '{ print }' /etc/passwd
+ 2041* awk '{ print $1 }' /etc/passwd
+ 2042  clr
+ 2043  awk '{ print $0 }' new.txt
+ 2044  cat new.txt | awk '{print $0}'
+ 2045  awk -F':' '{ print $1 }' /etc/passwd
+ 2046  awk -F':' '{ print $1 }' /etc/passwd | sort
+ 2047  history
+ 2048  history | awk '{print $2}' |sort |uniq
+ 2049  history | awk '{print $2}' |sort |uniq -c
+ 2050  history | awk '{print $2}' |uniq -c|sort
+ 2051  history | awk '{print $2}' |uniq -c|
+ 2052  history | awk '{print $2}' |uniq -c
+ 2053  history | awk '{print $2}'
+ 2054  history | awk '{print $2}'|uniq -c
+ 2055  history | awk '{print $2}'|sort|uniq-c
+ 2056  history | awk '{print $2}'|sort|uniq -c
+ 2057  history | awk '{print $2}'|sort|uniq -c|sort -rn
+ 2058  history | awk '{print $2}'|sort|uniq -c|sort -rn|head
+ 2059  history | awk '{print $2}'|sort|uniq -c|sort -rn|head 12
+ 2060  history | awk '{print $2}'|sort|uniq -c|sort -rn|tail
+ 2061  history | awk '{print $2}'|sort|uniq -c|sort -rn|head
+ 2062  history
+ 2063  history | awk '{print $2}'|sort
+ 2064  history | awk '{print $2}'|sort|uniq
+ 2065  history | awk '{print $2}'|sort|uniq -c
+ 2066  history | awk '{print $2}'|sort|uniq -c|sort
+ 2067  history | awk '{print $2}'|sort|uniq -c|sort -rn
+ 2068  history | awk '{print $2}'|sort|uniq -c|sort -r
+ 2069  history | awk '{print $2}'|sort|uniq -c|sort -n
+ 2070  history | awk '{print $2}'|sort|uniq -c|sort -rn
+ 2071  history
+ 2072  history > new.txt

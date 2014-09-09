@@ -1,0 +1,77 @@
+\documentclass[]{article}
+
+\usepackage{fullpage}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{url}
+
+\title{CS251 Final Assignment}
+\author{Arnab Bhattacharya}
+\date{10th November, 2013}
+
+\newcommand{\comment}[1]{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+In this sdocument, I describe how the different phases of the assignment have
+been completed such that they together form a nice overall package.  The tools
+used along with the phases are listed in a table.  The source of
+learning for most of these tools is \cite{cs251}.
+
+\\
+
+\section{Phases}
+
+\subsection{Phase-1: Octave}
+
+The {\bf Octave} script {\tt phase1.m generates the data randomly.
+
+\subsection{Phase-2: Perl}
+
+The {\bf Perl} script {\tt phase2.pl} creates the necessary tables and inserts
+the data.
+
+\subsection*{Phase-3: MySQL}
+
+The {\b MySQL} script {\tt phase3.sql} computes the total and grades using
+database functions.  The grades are calculated based on the formula given in an
+equation for $grade.
+
+\subsection*{Phase-4: Formatting (Perl)}
+
+The {\bf Perl} script {\tt phase3.pl} changes the format of the data so that the
+next phase becomes easy.
+
+\subsection*{Phase-5: GnuPlot}
+
+The {\bf GnuPlot} script {\tt phase5.gnu} is rather standard.  It produces the
+plot as shown in a figure.
+
+\subsection*{Phase-6: \LaTeX}
+
+The {\tt phase6.tex} is this file only and is, thus, a {\emph self-reference!
+
+\subsection*{Phase-7: Bash}
+
+The knowledge of different {\bf Bash} functions and options has made this script
+manageable.
+
+\subsection*{Phase-8: Automation (Bash)}
+
+The master file {\tt phase8.sh} keeps everything thing toegther and runs them in
+an orderly manner.
+
+\section{Analysis}
+
+It takes little or no effort to get an "F' grade.
+
+\bibliography{abbrv}
+\bibliographydata{phase6}
+
+\end{document}
+

@@ -1,0 +1,694 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://www.vogella.com/css/header.css);
+@import url(http://www.vogella.com/css/search.css);
+
+body {
+   background:whiteSmoke;
+   line-height: 1.5;
+   font-family: 'Droid Sans', sans-serif;
+}
+
+.article, .book {
+   background-color: white;
+   position: absolute;
+   left: 180px;
+   width: 750px;
+   top: 44px;
+   padding: 0 25px 0 25px;
+}
+
+
+td.header {
+    background: #eee none repeat scroll 0%;
+    color: #000;
+    font-size: 9px;
+    font-weight: bold;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+
+.article a, .article .toc a {
+  font-weight: 700;
+  color: #101010;
+}
+
+.toc p {
+  font-size: 1.3em;
+}
+h1 {
+    color: #111;
+}
+hr {
+    color: #eeeeee;
+    background-color: #eeeeee;
+    height: 1px;
+    border: 0;
+}
+h2.title {
+  color: #333;
+  font-size: 30px;
+  margin: 0px;
+  padding: 0 0 10px;
+  margin-top: 20px;	
+}
+
+h3.title {
+ color: #333;
+  font-size: 20px;
+  margin: 0px;
+  padding: 0 0 10px;
+}
+
+.mediaobject {
+  padding: 20px;
+}
+
+p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+div.figure {
+  float: center;
+  margin: 0;
+  padding: 0;
+}
+
+div.figure p {
+  text-align: center;
+  font-style: italic;
+  text-indent: 0;
+  margin: 0;
+}
+
+
+#leftcol {
+  position: absolute;
+  width: 160px;
+  top: 44px;
+}
+
+#rightcol {
+  position: absolute;
+  left: 1010px;
+  width: 200px;
+  top: 44px;
+}
+
+#quotes {
+  background-color: #f5f5f5;
+}
+
+#foot {
+  font-weight: bolder;
+}
+
+#rightcol ul {
+  padding-left: 20px;
+}
+
+.span5 h2 a {
+  text-decoration: none;
+}
+
+#intro {
+  background-color: #f5f5f5;
+  padding: 5px;
+  border-radius: 9px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+}
+
+.span5 img {
+  margin-left: 60px;
+}
+
+
+
+#intro h1 {
+  font-size: 100%;
+  line-height: 2;
+  padding-left: 10px
+}
+
+.row: : before, .row: : after {
+  display: table;
+  content: "";
+  zoom: 1;
+}
+
+.row: : after {
+  clear: both;
+}
+
+.row>[class*=span] {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  padding: 10px;
+  background: #f5f5f5;
+}
+
+.row>[class*=book1] {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  padding: 10px;
+  background: #f5f5f5;
+}
+
+.span5, .span6 {
+  width: 370px;
+}
+
+.span6 {
+  height: 340px;
+}
+
+.book1 {
+  width: 860px;
+}
+
+#intro a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.sidebar {
+  padding: 0;
+}
+
+
+
+.sidebar .well {
+  background-color: #f5f5f5;
+  padding: 10px;
+  padding-top: 1px;
+}
+
+.btn, .btn2 {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), color-stop(25%, #fff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(#fff, #ffffff 25%, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #fff, #ffffff 25%, #e6e6e6);
+  background-image: -ms-linear-gradient(#fff, #ffffff 25%, #e6e6e6);
+  background-image: -o-linear-gradient(#fff, #ffffff 25%, #e6e6e6);
+  background-image: linear-gradient(#fff, #ffffff 25%, #e6e6e6);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  padding: 5px 14px 6px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  color: #333333;
+  font-size: 13px;
+  line-height: normal;
+  border: 1px solid #cccccc;
+  border-bottom-color: #bbbbbb;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -ms-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+  border-image: initial;
+  text-decoration: none;
+}
+
+.span7 {
+  background: #f5f5f5;
+  padding: 10px;
+}
+
+.span7 h1 {
+  margin-top: 0;
+}
+
+.btn2 {
+  width: 130px;
+  height: 34px;
+  font-size: 16px;
+  text-align: center;
+  margin-left: 12px;
+}
+
+#logo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 40px;
+  z-index: 2;
+  width: 120px;
+}
+
+#logo img {
+  width: 120px;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  height: 36px;
+  z-index: 100;
+}
+
+#author img {
+  margin: 8px 10px 10px 10px;
+  border: 1px solid #d1d2d4;
+  padding: 2px;
+  background-color: #ffffff;
+}
+
+.code {
+  font-size: 120%;
+}
+
+#header {
+  width: 100%;
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+}
+
+
+
+.note p {
+    margin: 0 0 1em 0;
+}
+
+.note { 
+    background: url("http://www.vogella.com/img/icons/note.png") 10px 10px no-repeat transparent;
+    overflow: hidden;
+    background-size: 64px;
+    padding:20px;
+    padding-left: 80px;
+    border: 1px dashed gray;
+}
+
+.tip p {
+  margin: 0 0 1em 0;
+}
+
+.tip { 
+    background: url("http://www.vogella.com/img/icons/tip.png") 10px 10px no-repeat transparent;
+    background-size: 64px;
+    overflow: hidden;
+    padding:20px;
+    padding-left: 80px;
+    border: 1px dashed gray;
+}
+
+.tip p {
+    margin: 0 0 1em 0;
+}
+
+.warning { 
+    background: url("http://www.vogella.com/img/icons/warning.png") 10px 10px no-repeat transparent;
+    overflow: hidden;
+    background-size: 64px;
+    padding:20px;
+    padding-left: 80px;
+    border: 1px dashed gray;
+}
+
+.property {
+  font-style: italic;
+}
+
+.guilabel {
+  font-style: italic;
+}
+
+
+.guibutton {
+  font-style: italic;
+}
+
+.filename {
+  font-style: italic;
+}
+
+.guimenu {
+  font-style: italic;
+}
+
+.guisubmenu {
+  font-style: italic;
+}
+
+.keysym {
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+td.header {
+  background: #eeeeee none repeat scroll 0%;
+  color: #000000;
+  font: bold 11px verdana, arial, sans-serif;
+  padding-bottom: 3px;
+  padding-top: 3px;
+}
+
+.programlisting {
+  background-color: #FFE;
+  border: 1px solid #bbbbbb;
+  margin: 10px 10px;
+  overflow: auto;
+  padding: 1em;
+  word-wrap: break-word;
+  font: 80%/125% "Droid Sans Mono", Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+
+.hl-keyword {
+  color: #7f0055;
+  font-weight: bold;
+}
+
+.emphasis {
+  font-weight: bolder;
+}
+
+a {
+  color: #0000cc;
+}
+
+.toc a {
+  text-decoration: none;
+  font-weight: normal;
+  overflow: hidden;
+}
+
+a: hover {
+  text-decoration: underline;
+}
+
+a: visited {
+  color: #551a8b;
+}
+
+.list ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.list li {
+  list-style: none;
+}
+
+#nnaavv a: hover {
+  color: #000000;
+}
+
+.vogella-training { float: left; margin-right: 10px; }
+.twitt { float: left; margin-right: 10px; }
+.googleplus { float: left; }
+
+
+.twitter {
+  position: fixed;
+  bottom: 0;
+  left: 1000px;
+  z-index: 1;
+}
+
+
+#kindle {
+  position: absolute;
+  top: 400px;
+  left: 924px;
+  z-index: 10000;
+  width: 200px;
+}
+
+
+
+.toc {
+  line-height: 1.4;
+  font-size: 90%;
+  border-bottom: 1px solid #eeeeee;
+  padding: 20px;
+  border: 1px solid #e1e1e1;
+  background: #f1f1f1;
+  border-radius: 9px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  width: 50%;
+}
+
+
+form.requestForm div {
+  clear: left;
+  display: block;
+  width: 600px;
+  zoom: 1;
+  margin: 5px 0 0 0;
+  padding: 1px 3px;
+}
+
+form.requestForm fieldset {
+  clear: both;
+  border-color: #000000;
+  border-width: 0 0 0 0;
+  border-style: none;
+  background-color: #e5e5e5;
+  margin: 0;
+}
+
+form.requestForm div label {
+  display: block;
+  float: left;
+  width: 130px;
+  padding: 3px 5px;
+  margin: 0 0 5px 0;
+  text-align: left;
+}
+
+form.requestForm input {
+  width: 400px;
+}
+
+form.requestForm #ppllzz {
+  width: 100px;
+}
+
+form.requestForm #oorrtt {
+  width: 300px;
+}
+
+form.requestForm #buttons input {
+  width: 100px;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 0;
+  font-size: 14px;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table th, table td {
+  padding: 10px 10px 9px;
+  line-height: 18px;
+  text-align: left;
+}
+
+table th {
+  padding-top: 9px;
+  font-weight: bold;
+  vertical-align: middle;
+  background: #f5f5f5;
+}
+
+table td {
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+
+table tbody th {
+  border-top: 1px solid #dddddd;
+  vertical-align: top;
+}
+
+table {
+  border: 1px solid #dddddd;
+  border-collapse: separate;
+  *border-collapse: collapse;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+table th+th, table td+td, table th+td {
+  border-left: 1px solid #dddddd;
+}
+
+table thead tr: first-child th: first-child, table tbody tr: first-child td: first-child {
+  -webkit-border-radius: 4px 0 0 0;
+  -moz-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
+}
+
+table thead tr: first-child th: last-child, table tbody tr: first-child td: last-child {
+  -webkit-border-radius: 0 4px 0 0;
+  -moz-border-radius: 0 4px 0 0;
+  border-radius: 0 4px 0 0;
+}
+
+table tbody tr: last-child td: first-child {
+  -webkit-border-radius: 0 0 0 4px;
+  -moz-border-radius: 0 0 0 4px;
+  border-radius: 0 0 0 4px;
+}
+
+table tbody tr: last-child td: last-child {
+  -webkit-border-radius: 0 0 4px 0;
+  -moz-border-radius: 0 0 4px 0;
+  border-radius: 0 0 4px 0;
+}
+
+
+.training-bg { position: relative; width: 200px; height: 364px; }
+.image-z { position: absolute; top: 0; left: 0; z-index: 2; }
+.button1 { position: absolute; bottom: 70px; left: 20px; }
+.button2 { position: absolute; bottom: 20px; left: 20px; }
+a.btn-training, .btn-training:link, .btn-training:visited { color: #fff; z-index: 9999999; }
+.btn-training {
+    margin-top: 10px;
+    width: 140px;
+
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1em;
+    background: #ff3019; /* Old browsers */
+    background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ff3019 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ff3019 0%,#cf0404 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ff3019 0%,#cf0404 100%); /* IE10+ */
+    background: linear-gradient(top, #ff3019 0%,#cf0404 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
+    padding: 10px;
+    color: #fff;
+    font-weight: 700;
+    line-height: normal;
+    border: 1px solid #d1171e;
+    border-bottom-color: #ad1419;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow:  inset 0 1px 0 rgba(255,  255,  255,  0.2),  0 1px 2px rgba(0,  0,  0,  0.05);
+    -moz-box-shadow:  inset 0 1px 0 rgba(255,  255,  255,  0.2),  0 1px 2px rgba(0,  0,  0,  0.05);
+    box-shadow:  inset 0 1px 0 rgba(255,  255,  255,  0.2),  0 1px 2px rgba(0,  0,  0,  0.05);
+    -webkit-transition: 0.1s linear all;
+    -moz-transition: 0.1s linear all;
+    -ms-transition: 0.1s linear all;
+    -o-transition: 0.1s linear all;
+    transition: 0.1s linear all;
+    border-image: initial;
+    text-decoration: none;
+}
+
+
+#back-top {
+	position: fixed;
+	bottom: 30px;
+}
+
+#back-top a {
+	width: 108px;
+	display: block;
+	text-align: center;
+	font: 11px/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #bbb;
+
+	/* transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover {
+	color: #000;
+}
+
+/* arrow icon (span tag) */
+#back-top span {
+	width: 108px;
+	height: 108px;
+	display: block;
+	margin-bottom: 7px;
+	background: #ddd url(http://www.vogella.com/img/common/up-arrow.png) no-repeat center center;
+
+	/* rounded corners */
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+
+	/* transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover span {
+	background-color: #777;
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1300px) {
+    .article, .book {
+        width: 850px;
+        margin: auto;
+        margin-top: 50px;
+        margin: auto !important;
+        position: relative !important;
+        left: 0;
+    }
+    
+    #rightcol {
+        right: 20px !important;
+        left: auto !important;
+        position: absolute;
+        top: 44px;
+        width: 200px;
+    }
+
+    #leftcol {
+        left: 20px;
+        position: absolute;
+        top: 44px;
+        width: 160px;
+    }
+
+    .twitter {
+	left:84%;
+    }	
+}
+
+
+@media only screen 
+and (max-width : 1280px) {
+
+    .twitter {
+        display: none;
+    }
+
+}
+
+}

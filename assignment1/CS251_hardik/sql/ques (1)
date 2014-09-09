@@ -1,0 +1,50 @@
+Left Join, Right join were not asked, but simple join like
+
+... from employee e, salaries s where e.emp_id = s.emp_id ..... had to be used
+ 
+1. show the id's of employees who have joined their departments on the same date as their department managers. (level-3)
+
+2. show the id's of female employees with age > 60 (level - 2)
+
+3. show the id of employees who have got their salary changed maximum number of times. (level - 4)
+
+ hint: - the salary table has multiple entries for same id
+
+4. show the id's of employees who have joined their departments after joining the company. 
+
+5. Show the title names and count of employees (for that title) for the titles who have employees with salaries > 0.1 million. Show them
+   sorted by their age. 
+6. find emp_no first name and salary of an employee whose salary is maximum.
+7. female employees whose first_name starts with 'a' or 'A'
+8. find the min of salary of those employees who joined the company before the person with minimum salary join the company
+   
+   
+   
+   
+   Things need to do:
+   1.Book done
+   2.outer join, natural join, left and right outer joins done
+   3.create table, alter table, delete, drop, truncate done
+   4.create index operations and primary key, not null, foreign key done
+   5.where, group by, having, order by (done)
+   6. 3 websites and more done
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   ans...
+1. select * from dept_emp,dept_manager where dept_emp.from_date=dept_manager.from_date and dept_emp.dept_no=dept_manager.dept_no;
+2. select timestampdiff(year,birth_date,CURDATE()),gender,birth_date-CURDATE() from employees where gender='F' and timestampdiff(year,birth_date,CURDATE())>=60;
+3.
+4.easy
+5. select titles.title,salary,count(titles.emp_no),birth_date from titles,salaries,employees where salary>100000 and titles.emp_no=salaries.emp_no and titles.emp_no=employees.emp_no group by title order by birth_date;
+5b.select titles.title,count(titles.emp_no),birth_date from titles,salaries,employees where salary>100000 and titles.emp_no=salaries.emp_no and titles.emp_no=employees.emp_no group by birth_date ;
+5c.select titles.title,count(titles.emp_no),min(salary),timestampdiff(year,birth_date,curdate()),dept_emp.to_date-curdate() from titles,salaries,employees,dept_emp where salary>100000 and dept_emp.to_date-curdate()=79859177 and titles.emp_no=salaries.emp_no and titles.emp_no=employees.emp_no and dept_emp.emp_no=employees.emp_no group by birth_date DESC ;

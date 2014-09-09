@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{book1}
+Irene~Hyna Tobias~Oetiker, Hubert~Partl and Elisabeth Schlegl.
+\newblock {\em {Introduction to Latex}}.
+\newblock 2 edition, 2011.
+\bibitem{book2}
+Hardik Bansal
+\newblock {\em {Proof of Pythagoras}}.
+\newblock link to reference is available 
+\newblock {\href{http://www.mathsisfun.com/geometry/pythagorean-theorem-proof.html}{here}}.
+
+\end{thebibliography}

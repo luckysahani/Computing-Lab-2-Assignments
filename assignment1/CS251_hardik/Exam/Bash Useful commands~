@@ -1,0 +1,14 @@
+grep -A1 "eth0"
+grep  "eth0",1
+ifconfig | sed -n -e 1,4p -e 10p
+ifconfig | sed '1!d'
+sed -e 's/.*://g'
+awk '{for(i=1;i<=NF;i++){ if($i=="yyy"){print $i} } }' file
+
+############Latex##############
+\label{marker}
+\ref{marker}
+\pageref{marker}
+See figure~\ref{fig:test} on page~\pageref{fig:test}.
+Link:                                                   http://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
+

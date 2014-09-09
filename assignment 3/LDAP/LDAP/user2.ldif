@@ -1,0 +1,11 @@
+dn: cn=user2,ou=people,dc=cse,dc=iitk,dc=ac,dc=in
+objectclass: inetOrgPerson
+cn: user2
+sn: user2
+uid: user2
+userpassword: user2
+carlicense: USER2 CAR
+homephone: 666-111-2222
+mail: user2@cse.iitk.ac.in
+description: Testing_User2
+ou: Student

@@ -1,0 +1,45 @@
+# New attribute definitions:
+
+attributetype ( 1.3.6.1.4.1.4203.666.1.90
+        NAME 'personStatus'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{1024} )
+
+attributetype ( 1.3.6.1.4.1.4203.666.1.91
+        NAME 'preferredEmail'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{1024} )
+
+attributetype ( 1.3.6.1.4.1.4203.666.1.92
+        NAME 'mail2'
+        DESC 'RFC1274: RFC822 Mailbox'
+        EQUALITY caseIgnoreIA5Match
+        SUBSTR caseIgnoreIA5SubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+
+attributetype ( 1.3.6.1.4.1.4203.666.1.93
+        NAME 'businessName'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{1024} )
+
+attributetype ( 1.3.6.1.4.1.4203.666.1.94
+        NAME 'xmozillanickname'
+        EQUALITY caseIgnoreMatch
+        SUBSTR caseIgnoreSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{1024} )
+
+attributetype ( 1.3.6.1.4.1.4203.666.1.95 NAME 'birthdate' SUP name )
+
+
+objectClass     ( 1.3.6.1.4.1.4203.666.1.100
+    NAME 'YoLinuxPerson'
+        DESC 'X-Person'
+    SUP inetOrgPerson
+    STRUCTURAL
+        MAY  ( personStatus $ preferredEmail $ mail2 $
+               businessName $ xmozillanickname $
+               birthdate $ c )
+        )

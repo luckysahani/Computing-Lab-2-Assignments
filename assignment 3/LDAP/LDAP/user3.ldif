@@ -1,0 +1,23 @@
+dn: cn=user3,dc=cse,dc=iitk,dc=ac,dc=in
+cn: user3
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+objectClass: YoLinuxPerson
+mail: user3@cse.iitk.ac.in
+givenname: Schemp
+sn: Anderson
+ou: MemberGroupB
+street: 16 Cherry St.
+l: Dallas
+st: TX
+postalcode: 76888
+pager: 800-555-1319
+homePhone: 800-555-1313
+mobile: 800-555-1318
+birthdate: 10/2/23
+mail2: SAnderson@isp.com
+preferredEmail: 1
+businessName: ABC Inc.
+xmozillanickname: Testing

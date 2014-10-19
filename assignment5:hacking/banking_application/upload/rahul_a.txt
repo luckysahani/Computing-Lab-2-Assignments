@@ -1,0 +1,13 @@
+<html>
+<head>
+karan
+</head>
+<body>
+<script>
+alert('karan');
+</script>
+</body>
+</html>
+<?php
+echo "karan";
+?>

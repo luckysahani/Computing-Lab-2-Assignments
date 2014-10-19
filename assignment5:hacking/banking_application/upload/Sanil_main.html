@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <title>Welcome!</title>
+</head>
+<body>
+
+<H1> Welcome to the awesome page </H1>
+
+<form action="login.php" method="post" enctype="multipart/form-data">
+<label for="file">Filename:</label>
+<input type="file" name="file" id="file"><br>
+<input type="submit" name="formSubmit" value="FileSubmit">
+</form>
+
+<form action="filelist.php" method="post">
+	<input type="submit" name="filelist" value="FileList">
+</form>
+<form action="checkbalance.php" method="post">
+	<input type="submit" name="checkbalance" value="Check Account Balance">
+</form>
+
+<a href="resetPassword.html"><button> Reset Password </button></a>
+
+<form action="transferMoney.php" method="post">
+	<input type="submit" name="transferMoney" value="Transfer Money">
+</form>
+
+<a href="depwitmoney.php"><button> Deposit/Withdraw Money </button></a>
+
+<form action="accStatement.php" method="post">
+	<input type="submit" name="accStatement" value="Account Statement">
+</form>
+
+<a href="login.html"><button> Logout </button></a>
+
+</body>
+</html>

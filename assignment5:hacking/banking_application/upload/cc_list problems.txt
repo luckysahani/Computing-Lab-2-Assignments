@@ -1,0 +1,32 @@
+Types : 
+1.) Singly linked list
+2.) Doubly linked list
+3.) Circular linked list
+
+Functions :
+
+- for 1 list
+1.) create (list, before, after)
+2.) print (normal, reverse, alternate)
+3.) count (normal, occurrences, based on parameters)
+4.) find maximum,minimum,median,average,mode (or any other thing)
+5.) insert (head, end, before, after)
+6.) delete (head, end, before, after)
+7.) search
+8.) implement stack,queue (lab 12)
+9.) check if list is a palindrome
+10.) remove duplicates
+11.) reverse a linked list
+12.) reverse until n elements
+13.) sort (difficult)
+
+- for 2 lists
+1.) check if 2 lists are the same
+2.) add one list after the other
+3.) do operations on corresponding elements and make a new list
+4.) take maximum/minimum (or any other condition) of corresponding elements and make a new list 
+5.) find common elements and make a new list (repeated only once)
+6.) given 2 sorted lists, form a new sorted list from the other 2
+
+- conversion
+1.) conversion from singly/doubly/circular linked list to singly/doubly/circular linked list

@@ -1,0 +1,7 @@
+AuthUserFile /var/www/html/testfolder/.htpasswd
+AuthGroupFile /www.null
+AuthName "Authorization Required"
+AuthType Basic
+ 
+require user USER_NAME
+ErrorDocument 404 /new404.html
